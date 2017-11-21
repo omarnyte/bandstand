@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: users
+# Table name: bands
 #
 #  id              :integer          not null, primary key
 #  username        :string           not null
@@ -14,7 +14,7 @@
 
 require 'test_helper'
 
-class UserTest < ActiveSupport::TestCase
+class BandTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

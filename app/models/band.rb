@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: users
+# Table name: bands
 #
 #  id              :integer          not null, primary key
 #  username        :string           not null
@@ -12,7 +12,7 @@
 #  updated_at      :datetime         not null
 #
 
-class User < ApplicationRecord
+class Band < ApplicationRecord
   validates :username, :email, :band_name, :password_digest,
       :session_token, presence: true
   validates :username, :email, :band_name, uniqueness: true
@@ -23,8 +23,8 @@ class User < ApplicationRecord
   attr_reader :password
 
   def self.find_by_credentials(username, password)
-    user = User.find_by(username: username)
-    user && user.is_password?(password) ? user : nil
+    band = Band.find_by(username: username)
+    band && band.is_password?(password) ? band : nil
   end
 
   def password=(password)
@@ -44,7 +44,7 @@ class User < ApplicationRecord
 
   private
   def ensure_session_token
-    self.session_token ||= SecureRandom.urlsafe_base64 
+    self.session_token ||= SecureRandom.urlsafe_base64
   end
 
 end
