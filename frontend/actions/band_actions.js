@@ -15,11 +15,11 @@ export const fetchBand = (bandId) => dispatch => (
 
 // Sync actions
 const receiveAllBands = (bands) => ({
-  type: RECEIVE_ALL_BANDS,
+  type: RECEIVE_ALL_BANDS, 
   bands
 });
 
 const receiveBand = (band) => ({
   type: RECEIVE_BAND,
   band
-}); 
+});

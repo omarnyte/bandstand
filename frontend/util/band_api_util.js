@@ -1,5 +1,5 @@
 // Returns an object with band IDs as keys and their corresponding
-// band objects as values 
+// band objects as values
 export const fetchBands = () => (
   $.ajax({
     method: 'GET',
