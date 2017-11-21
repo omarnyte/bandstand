@@ -15,9 +15,10 @@ class Api::BandsController < ApplicationController
     render 'api/bands/show'
   end
 
-  # def index
-  #
-  # end
+  def index
+    @bands = Band.all
+    render 'api/bands/index'
+  end
 
   private
   def band_params

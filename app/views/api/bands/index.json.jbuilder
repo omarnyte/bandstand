@@ -1,5 +1,5 @@
-# @bands.each do |band|
-#   json.set! :band.id do
-#     json.set! :id :username :email, :band_name
-#   end
-# end
+@bands.each do |band|
+  json.set! band.id do
+    json.extract! band, :id, :username, :email, :band_name
+  end
+end
