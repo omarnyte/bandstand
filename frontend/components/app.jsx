@@ -1,10 +1,13 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
+import NavbarContainer from './navbar/navbar_container';
+
 const App = () => (
   <div>
-    <span>Currently in the app component!</span>
+    <h1>bandstand</h1>
+    <NavbarContainer />
   </div>
 );
 
-export default App; 
+export default App;
