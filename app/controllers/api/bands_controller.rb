@@ -12,6 +12,7 @@ class Api::BandsController < ApplicationController
 
   def show
     @band = Band.find(params[:id])
+    # TODO handle errors 
     render 'api/bands/show'
   end
 

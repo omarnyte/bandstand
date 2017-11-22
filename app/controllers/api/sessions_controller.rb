@@ -1,4 +1,4 @@
-class Api::SessionController < ApplicationController
+class Api::SessionsController < ApplicationController
   def create
     @band = Band.find_by_credentials(
       params[:band][:username],
@@ -15,9 +15,9 @@ class Api::SessionController < ApplicationController
   end
 
   def destroy
-    @band = current_user
+    @band = current_band
     if @band
-      logout
+      logout!
       # TODO figure out where a logout should redirect
       render "api/bands/show"
     else

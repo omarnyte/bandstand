@@ -1,22 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// import Root from './components/root';
+import Root from './components/root';
 import configureStore from './store/store';
 
 // begin test
-import * as BandAPIUtil from './util/band_api_util';
+// import * as BandAPIUtil from './util/band_api_util';
+import * as SessionAPIUtil from './util/session_api_util';
+
+import { fetchBands, fetchBand } from './actions/band_actions';
+// import { login, logout, signup } from './actions/session_actions';
 // end test
 
 document.addEventListener("DOMContentLoaded", () => {
   const store = configureStore();
 
   const root = document.getElementById("root");
-  ReactDOM.render((<span>Currently in bandstand.jsx</span>), root);
+  ReactDOM.render(<Root store={ store } />, root);
 
   // begin test
-  window.fetchBands = BandAPIUtil.fetchBands;
-  window.fetchBand = BandAPIUtil.fetchBand;
+  window.fetchBands = fetchBands;
+  window.fetchBand = fetchBand;
+  window.login = SessionAPIUtil.login;
+  window.logout = SessionAPIUtil.logout;
+  window.signup = SessionAPIUtil.signup;
   window.store = store;
   // end test
 });

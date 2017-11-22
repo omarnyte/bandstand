@@ -9,6 +9,7 @@ const BandsReducer = (oldState = {}, action) => {
     case RECEIVE_ALL_BANDS:
       return merge({}, action.bands);
     case RECEIVE_BAND:
+      // TODO: resolve state shape/integration
       return merge({}, oldState, {[action.band.id]: action.band});
     default:
       return oldState;
