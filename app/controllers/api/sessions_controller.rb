@@ -1,8 +1,8 @@
 class Api::SessionsController < ApplicationController
   def create
     @band = Band.find_by_credentials(
-      params[:band][:username],
-      params[:band][:password]
+      params[:username],
+      params[:password]
     )
 
     if @band
