@@ -5,7 +5,7 @@ export const RECEIVE_CURRENT_BAND = 'RECEIVE_CURRENT_BAND';
 
 // thunk action creators
 export const login = (band) => dispatch => (
-  SessionAPIUtil.login().then(bandResp => dispatch(receiveCurrentBand(bandResp)))
+  SessionAPIUtil.login(band).then(bandResp => dispatch(receiveCurrentBand(bandResp)))
 );
 
 export const logout = () => dispatch => (

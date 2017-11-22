@@ -10,7 +10,7 @@ export const login = band => (
   $.ajax({
     method: 'POST',
     url: '/api/session',
-    data: band 
+    data: band
   })
 );
 

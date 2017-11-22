@@ -6,10 +6,10 @@ import configureStore from './store/store';
 
 // begin test
 // import * as BandAPIUtil from './util/band_api_util';
-import * as SessionAPIUtil from './util/session_api_util';
+// import * as SessionAPIUtil from './util/session_api_util';
 
 import { fetchBands, fetchBand } from './actions/band_actions';
-// import { login, logout, signup } from './actions/session_actions';
+import { login, logout, signup } from './actions/session_actions';
 // end test
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // begin test
   window.fetchBands = fetchBands;
   window.fetchBand = fetchBand;
-  window.login = SessionAPIUtil.login;
-  window.logout = SessionAPIUtil.logout;
-  window.signup = SessionAPIUtil.signup;
+  window.login = login;
+  window.logout = logout;
+  window.signup = signup;
   window.store = store;
   // end test
 });

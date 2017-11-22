@@ -4,7 +4,7 @@ import { RECEIVE_CURRENT_BAND } from '../actions/session_actions';
 
 const _nullBand = Object.freeze({ currentBand: null});
 
-const sessionReducer = (state = _nullBand, action) => {
+const SessionReducer = (state = _nullBand, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_CURRENT_BAND:
@@ -15,4 +15,4 @@ const sessionReducer = (state = _nullBand, action) => {
   }
 };
 
-export default sessionReducer;
+export default SessionReducer;
