@@ -12,27 +12,34 @@ class SessionForm extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-  if (nextProps.loggedIn) {
-    // TODO for now, redirect to landing page (with updated header)
-    this.props.history.push('/');
+    if (nextProps.loggedIn) {
+      this.props.history.push('/');
+    }
   }
-}
 
-update(field) {
-  return e => this.setState({
-    [field]: e.currentTarget.value
-  });
-}
+  update(field) {
+    return e => this.setState({
+      [field]: e.currentTarget.value
+    });
+  }
 
-handleSubmit(e) {
-  e.preventDefault();
-  const band = Object.assign({}, this.state);
-  this.props.processForm(band);
+  handleSubmit(e) {
+    e.preventDefault();
+    const band = Object.assign({}, this.state);
+    this.props.processForm(band);
+  }
+
+  navLink() {
+  if (this.props.formType === 'login') {
+    return <Link to="/signup">sign up instead</Link>;
+  } else {
+    return <Link to="/login">log in instead</Link>;
+  }
 }
 
   render() {
       return (
-        <div className="login-form-container">
+        <div>
           <form onSubmit={this.handleSubmit}>
             Welcome to bandstand!
             <br/>

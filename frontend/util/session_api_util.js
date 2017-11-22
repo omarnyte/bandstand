@@ -2,7 +2,7 @@ export const signup = band => (
   $.ajax({
     method: 'POST',
     url: '/api/bands',
-    data: band
+    data: { band } 
   })
 );
 
