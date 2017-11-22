@@ -1,4 +1,4 @@
-import * as SessionAPIUtil from '../util/session_api_util';
+import * as SessionAPIUtil from '../utils/session_api_util';
 
 export const RECEIVE_CURRENT_BAND = 'RECEIVE_CURRENT_BAND';
 // TODO RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS'

@@ -1,4 +1,4 @@
-import * as BandAPIUtil from '../util/band_api_util';
+import * as BandAPIUtil from '../utils/band_api_util';
 
 export const RECEIVE_ALL_BANDS = 'RECEIVE_ALL_BANDS';
 export const RECEIVE_BAND = 'RECEIVE_BANDS';

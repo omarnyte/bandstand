@@ -1,13 +1,15 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
+  helper_method :current_band, :logged_in? 
+
   def current_band
     @current_band ||= Band.find_by(session_token: session[:session_token])
   end
 
   def login(band)
     session[:session_token] = band.reset_session_token!
-    current_band 
+    current_band
   end
 
   def logout!

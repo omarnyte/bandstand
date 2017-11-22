@@ -13,9 +13,17 @@ import { login, logout, signup } from './actions/session_actions';
 // end test
 
 document.addEventListener("DOMContentLoaded", () => {
-  const store = configureStore();
-
   const root = document.getElementById("root");
+
+  let preloadedState = undefined;
+  if (window.currentBand) {
+    preloadedState = {
+      session: {
+        currentBand: window.currentBand
+      }
+    };
+  }
+  const store = configureStore(preloadedState);
   ReactDOM.render(<Root store={ store } />, root);
 
   // begin test

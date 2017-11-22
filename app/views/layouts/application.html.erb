@@ -6,7 +6,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-
+    <% if current_band %>
+      <script>
+        window.currentBand= {
+          'id': <%= current_band.id %>,
+          'username': '<%= current_band.username %>',
+          'email': '<%= current_band.email %>',
+          'band_name': '<%= current_band.band_name %>',
+        }
+      </script>
+    <% end %>
   </head>
 
   <body>
