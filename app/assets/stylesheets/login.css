@@ -1,3 +1,15 @@
+.login-header {
+  border: 1px solid green;
+
+  height: 105px;
+
+  background-color: #DDDDDD;
+}
+
+.logo {
+  background: transparent url(../../img/bandcamp-logo-color-bcaqua.svg) no-repeat
+}
+
 .outer-login-div {
   background-color: #DDDDDD;
 
@@ -68,4 +80,9 @@
   text-align: center;
 
   border-radius: 0px;
+}
+
+.error-list {
+  margin: 0 auto; 
+  color: red;
 }

@@ -34,7 +34,7 @@ class LogIn extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className='error-list'>
         {this.props.errors.map(error => (
           <li>{error}</li>
         ))}
@@ -46,11 +46,9 @@ class LogIn extends React.Component {
     return (
       <div className='outer-login-div'>
         <header className='login-header'>
-          <img className='logo' src="http://www.drunkenwerewolf.com/wp-content/uploads/2017/04/Bandcamp.png"/>
         </header>
         <div className='login-div'>
           <h2 className='login-header'>Log In</h2>
-          {this.renderErrors()}
           <div className='dividor'></div>
           <form className='login-form'>
 
@@ -70,6 +68,7 @@ class LogIn extends React.Component {
                 onChange={this.handleInput('password')}
                 />
             </label>
+            {this.renderErrors()}
 
             <button
               className='login-button'
