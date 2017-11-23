@@ -44,14 +44,16 @@ class LogIn extends React.Component {
 
   render () {
     return (
-      <div className='outer-login-div'>
-        <header className='login-header'>
-        </header>
-        <div className='login-div'>
-          <h2 className='login-header'>Log In</h2>
-          <div className='dividor'></div>
-          <form className='login-form'>
+      <div className='login-component'>
+        <header className='login-navbar'>
 
+        </header>
+
+        <div className='login-container'>
+          <h2>Log in</h2>
+          <div className='dividor'></div>
+          <br />
+          <form className='login-form'>
             <label>Username
               <input
                 className='username-input'
@@ -72,10 +74,13 @@ class LogIn extends React.Component {
 
             <button
               className='login-button'
-              onClick={this.handleSubmit}> Log In</button>
+              onClick={this.handleSubmit}> Log in</button>
+
             <button
               className='login-button'
               onClick={this.handleSubmitDemo}> Demo Log In</button>
+
+            <p>Don’t have an account? Sign up</p>
           </form>
         </div>
       </div>
