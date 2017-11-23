@@ -9,14 +9,16 @@ export const login = (bandCredentials) => dispatch => (
     bandResp => (dispatch(receiveCurrentBand(bandResp))),
     (errors) => dispatch(receiveErrors(errors.responseJSON))
   )
-); 
+);
 
 export const logout = () => dispatch => (
   SessionAPIUtil.logout().then(bandResp => dispatch(receiveCurrentBand(null)))
 );
 
 export const signup = (band) => dispatch => (
-  SessionAPIUtil.signup(band).then(bandResp => dispatch(receiveCurrentBand(bandResp)))
+  SessionAPIUtil.signup(band).then(
+    bandResp => dispatch(receiveCurrentBand(bandResp)),
+    (errors) => dispatch(receiveErrors(errors.responseJSON)))
 );
 
 

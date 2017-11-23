@@ -25,6 +25,16 @@ class Signup extends React.Component {
       .then( () => this.props.history.push('/'));
   }
 
+  renderErrors() {
+    return (
+      <ul className='errors-list'>
+        {this.props.errors.map((error, i) => (
+          <li key={i}>{error}</li>
+        ))}
+      </ul>
+    );
+  }
+
   render () {
     return (
       <div className='outer-signup-div'>
@@ -62,6 +72,8 @@ class Signup extends React.Component {
                 onChange={this.handleInput('band_name')}
                 />
             </label>
+
+            {this.renderErrors()}
 
             <button
               className='login-button'

@@ -7,7 +7,7 @@
 }
 
 .logo {
-  background: transparent url(../../img/bandcamp-logo-color-bcaqua.svg) no-repeat
+
 }
 
 .outer-login-div {
@@ -82,7 +82,7 @@
   border-radius: 0px;
 }
 
-.error-list {
-  margin: 0 auto; 
+.errors-list {
+  margin: 0 auto;
   color: red;
 }

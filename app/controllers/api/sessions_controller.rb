@@ -7,7 +7,6 @@ class Api::SessionsController < ApplicationController
 
     if @band
       login(@band)
-      # TODO figure out where a login should redirect
       render "api/bands/show"
     else
       render json: ["Incorrect password. Please try again."], status: 401
