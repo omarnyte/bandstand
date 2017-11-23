@@ -55,10 +55,14 @@
 
 .signup-form > input {
   width: 300px;
-  margin: 0 auto;
   padding: 7px;
-
+  margin: 0 auto;
+  border: 1px solid #ccc;
   background-color: white;
+}
+
+.signup-form > input:focus {
+  border: 1px solid #50a1e6;
 }
 
 .signup-button {
@@ -74,51 +78,17 @@
   border-radius: 0px;
 }
 
-
-/*.outer-signup-div {
-  background-color: #DDDDDD;
-
-  height: 1000px;
-  display: flex;
-  justify-content: center;
-
-  font-size: 16px;
+.has-account {
+  font-size: 12px;
+  color: #818285;
 }
 
-.signup-div {
-  border: 1px solid blue;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/*duplicate in login.css*/
+.inline-link {
+  color: rgb(0,161,198);
 }
 
-.signup-header {
-  margin: 0 auto;
-  margin-top: auto;
+/*duplicate in login.css*/
+.errors-item {
+  color: red;
 }
-
-.login-form {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.login-form > label > input {
-  border: 1px solid gray;
-
-  width: 340;
-}
-
-.signup-button {
-  width: 340px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-top: 30px;
-
-  color: #fff;
-  background-color: rgb(0,161,198);
-  text-align: center;
-
-  border-radius: 0px;
-}*/

@@ -54,16 +54,18 @@
   align-items: center;
 }
 
-
 .login-form > input {
   width: 300px;
-  margin: 0 auto;
   padding: 7px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
 
   background-color: white;
 }
 
-
+.login-form > input:focus {
+  border: 1px solid #50a1e6;
+}
 
 .login-button {
   width: 300px;
@@ -83,6 +85,12 @@
   color: #818285;
 }
 
+/*duplicate in signup.css*/
 .inline-link {
   color: rgb(0,161,198);
+}
+
+/*duplicate in signup.css*/
+.errors-item {
+  color: red;
 }
