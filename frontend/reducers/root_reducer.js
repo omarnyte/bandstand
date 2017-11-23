@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 
-import BandsReducer from './bands_reducer';
-import SessionReducer from './session_reducer';
+import bandsReducer from './bands_reducer';
+import sessionReducer from './session_reducer';
+import errorsReducer from './session_errors_reducer';
 
 export default combineReducers({
-  bands: BandsReducer,
-  session: SessionReducer
+  bands: bandsReducer,
+  session: sessionReducer,
+  errors: errorsReducer
 });
