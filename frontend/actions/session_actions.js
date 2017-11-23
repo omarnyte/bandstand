@@ -1,7 +1,7 @@
 import * as SessionAPIUtil from '../utils/session_api_util';
 
 export const RECEIVE_CURRENT_BAND = 'RECEIVE_CURRENT_BAND';
-// TODO RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS'
+export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 
 // thunk action creators
 export const login = (bandCredentials) => dispatch => (
@@ -21,4 +21,9 @@ export const signup = (band) => dispatch => (
 const receiveCurrentBand = (currentBand) => ({
   type: RECEIVE_CURRENT_BAND,
   currentBand
+});
+
+const receiveErrors = (errors) => ({
+  type: RECEIVE_SESSION_ERRORS,
+  errors
 });

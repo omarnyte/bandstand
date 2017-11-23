@@ -15,29 +15,29 @@ Band.create(
   )
 
 Band.create(
-  username: 'username1',
+  username: 'perljam',
   password: 'password',
-  email: 'email1@email.com',
-  band_name: 'band1'
+  email: 'perljam@email.com',
+  band_name: 'Perl Jam'
   )
 
 Band.create(
-  username: 'username2',
+  username: 'foobarfighters',
   password: 'password',
-  email: 'email2@email.com',
-  band_name: 'band2'
+  email: 'foobarfighters@email.com',
+  band_name: 'Foo Bar Fighters'
   )
 
 Band.create(
-  username: 'username3',
+  username: 'ajaxonfive',
   password: 'password',
-  email: 'email3@email.com',
-  band_name: 'band3'
+  email: 'ajaxonfive@email.com',
+  band_name: 'Ajaxon Five'
   )
 
 Band.create(
-  username: 'username4',
+  username: 'dc4qt',
   password: 'password',
-  email: 'email4@email.com',
-  band_name: 'band4'
+  email: 'dc4qt@email.com',
+  band_name: 'Death Cab for Queuetie'
 )

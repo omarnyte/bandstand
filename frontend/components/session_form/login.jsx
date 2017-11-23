@@ -32,11 +32,22 @@ class LogIn extends React.Component {
       .then( () => this.props.history.push('/'));
   }
 
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map(error => (
+          <li>{error}</li>
+        ))}
+      </ul>
+    );
+  }
+
   render () {
     return (
       <div className='outer-login-div'>
         <div className='login-div'>
           <h2 className='login-header'>Log In</h2>
+          {this.renderErrors()}
           <div className='dividor'></div>
           <form className='login-form'>
 
@@ -47,7 +58,7 @@ class LogIn extends React.Component {
                 value={this.state.username}
                 onChange={this.handleInput('username')}
                 />
-            </label> 
+            </label>
 
             <label>Password
               <input
