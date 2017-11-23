@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // will only be rendered if a user is logged in
-const Navbar = ({ currentBand, logout }) => {
+const Navbar = ({ currentBand, logout, path }) => {
   const display = currentBand ? (
     <div className='right-nav'>
       <input
@@ -25,6 +25,12 @@ const Navbar = ({ currentBand, logout }) => {
       </ul>
     </div>
   );
+
+
+  if (path === 'login' || path === 'signup') {
+    return <div></div>; 
+  }
+
   return (
     <nav className='navbar'>
       <div className='left-nav'>

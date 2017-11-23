@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom'; 
+import { withRouter } from 'react-router-dom';
 
-import Navbar from './navbar';
+import SplashPage from '.splash_page';
 import { login, logout, signup} from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => ({
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(Navbar));
+)(SplashPage));
