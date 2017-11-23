@@ -1,0 +1,24 @@
+.signup-div {
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: row;
+}
+
+.login-form > label > input {
+  border: 1px solid gray;
+
+  width: 340;
+}
+
+.signup-button {
+  width: 340px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 30px;
+
+  color: #fff;
+  background-color: rgb(0,161,198);
+  text-align: center;
+
+  border-radius: 0px;
+}

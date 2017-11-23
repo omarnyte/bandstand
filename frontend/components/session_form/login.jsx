@@ -8,6 +8,7 @@ class LogIn extends React.Component {
       password: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmitDemo = this.handleSubmitDemo.bind(this);
   }
 
   handleInput(type) {
@@ -23,33 +24,47 @@ class LogIn extends React.Component {
       .then( () => this.props.history.push('/'));
   }
 
+  handleSubmitDemo(e) {
+    e.preventDefault();
+    // redirects new user to landing page
+    const demo = {username: 'lanadellrey', password: 'password'};
+    this.props.signup(demo)
+      .then( () => this.props.history.push('/'));
+  }
+
   render () {
     return (
-      <div className='login-div'>
-        <h2 className='login-header'>Log In</h2>
-        <form className='login-form'>
+      <div className='outer-login-div'>
+        <div className='login-div'>
+          <h2 className='login-header'>Log In</h2>
+          <div className='dividor'></div>
+          <form className='login-form'>
 
-          <label>Username
-            <input
-              className='username-input'
-              type='text'
-              value={this.state.username}
-              onChange={this.handleInput('username')}
-              />
-          </label>
+            <label>Username
+              <input
+                className='username-input'
+                type='text'
+                value={this.state.username}
+                onChange={this.handleInput('username')}
+                />
+            </label> 
 
-          <label>Password
-            <input
-              type='password'
-              value ={this.state.password}
-              onChange={this.handleInput('password')}
-              />
-          </label>
+            <label>Password
+              <input
+                type='password'
+                value ={this.state.password}
+                onChange={this.handleInput('password')}
+                />
+            </label>
 
-          <button
-            className='login-button'
-            onClick={this.handleSubmit}> Log In</button>
-        </form>
+            <button
+              className='login-button'
+              onClick={this.handleSubmit}> Log In</button>
+            <button
+              className='login-button'
+              onClick={this.handleSubmitDemo}> Demo Log In</button>
+          </form>
+        </div>
       </div>
     );
   }

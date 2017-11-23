@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 const Navbar = ({ currentBand, logout }) => {
   const display = currentBand ? (
     <div className='right-nav'>
+      <input
+        className='temp-search-bar'
+        type='text'
+        placeholder='Search for artist, track, or album'/>
       <p>Hello, {currentBand.band_name}</p>
       <button onClick={logout}>log out</button>
     </div>
@@ -27,9 +31,7 @@ const Navbar = ({ currentBand, logout }) => {
         <img className='logo' src="http://www.drunkenwerewolf.com/wp-content/uploads/2017/04/Bandcamp.png"/>
         <h2 className='slogan'>Discover amazing new music and directly support the artits who make it</h2>
       </div>
-      <div>
-        {display}
-      </div>
+      {display}
     </nav>
   );
 };
