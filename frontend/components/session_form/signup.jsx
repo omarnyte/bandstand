@@ -37,46 +37,48 @@ class Signup extends React.Component {
 
   render () {
     return (
-      <div className='outer-signup-div'>
-        <div className='signup-div'>
-          <h2 className='signup-header'>Sign Up for a Bandcamp account</h2>
-          <form className='login-form'>
-            <label>Email address
+      <div className='signup-component'>
+        <header className='signup-navbar'>
+          <img src='https://www.seeklogo.net/wp-content/uploads/2017/02/bandcamp-logo.png'/>
+        </header>
+
+        <div className='signup-container'>
+          <h2 className='signup-header'>Sign Up for a bandstand account</h2>
+          <div className='dividor'></div>
+          <br />
+          <form className='signup-form'>
+            <p>Email address</p>
               <input
                 type='text'
                 value={this.state.email}
                 onChange={this.handleInput('email')}
                 />
-            </label>
 
-            <label>Password
+              <p>Password</p>
               <input
                 type='password'
                 value ={this.state.password}
                 onChange={this.handleInput('password')}
                 />
-            </label>
 
-            <label>Username
+              <p>Username</p>
               <input
                 type='text'
                 value={this.state.username}
                 onChange={this.handleInput('username')}
                 />
-            </label>
 
-            <label>Band Name
+              <p>Band Name</p>
               <input
                 type='text'
                 value={this.state.band_name}
                 onChange={this.handleInput('band_name')}
                 />
-            </label>
 
             {this.renderErrors()}
 
             <button
-              className='login-button'
+              className='signup-button'
               onClick={this.handleSubmit}> Sign Up</button>
           </form>
         </div>
