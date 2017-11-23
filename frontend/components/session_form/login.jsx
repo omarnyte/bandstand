@@ -25,10 +25,6 @@ class LogIn extends React.Component {
 
   render () {
     return (
-      <div>
-        
-      </div>
-
       <div className='login-div'>
         <h2 className='login-header'>Log In</h2>
         <form className='login-form'>
