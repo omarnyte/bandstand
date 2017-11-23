@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class LogIn extends React.Component {
   constructor(props) {
@@ -46,7 +47,7 @@ class LogIn extends React.Component {
     return (
       <div className='login-component'>
         <header className='login-navbar'>
-
+          <img src='https://www.seeklogo.net/wp-content/uploads/2017/02/bandcamp-logo.png'/>
         </header>
 
         <div className='login-container'>
@@ -54,22 +55,21 @@ class LogIn extends React.Component {
           <div className='dividor'></div>
           <br />
           <form className='login-form'>
-            <label>Username
-              <input
-                className='username-input'
-                type='text'
-                value={this.state.username}
-                onChange={this.handleInput('username')}
-                />
-            </label>
+            <p>Username</p>
+            <input
+              className='username-input'
+              type='text'
+              value={this.state.username}
+              onChange={this.handleInput('username')}
+            />
 
-            <label>Password
-              <input
-                type='password'
-                value ={this.state.password}
-                onChange={this.handleInput('password')}
-                />
-            </label>
+            <p>Password</p>
+            <input
+              type='password'
+              value ={this.state.password}
+              onChange={this.handleInput('password')}
+            />
+
             {this.renderErrors()}
 
             <button
@@ -79,8 +79,13 @@ class LogIn extends React.Component {
             <button
               className='login-button'
               onClick={this.handleSubmitDemo}> Demo Log In</button>
-
-            <p>Don’t have an account? Sign up</p>
+            <br />
+            <p className='no-account'>
+              Don’t have an account?
+                <Link to='/signup'>
+                  <strong className='inline-link'> Sign up </strong>
+              </Link>now.
+            </p>
           </form>
         </div>
       </div>
