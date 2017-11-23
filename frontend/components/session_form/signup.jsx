@@ -12,6 +12,9 @@ class Signup extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+  componentWillMount() {
+    this.props.clearErrors();
+  }
 
   handleInput(type) {
     return (e) => {
@@ -85,7 +88,7 @@ class Signup extends React.Component {
             <p className='has-account'>
               Already have an account?
                 <Link to='/login'>
-                  <strong className='inline-link'> Sign up.</strong>
+                  <strong className='inline-link'> Log in.</strong>
               </Link>
             </p>
           </form>
