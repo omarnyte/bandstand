@@ -5,8 +5,11 @@ export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 
 // thunk action creators
 export const login = (bandCredentials) => dispatch => (
-  SessionAPIUtil.login(bandCredentials).then(bandResp => dispatch(receiveCurrentBand(bandResp)))
-);
+  SessionAPIUtil.login(bandCredentials).then(
+    bandResp => (dispatch(receiveCurrentBand(bandResp))),
+    (errors) => dispatch(receiveErrors(errors.responseJSON))
+  )
+); 
 
 export const logout = () => dispatch => (
   SessionAPIUtil.logout().then(bandResp => dispatch(receiveCurrentBand(null)))

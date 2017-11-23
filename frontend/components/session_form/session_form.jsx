@@ -6,7 +6,9 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      email: '',
+      band_name: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -29,22 +31,33 @@ class SessionForm extends React.Component {
     this.props.processForm(band);
   }
 
+  demoLoginButton () {
+    if (this.props.formType === 'login') {
+      return <input
+        className='session-submit-button'
+        type='submit'
+        value='Demo Log In' />;
+    }
+  }
+
   navLink() {
   if (this.props.formType === 'login') {
     return <Link to="/signup">sign up instead</Link>;
   } else {
     return <Link to="/login">log in instead</Link>;
   }
+
+
 }
 
   render() {
       return (
-        <div>
+        <div className='session-form-div'>
           <form onSubmit={this.handleSubmit}>
             Welcome to bandstand!
             <br/>
             Please {this.props.formType} or {this.navLink()}
-            <div >
+            <div className='session-inputs-div'>
               <br/>
               <label>Username:
                 <input type="text"
@@ -60,7 +73,12 @@ class SessionForm extends React.Component {
                 />
               </label>
               <br/>
-              <input type="submit" value="Submit" />
+              <input
+                className='session-submit-button'
+                type='submit'
+                value='Submit' />
+              <br/>
+              {this.demoLoginButton()}
             </div>
           </form>
         </div>

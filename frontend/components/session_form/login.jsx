@@ -45,6 +45,9 @@ class LogIn extends React.Component {
   render () {
     return (
       <div className='outer-login-div'>
+        <header className='login-header'>
+          <img className='logo' src="http://www.drunkenwerewolf.com/wp-content/uploads/2017/04/Bandcamp.png"/>
+        </header>
         <div className='login-div'>
           <h2 className='login-header'>Log In</h2>
           {this.renderErrors()}
