@@ -4,15 +4,15 @@ import { Route, Switch } from 'react-router-dom';
 import NavbarContainer from './navbar/navbar_container';
 import LogInContainer from './session_form/login_container';
 import SignupContainer from './session_form/signup_container';
-import { AuthRoute } from '../util/route_utils';
+import Footer from './footer/footer';
+import { AuthRoute } from '../utils/route_utils';
 
 const App = () => (
-  <div>
-    <h1>bandstand</h1>
-
-    <Route path='/' component={NavbarContainer} />
+  <div className='app-div'>
+    <NavbarContainer />
     <AuthRoute path="/login" component={LogInContainer} />
     <AuthRoute path="/signup" component={SignupContainer} />
+    <Footer />
   </div>
 );
 

@@ -26,10 +26,16 @@ class LogIn extends React.Component {
   render () {
     return (
       <div>
-        <h2>Log In</h2>
-        <form>
+        
+      </div>
+
+      <div className='login-div'>
+        <h2 className='login-header'>Log In</h2>
+        <form className='login-form'>
+
           <label>Username
             <input
+              className='username-input'
               type='text'
               value={this.state.username}
               onChange={this.handleInput('username')}
@@ -44,7 +50,9 @@ class LogIn extends React.Component {
               />
           </label>
 
-          <button onClick={this.handleSubmit}> Log In</button>
+          <button
+            className='login-button'
+            onClick={this.handleSubmit}> Log In</button>
         </form>
       </div>
     );

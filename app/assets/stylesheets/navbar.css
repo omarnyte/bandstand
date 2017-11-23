@@ -1,0 +1,16 @@
+.navbar {
+  background-color: blue;
+
+  height: 105px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.session-link {
+  margin: 5px;
+}
+
+.session-link:hover {
+  text-decoration: underline;
+}
