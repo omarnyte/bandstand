@@ -11,3 +11,18 @@ export const fetchAlbum = (albumId) => (
     url: `api/albums/${albumId}`
   })
 );
+
+export const createAlbum = (data) => (
+  $.ajax({
+      method: 'POST',
+      url: 'api/albums',
+      data
+  })
+);
+
+export const deleteAlbum = (albumId) => (
+  $.ajax({
+    method: 'DELETE',
+    url: `api/albums/id${albumId}`
+  })
+); 

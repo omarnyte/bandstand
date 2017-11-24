@@ -7,7 +7,7 @@ class Api::AlbumsController < ApplicationController
     if @album.save
       render :show
     else
-      render json: @post.errors.full_messages, status: 422
+      render json: @album.errors.full_messages, status: 422
     end
   end
 
@@ -26,12 +26,19 @@ class Api::AlbumsController < ApplicationController
     if @album.update(album_params)
       render :show
     else
-      render json: @post.errors.full_messages, status: 422
-    end 
+      render json: @album.errors.full_messages, status: 422
+    end
   end
 
   def destroy
-    # TODO ensure that bands can only destroy their own albums
+    @album = current_band.albums.find(params[:id])
+
+    if @album.destroy
+      # TODO fiigure out what to render
+      render :show
+    else
+      rennder json @album.errors.full_messages, status: 422
+    end
   end
 
   private

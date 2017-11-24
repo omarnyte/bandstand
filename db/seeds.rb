@@ -46,7 +46,22 @@ band6 = Band.create(
   username: 'nodeout',
   password: 'password',
   email: 'nodeout@email.com',
+  band_name: 'Node Out'
 
+)
+
+band7 = Band.create(
+  username: 'link182',
+  password: 'password',
+  email: 'link182@email.com',
+  band_name: 'Link 182'
+)
+
+band7 = Band.create(
+  username: 'maclemore',
+  password: 'password',
+  email: 'maclemore@email.com',
+  band_name: 'Maclemore'
 )
 
 
