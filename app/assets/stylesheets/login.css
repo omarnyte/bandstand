@@ -17,12 +17,13 @@
   align-items: center;
 }
 
-.login-navbar > img {
+
+.login-logo {
   position: relative;
   left: 200px;
 
   height: 175px;
-  width: 170px;
+  width: 175px;
 }
 
 .login-container {
@@ -47,7 +48,7 @@
 }
 
 .login-form {
-  height: 400px;
+  height: 500px;
 
   display: flex;
   flex-direction: column;

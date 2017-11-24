@@ -31,7 +31,7 @@ class Signup extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className='errors-list'>
         {this.props.errors.map((error, i) => (
           <li className='errors-item' key={i}>{error}</li>
         ))}
@@ -43,9 +43,12 @@ class Signup extends React.Component {
     return (
       <div className='signup-component'>
         <header className='signup-navbar'>
-          <img src='https://www.seeklogo.net/wp-content/uploads/2017/02/bandcamp-logo.png'/>
+          <Link to='/'>
+            <img
+              className='signup-logo'
+              src='https://www.seeklogo.net/wp-content/uploads/2017/02/bandcamp-logo.png'/>
+          </Link>
         </header>
-
         <div className='signup-container'>
           <h2 className='signup-header'>Sign Up for a bandstand account</h2>
           <div className='dividor'></div>

@@ -16,12 +16,12 @@
   align-items: center;
 }
 
-.signup-navbar > img {
+.signup-logo {
   position: relative;
   left: 200px;
 
   height: 175px;
-  width: 170px;
+  width: 175px;
 }
 
 .signup-container {
@@ -46,7 +46,7 @@
 }
 
 .signup-form {
-  height: 400px;
+  height: 500px;
 
   display: flex;
   flex-direction: column;
@@ -79,6 +79,8 @@
 }
 
 .has-account {
+  margin-bottom: 50px;
+
   font-size: 12px;
   color: #818285;
 }
@@ -90,5 +92,6 @@
 
 /*duplicate in login.css*/
 .errors-item {
+  text-align: center;
   color: red;
 }

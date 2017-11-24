@@ -51,7 +51,11 @@ class LogIn extends React.Component {
     return (
       <div className='login-component'>
         <header className='login-navbar'>
-          <img src='https://www.seeklogo.net/wp-content/uploads/2017/02/bandcamp-logo.png'/>
+          <Link to='/'>
+            <img
+              className='login-logo'
+              src='https://www.seeklogo.net/wp-content/uploads/2017/02/bandcamp-logo.png'/>
+          </Link>
         </header>
 
         <div className='login-container'>
