@@ -4,14 +4,21 @@ import { Route, Switch } from 'react-router-dom';
 import NavbarContainer from './navbar/navbar_container';
 import LogInContainer from './session_form/login_container';
 import SignupContainer from './session_form/signup_container';
+import AlbumPageContainer from './album_page/album_page_container';
 import Footer from './footer/footer';
 import { AuthRoute } from '../utils/route_utils';
 
 const App = () => (
   <div className='app-div'>
     <NavbarContainer />
-    <AuthRoute path="/login" component={LogInContainer} />
-    <AuthRoute path="/signup" component={SignupContainer} />
+
+    <Switch>
+      <AuthRoute path='/login' component={LogInContainer} />
+      <AuthRoute path='signup' component={SignupContainer} />
+
+      <Route path='/albums/:albumId' component={AlbumPageContainer}/> 
+    </Switch>
+
     <Footer />
   </div>
 );
