@@ -64,6 +64,13 @@ band7 = Band.create(
   band_name: 'Maclemore'
 )
 
+band8 = Band.create(
+  username: 'link182',
+  password: 'password',
+  email: 'link182@email.com',
+  band_name: 'Link 182'
+)
+
 
 album1 = Album.create(
   band_id: band5.id,
