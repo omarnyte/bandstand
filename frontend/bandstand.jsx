@@ -7,7 +7,11 @@ import configureStore from './store/store';
 // begin test
 import { login, logout, signup } from './actions/session_actions';
 import { fetchBands, fetchBand } from './actions/band_actions';
-import { fetchAlbums, fetchAlbum } from './actions/album_actions';
+import {
+  fetchAlbums,
+  fetchAlbum,
+  createAlbum,
+  deleteAlbum } from './actions/album_actions';
 // end test
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -35,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.fetchAlbums = fetchAlbums;
   window.fetchAlbum = fetchAlbum;
-
+  window.createAlbum = createAlbum;
+  window.deleteAlbum = deleteAlbum;
   // end test
 });
