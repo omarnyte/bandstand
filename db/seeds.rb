@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# demo log in
+# BANDS
 band1 = Band.create(
   username: 'lanadellrey',
   password: 'password',
@@ -72,6 +72,7 @@ band8 = Band.create(
 )
 
 
+# ALBUMS
 album1 = Album.create(
   band_id: band5.id,
   name: 'Nodes and Keys',
