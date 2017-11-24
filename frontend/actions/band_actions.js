@@ -5,11 +5,13 @@ export const RECEIVE_BAND = 'RECEIVE_BANDS';
 
 // Thunk actions
 export const fetchBands = () => dispatch => (
-  BandAPIUtil.fetchBands().then(bandsResp => dispatch(receiveAllBands(bandsResp)))
+  BandAPIUtil.fetchBands()
+  .then(bandsResp => dispatch(receiveAllBands(bandsResp)))
 );
 
 export const fetchBand = (bandId) => dispatch => (
-  BandAPIUtil.fetchBand(bandId).then(bandResp => dispatch(receiveBand(bandResp)))
+  BandAPIUtil.fetchBand(bandId)
+  .then(bandResp => dispatch(receiveBand(bandResp)))
 );
 
 

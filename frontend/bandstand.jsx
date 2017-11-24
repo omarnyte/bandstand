@@ -5,8 +5,9 @@ import Root from './components/root';
 import configureStore from './store/store';
 
 // begin test
-import { fetchBands, fetchBand } from './actions/band_actions';
 import { login, logout, signup } from './actions/session_actions';
+import { fetchBands, fetchBand } from './actions/band_actions';
+import { fetchAlbums, fetchAlbum } from './actions/album_actions';
 // end test
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -24,12 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(<Root store={ store } />, root);
 
   // begin test
-  window.fetchBands = fetchBands;
-  window.fetchBand = fetchBand;
+  window.store = store;
   window.login = login;
   window.logout = logout;
+
   window.signup = signup;
-  window.store = store;
+  window.fetchBands = fetchBands;
+  window.fetchBand = fetchBand;
+
+  window.fetchAlbums = fetchAlbums;
+  window.fetchAlbum = fetchAlbum;
 
   // end test
 });

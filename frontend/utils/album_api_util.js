@@ -25,4 +25,4 @@ export const deleteAlbum = (albumId) => (
     method: 'DELETE',
     url: `api/albums/id${albumId}`
   })
-); 
+);
