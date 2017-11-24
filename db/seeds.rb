@@ -7,37 +7,57 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # demo log in
-Band.create(
+band1 = Band.create(
   username: 'lanadellrey',
   password: 'password',
   email: 'lanadellrey@email.com',
   band_name: 'Lana Dell Rey'
   )
 
-Band.create(
+band2 = Band.create(
   username: 'perljam',
   password: 'password',
   email: 'perljam@email.com',
   band_name: 'Perl Jam'
   )
 
-Band.create(
+band3 = Band.create(
   username: 'foobarfighters',
   password: 'password',
   email: 'foobarfighters@email.com',
   band_name: 'Foo Bar Fighters'
   )
 
-Band.create(
+band4 = Band.create(
   username: 'ajaxonfive',
   password: 'password',
   email: 'ajaxonfive@email.com',
   band_name: 'Ajaxon Five'
   )
 
-Band.create(
+band5 = Band.create(
   username: 'dc4qt',
   password: 'password',
   email: 'dc4qt@email.com',
   band_name: 'Death Cab for Queuetie'
+)
+
+band6 = Band.create(
+  username: 'nodeout',
+  password: 'password',
+  email: 'nodeout@email.com',
+
+)
+
+
+album1 = Album.create(
+  band_id: band5.id,
+  name: 'Nodes and Keys',
+  description: 'lorem ipsum'
+)
+
+album2 = Album.create(
+  band_id: band6.id,
+  name: 'Push and Pop',
+  description: 'lorem'
 )
