@@ -5,6 +5,8 @@ class AlbumPage extends React.Component {
     super(props);
   }
 
+  // page via the url
+  // ensures that a fetch attempt occurs even if a user visits the album
   componentDidMount() {
     this.props.fetchAlbum(this.props.match.params.albumId);
   }
@@ -16,14 +18,16 @@ class AlbumPage extends React.Component {
   }
 
   render() {
-    const { currentAlbum } = this.props
+    const { currentAlbum } = this.props;
 
     if (!currentAlbum) {
       return <div> No album found! </div>;
     }
 
     return (
-      <h1>You're at {currentAlbum.id}</h1>
+      <div>
+        <h1>{currentAlbum.id}</h1>
+      </div>
     );
   }
 }
