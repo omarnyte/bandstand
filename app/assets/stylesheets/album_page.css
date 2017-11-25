@@ -1,0 +1,24 @@
+.album-component {
+  border: 1px solid green;
+  height: 2000px;
+  width: 975px;
+}
+
+.album-page-left {
+  border: 1px solid blue;
+}
+
+
+.album-page-mid {
+  border: 5px solid red;
+}
+
+.current-album-cover {
+  height: 700px;
+  width: 700px;
+}
+
+
+.album-page-right {
+  border: 5px solid: pink;
+}

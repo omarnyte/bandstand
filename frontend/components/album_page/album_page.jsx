@@ -25,8 +25,14 @@ class AlbumPage extends React.Component {
     }
 
     return (
-      <div>
-        <h1>{currentAlbum.id}</h1>
+      <div className='album-component'>
+        <div className='album-page-left'>
+          <h1 className='current-album-name'>{currentAlbum.name}</h1>
+          <h2 className='current-album-band-name'>{currentAlbum.band_name}</h2>
+        </div>
+        <img
+          className='current-album-cover'
+          src='https://images-na.ssl-images-amazon.com/images/I/61HYU2oNOsL._SX355_.jpg'/>
       </div>
     );
   }
