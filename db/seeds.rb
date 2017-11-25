@@ -97,3 +97,30 @@ album2 = Album.create(
   name: 'Push and Pop',
   description: 'lorem'
 )
+
+# SONGS
+song1 = Song.create(
+  album_id: album1.id,
+  title: 'song1',
+  track_index: 1
+)
+song2 = Song.create(
+  album_id: album1.id,
+  title: 'song2',
+  track_index: 2
+)
+song3 = Song.create(
+  album_id: album1.id,
+  title: 'song3',
+  track_index: 3
+)
+song4 = Song.create(
+  album_id: album1.id,
+  title: 'song4',
+  track_index: 4
+)
+song5 = Song.create(
+  album_id: album1.id,
+  title: 'song5',
+  track_index: 5
+)

@@ -2,23 +2,38 @@
   border: 1px solid green;
   height: 2000px;
   width: 975px;
+  margin: 0 auto;
+
+  display: flex;
 }
 
 .album-page-left {
   border: 1px solid blue;
+
+  width: 375px;
+}
+
+.album-and-band-name > h1 {
+  font-size: 23px;
+}
+
+.album-and-band-name > h2 {
+  font-size: 14px;
 }
 
 
 .album-page-mid {
-  border: 5px solid red;
+  border: 1px solid red;
 }
 
 .current-album-cover {
-  height: 700px;
-  width: 700px;
+  height: 350px;
+  width: 350px;
 }
 
 
 .album-page-right {
   border: 5px solid: pink;
+
+  width: 120px;
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SongPlayer from '../song_player/song_player';
+
 class AlbumPage extends React.Component {
   constructor(props) {
     super(props);
@@ -27,12 +29,25 @@ class AlbumPage extends React.Component {
     return (
       <div className='album-component'>
         <div className='album-page-left'>
-          <h1 className='current-album-name'>{currentAlbum.name}</h1>
-          <h2 className='current-album-band-name'>{currentAlbum.band_name}</h2>
+          <div className='album-and-band-name'>
+            <h1 className='current-album-name'>{currentAlbum.name}</h1>
+            <h2 className='current-album-band-name'>by {currentAlbum.band_name}</h2>
+          </div>
+          <SongPlayer />
+          
         </div>
-        <img
-          className='current-album-cover'
-          src='https://images-na.ssl-images-amazon.com/images/I/61HYU2oNOsL._SX355_.jpg'/>
+
+        <div className='album-page-mid'>
+          <img
+            className='current-album-cover'
+            src='https://images-na.ssl-images-amazon.com/images/I/61HYU2oNOsL._SX355_.jpg'/>
+
+        </div>
+
+        <div className='album-page-right'>
+          <h2>Sufjan Stevens[no link]</h2>
+          <h3>New York [no link]</h3>
+        </div>
       </div>
     );
   }

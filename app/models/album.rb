@@ -17,6 +17,7 @@ class Album < ApplicationRecord
     message: 'You already have an album with that name.'
   }
 
-  belongs_to :band 
+  belongs_to :band
+  has_many :songs 
 
 end
