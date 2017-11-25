@@ -11,7 +11,6 @@ const AlbumsReducer = (oldState = {}, action) => {
     case RECEIVE_ALL_ALBUMS:
       return merge({}, action.albumxs);
     case RECEIVE_ALBUM:
-      console.log(action.payload);
       const albumBundle = action.payload.album;
       albumBundle.song_ids = action.payload.songs.map(song => song.id);
 
