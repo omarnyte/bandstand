@@ -28,12 +28,12 @@ export const deleteAlbum = (albumId) => dispatch => (
 // sync actions
 const receiveAllAlbums = (albums) => ({
   type: RECEIVE_ALL_ALBUMS,
-  albums: albums 
+  albums: albums
 });
 
-const receiveAlbum = (album) => ({
+const receiveAlbum = (payload) => ({
   type: RECEIVE_ALBUM,
-  album
+  payload
 });
 
 const removeAlbum = (albumId) => ({

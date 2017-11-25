@@ -5,6 +5,7 @@
   margin: 0 auto;
 
   display: flex;
+  justify-content: space-around;
 }
 
 .album-page-left {
@@ -33,7 +34,20 @@
 
 
 .album-page-right {
-  border: 5px solid: pink;
+  border: 1px solid pink;
 
   width: 120px;
+}
+
+.band-bio-image {
+  width: 120px;
+  height: 133px;
+}
+
+.band-name-and-location > h2 {
+  font-size: 12px;
+  /*font-weight: 700px;*/
+}
+.band-name-and-location > h3 {
+  font-size: 12px;
 }

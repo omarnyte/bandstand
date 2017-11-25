@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import SongPlayer from '../song_player/song_player';
 
@@ -30,11 +31,11 @@ class AlbumPage extends React.Component {
       <div className='album-component'>
         <div className='album-page-left'>
           <div className='album-and-band-name'>
-            <h1 className='current-album-name'>{currentAlbum.name}</h1>
-            <h2 className='current-album-band-name'>by {currentAlbum.band_name}</h2>
+            <h1>{currentAlbum.name}</h1>
+            <h2>by {currentAlbum.band_name}</h2>
           </div>
           <SongPlayer />
-          
+
         </div>
 
         <div className='album-page-mid'>
@@ -45,8 +46,13 @@ class AlbumPage extends React.Component {
         </div>
 
         <div className='album-page-right'>
-          <h2>Sufjan Stevens[no link]</h2>
-          <h3>New York [no link]</h3>
+          <img
+            className='band-bio-image'
+            src='http://f4.bcbits.com/img/0010184835_10.jpg'/>
+          <div className='band-name-and-location'>
+            <h2>Sufjan Stevens[no link]</h2>
+            <h3>New York [no link]</h3>
+          </div>
         </div>
       </div>
     );
