@@ -71,6 +71,19 @@ band8 = Band.create(
   band_name: 'Link 182'
 )
 
+band9 = Band.create(
+  username: 'u2ube',
+  password: 'password',
+  email: 'u2ube@email.com',
+  band_name: 'U2ube'
+)
+band10 = Band.create(
+  username: 'async',
+  password: 'password',
+  email: 'nsync@email.com',
+  band_name: 'ASYNC'
+)
+
 
 # ALBUMS
 album1 = Album.create(

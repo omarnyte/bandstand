@@ -14,9 +14,9 @@ const App = () => (
 
     <Switch>
       <AuthRoute path='/login' component={LogInContainer} />
-      <AuthRoute path='signup' component={SignupContainer} />
+      <AuthRoute path='/signup' component={SignupContainer} />
 
-      <Route path='/albums/:albumId' component={AlbumPageContainer}/> 
+      <Route path='/albums/:albumId' component={AlbumPageContainer}/>
     </Switch>
 
     <Footer />

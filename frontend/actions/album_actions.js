@@ -18,7 +18,7 @@ export const fetchAlbum = (albumId) => dispatch => (
 export const createAlbum = (album) => dispatch => (
   BandAPIUtil.createAlbum(album)
     .then(albumResp => dispatch(receiveAlbum(albumResp)))
-); 
+);
 
 export const deleteAlbum = (albumId) => dispatch => (
   BandAPIUtil.deleteAlbum(albumId)
@@ -28,7 +28,7 @@ export const deleteAlbum = (albumId) => dispatch => (
 // sync actions
 const receiveAllAlbums = (albums) => ({
   type: RECEIVE_ALL_ALBUMS,
-  albums
+  albums: albums 
 });
 
 const receiveAlbum = (album) => ({
