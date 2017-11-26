@@ -3,18 +3,20 @@ import { withRouter } from 'react-router-dom';
 
 import { selectAlbum } from '../../reducers/selectors';
 import { fetchAlbum } from '../../actions/album_actions';
+import { fetchBand } from '../../actions/band_actions';
 import AlbumPage from './album_page';
 
 const mapStateToProps = (state, { match }) => {
   const albumId = parseInt(match.params.albumId);
   const currentAlbum = selectAlbum(state.entities, albumId);
   return {
-    currentAlbum
+    currentAlbum,
   };
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchAlbum: (albumId) => dispatch(fetchAlbum(albumId))
+  fetchAlbum: (albumId) => dispatch(fetchAlbum(albumId)),
+  fetchBand: (bandId) => dispatch(fetchBand(bandId))
 });
 export default withRouter(connect(
   mapStateToProps,

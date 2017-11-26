@@ -8,13 +8,16 @@ class AlbumPage extends React.Component {
     super(props);
   }
 
-  // page via the url
   // ensures that a fetch attempt occurs even if a user visits the album
+  // page via the url
   componentDidMount() {
     this.props.fetchAlbum(this.props.match.params.albumId);
   }
 
   componentWillReceiveProps(nextProps) {
+    // if (this.props.match.params.albumId !== nextProps.match.params.albumID) {
+    //   this.props.fetchAlbum(this.props.match.params.albumId);
+    // }
     if (!nextProps.currentAlbum) {
       this.props.fetchAlbum(this.props.match.params.albumId);
     }
@@ -23,16 +26,17 @@ class AlbumPage extends React.Component {
   render() {
     const { currentAlbum } = this.props;
 
-    if (!currentAlbum) {
-      return <div> No album found! </div>;
-    }
+    // if (!currentAlbum) {
+    //   return <div> No album found! </div>;
+    // }
+
+    if (!currentAlbum) return null;
 
     return (
       <div className='album-component'>
         <div className='album-page-left'>
           <div className='album-and-band-name'>
             <h1>{currentAlbum.name}</h1>
-            <h2>by {currentAlbum.band_name}</h2>
           </div>
           <SongPlayer />
 
