@@ -6,84 +6,93 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# USERS
+user1 = User.create(
+  username: 'username1',
+  password: 'password',
+  email: 'email1@email.com'
+)
+
+user2 = User.create(
+  username: 'username2',
+  password: 'password',
+  email: 'email2@email.com'
+)
+
+user3 = User.create(
+  username: 'username3',
+  password: 'password',
+  email: 'email3@email.com'
+)
+
 # BANDS
 band1 = Band.create(
-  username: 'lanadellrey',
-  password: 'password',
-  email: 'lanadellrey@email.com',
-  band_name: 'Lana Dell Rey'
-  )
+  band_name: 'Lana Dell Rey',
+  location: 'New York, NY',
+  mini_bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel malesuada nulla, a ultrices enim. Vivamus velit nisi, imperdiet vitae vehicula et, mollis vel dolor. Fusce vitae massa mauris.',
+  image_location: 'https://upload.wikimedia.org/wikipedia/en/1/14/Coachella_-_Woodstock_In_My_Mind_-_Lana_Del_Rey.jpg'
+)
 
 band2 = Band.create(
-  username: 'perljam',
-  password: 'password',
-  email: 'perljam@email.com',
-  band_name: 'Perl Jam'
-  )
+  band_name: 'Perl Jam',
+  location: 'Seattle, Washington',
+  image_location: 'https://upload.wikimedia.org/wikipedia/commons/9/9f/Pearl_Jam_at_O2_World_Berlin.jpg'
+)
 
 band3 = Band.create(
-  username: 'foobarfighters',
-  password: 'password',
-  email: 'foobarfighters@email.com',
-  band_name: 'Foo Bar Fighters'
-  )
+  band_name: 'Foo Bar Fighters',
+  location: 'Seattle, Washington',
+  mini_bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel malesuada nulla, a ultrices enim. Vivamus velit nisi, imperdiet vitae vehicula et, mollis vel dolor. Fusce vitae massa mauris.',
+  image_location: 'https://upload.wikimedia.org/wikipedia/commons/4/48/Foofighters-band2009.jpg'
+)
 
 band4 = Band.create(
-  username: 'ajaxonfive',
-  password: 'password',
-  email: 'ajaxonfive@email.com',
-  band_name: 'Ajaxon Five'
+  band_name: 'Ajaxon Five',
+  location: 'Gary, Indiana',
+  mini_bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel malesuada nulla, a ultrices enim. Vivamus velit nisi, imperdiet vitae vehicula et, mollis vel dolor. Fusce vitae massa mauris.',
+  image_location: 'https://c1.staticflickr.com/3/2471/4031639468_d83eda78e0_b.jpg'
   )
 
 band5 = Band.create(
-  username: 'dc4qt',
-  password: 'password',
-  email: 'dc4qt@email.com',
-  band_name: 'Death Cab for Queuetie'
+  band_name: 'Death Cab for Queuetie',
+  location: 'Bellingham, Washington',
+  mini_bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel malesuada nulla, a ultrices enim. Vivamus velit nisi, imperdiet vitae vehicula et, mollis vel dolor. Fusce vitae massa mauris.',
+  image_location: 'https://upload.wikimedia.org/wikipedia/commons/d/db/Death_cab_for_cutie_münchen_21.11.2008._6_%28B%26W%29.jpg'
 )
 
 band6 = Band.create(
-  username: 'nodeout',
-  password: 'password',
-  email: 'nodeout@email.com',
-  band_name: 'Node Out'
-
+  band_name: 'Node Out',
+  location: 'Anaheim, California',
+  mini_bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel malesuada nulla, a ultrices enim. Vivamus velit nisi, imperdiet vitae vehicula et, mollis vel dolor. Fusce vitae massa mauris.',
+  image_location: 'https://upload.wikimedia.org/wikipedia/commons/5/5d/No_Doubt_at_Summer_Tour_7.jpg'
 )
 
 band7 = Band.create(
-  username: 'link182',
-  password: 'password',
-  email: 'link182@email.com',
-  band_name: 'Link 182'
+  band_name: 'Link 182',
+  location: 'Poway, California',
+  mini_bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel malesuada nulla, a ultrices enim. Vivamus velit nisi, imperdiet vitae vehicula et, mollis vel dolor. Fusce vitae massa mauris.',
+  image_location: 'https://upload.wikimedia.org/wikipedia/commons/9/90/Blink182.jpg'
 )
 
 band7 = Band.create(
-  username: 'maclemore',
-  password: 'password',
-  email: 'maclemore@email.com',
-  band_name: 'Maclemore'
-)
-
-band8 = Band.create(
-  username: 'link182',
-  password: 'password',
-  email: 'link182@email.com',
-  band_name: 'Link 182'
+  band_name: 'Maclemore',
+  location: 'Seattle, Washington',
+  mini_bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel malesuada nulla, a ultrices enim. Vivamus velit nisi, imperdiet vitae vehicula et, mollis vel dolor. Fusce vitae massa mauris.',
+  image_location: 'https://upload.wikimedia.org/wikipedia/commons/3/36/Macklemore_Ryan_Lewis_Live_2016_%284_von_20%29.jpg'
 )
 
 band9 = Band.create(
-  username: 'u2ube',
-  password: 'password',
-  email: 'u2ube@email.com',
-  band_name: 'U2ube'
+  band_name: 'U2ube',
+  location: 'Dublin, Ireland',
+  mini_bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel malesuada nulla, a ultrices enim. Vivamus velit nisi, imperdiet vitae vehicula et, mollis vel dolor. Fusce vitae massa mauris.',
+  image_location: 'https://upload.wikimedia.org/wikipedia/commons/a/ac/U2_360-UTEOTW-Toronto.JPG'
 )
 band10 = Band.create(
-  username: 'async',
-  password: 'password',
-  email: 'nsync@email.com',
-  band_name: 'ASYNC'
+  band_name: 'ASYNC',
+  location: 'Orlando, Florida',
+  mini_bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel malesuada nulla, a ultrices enim. Vivamus velit nisi, imperdiet vitae vehicula et, mollis vel dolor. Fusce vitae massa mauris.',
+  location: 'http://3.bp.blogspot.com/-3iyDsJqXzeQ/UUx52FxLFiI/AAAAAAAANZQ/mwdTFG82eLU/s1600/nsync+1998+justin+timberlake+jc+chasez+joey+fatone+lance+bass+chris+kirkpatrick.jpg'
 )
-
 
 # ALBUMS
 album1 = Album.create(

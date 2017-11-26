@@ -12,7 +12,7 @@ class Api::BandsController < ApplicationController
 
   def show
     @band = Band.find(params[:id])
-    # TODO handle errors 
+    # TODO handle errors
     render 'api/bands/show'
   end
 
@@ -23,7 +23,7 @@ class Api::BandsController < ApplicationController
 
   private
   def band_params
-    params.require(:band).permit(:username, :password, :email, :band_name)
+    params.require(:band).permit(:band_name, :location, :mini_bio, :image_location)
   end
 
 end
