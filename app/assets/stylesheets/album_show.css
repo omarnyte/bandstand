@@ -22,6 +22,10 @@
   font-size: 14px;
 }
 
+.album-description {
+  font-size: 11px; 
+}
+
 
 .album-page-mid {
   border: 1px solid red;
@@ -38,16 +42,3 @@
 
   width: 120px;
 }
-
-/*.band-bio-image {
-  width: 120px;
-  height: 133px;
-}
-
-.band-name-and-location > h2 {
-  font-size: 12px;
-
-}
-.band-name-and-location > h3 {
-  font-size: 12px;
-}*/

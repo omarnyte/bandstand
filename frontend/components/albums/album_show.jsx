@@ -27,7 +27,6 @@ class AlbumShow extends React.Component {
 
   render() {
     const { currentAlbum, currentBand } = this.props;
-
     // if (!currentAlbum) {
     //   return <div> No album found! </div>;
     // }
@@ -39,8 +38,12 @@ class AlbumShow extends React.Component {
         <div className='album-page-left'>
           <div className='album-and-band-name'>
             <h1>{currentAlbum.name}</h1>
+            <h2>by {currentBand.band_name}</h2>
           </div>
-          <SongPlayer />
+          <SongPlayer album={currentAlbum}/>
+          <p className='album-description'>
+            {currentAlbum.description}
+          </p>
 
         </div>
 

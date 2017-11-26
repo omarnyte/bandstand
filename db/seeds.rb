@@ -98,35 +98,55 @@ band10 = Band.create(
 album1 = Album.create(
   band_id: band5.id,
   name: 'Nodes and Keys',
-  description: 'lorem ipsum',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio lorem, molestie ac maximus tincidunt, feugiat ac libero. Sed blandit mauris sed imperdiet tristique. Donec porttitor feugiat diam, ut interdum mauris. Proin ultricies nisl vitae erat sodales scelerisque. Aliquam tincidunt, sem ac hendrerit fringilla, mauris erat maximus quam, ut pharetra risus eros a magna. Quisque eu est quis ligula vulputate accumsan. Quisque in libero nisi. Aliquam ac mauris vel lorem hendrerit lacinia eget sit amet nisl. Proin sit amet risus nec urna bibendum convallis sit amet eget erat. Proin auctor lectus at leo ultrices, id consectetur ligula pellentesque. Sed id maximus magna. Donec lacinia eu tellus at lacinia. Ut non magna ipsum. Nulla vel dui ipsum.
+
+Ut suscipit, eros id porttitor pharetra, neque turpis mattis ligula, vitae venenatis sapien erat et mauris. Ut et venenatis enim, at fermentum tortor. Quisque molestie volutpat eros sed malesuada. Nulla non interdum velit. Aliquam vestibulum sit amet lectus at ultricies. Pellentesque tempor quam sit amet iaculis eleifend. Nulla in neque fermentum mauris blandit posuere. Proin et sem semper, volutpat mi vel, luctus massa. Fusce ullamcorper dapibus ex nec varius. Nulla quis viverra magna. Aenean non orci sem. Donec mattis maximus tortor id fermentum. Donec mollis maximus ultrices. Cras luctus lorem rutrum congue fermentum. Fusce tortor diam, scelerisque nec lorem in, rhoncus pharetra ante. Phasellus accumsan feugiat risus nec bibendum.
+
+',
   image_location: 'https://upload.wikimedia.org/wikipedia/en/5/5b/Codes_And_Keys_Death_Cab_For_Cutie.jpg'
 )
 
 album2 = Album.create(
   band_id: band5.id,
   name: 'Narrow Stairs',
-  description: 'lorem ipsum',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio lorem, molestie ac maximus tincidunt, feugiat ac libero. Sed blandit mauris sed imperdiet tristique. Donec porttitor feugiat diam, ut interdum mauris. Proin ultricies nisl vitae erat sodales scelerisque. Aliquam tincidunt, sem ac hendrerit fringilla, mauris erat maximus quam, ut pharetra risus eros a magna. Quisque eu est quis ligula vulputate accumsan. Quisque in libero nisi. Aliquam ac mauris vel lorem hendrerit lacinia eget sit amet nisl. Proin sit amet risus nec urna bibendum convallis sit amet eget erat. Proin auctor lectus at leo ultrices, id consectetur ligula pellentesque. Sed id maximus magna. Donec lacinia eu tellus at lacinia. Ut non magna ipsum. Nulla vel dui ipsum.
+
+Ut suscipit, eros id porttitor pharetra, neque turpis mattis ligula, vitae venenatis sapien erat et mauris. Ut et venenatis enim, at fermentum tortor. Quisque molestie volutpat eros sed malesuada. Nulla non interdum velit. Aliquam vestibulum sit amet lectus at ultricies. Pellentesque tempor quam sit amet iaculis eleifend. Nulla in neque fermentum mauris blandit posuere. Proin et sem semper, volutpat mi vel, luctus massa. Fusce ullamcorper dapibus ex nec varius. Nulla quis viverra magna. Aenean non orci sem. Donec mattis maximus tortor id fermentum. Donec mollis maximus ultrices. Cras luctus lorem rutrum congue fermentum. Fusce tortor diam, scelerisque nec lorem in, rhoncus pharetra ante. Phasellus accumsan feugiat risus nec bibendum.
+
+',
   image_location: 'https://en.wikipedia.org/wiki/Narrow_Stairs#/media/File:Narrow_stairs.jpg'
 )
 
 album3 = Album.create(
   band_id: band5.id,
   name: 'The Photo Album',
-  description: 'lorem ipsum',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio lorem, molestie ac maximus tincidunt, feugiat ac libero. Sed blandit mauris sed imperdiet tristique. Donec porttitor feugiat diam, ut interdum mauris. Proin ultricies nisl vitae erat sodales scelerisque. Aliquam tincidunt, sem ac hendrerit fringilla, mauris erat maximus quam, ut pharetra risus eros a magna. Quisque eu est quis ligula vulputate accumsan. Quisque in libero nisi. Aliquam ac mauris vel lorem hendrerit lacinia eget sit amet nisl. Proin sit amet risus nec urna bibendum convallis sit amet eget erat. Proin auctor lectus at leo ultrices, id consectetur ligula pellentesque. Sed id maximus magna. Donec lacinia eu tellus at lacinia. Ut non magna ipsum. Nulla vel dui ipsum.
+
+Ut suscipit, eros id porttitor pharetra, neque turpis mattis ligula, vitae venenatis sapien erat et mauris. Ut et venenatis enim, at fermentum tortor. Quisque molestie volutpat eros sed malesuada. Nulla non interdum velit. Aliquam vestibulum sit amet lectus at ultricies. Pellentesque tempor quam sit amet iaculis eleifend. Nulla in neque fermentum mauris blandit posuere. Proin et sem semper, volutpat mi vel, luctus massa. Fusce ullamcorper dapibus ex nec varius. Nulla quis viverra magna. Aenean non orci sem. Donec mattis maximus tortor id fermentum. Donec mollis maximus ultrices. Cras luctus lorem rutrum congue fermentum. Fusce tortor diam, scelerisque nec lorem in, rhoncus pharetra ante. Phasellus accumsan feugiat risus nec bibendum.
+
+',
   image_location: 'https://en.wikipedia.org/wiki/The_Photo_Album#/media/File:DeathCabPhotoAlbum.jpg'
 )
 
 album4 = Album.create(
   band_id: band5.id,
   name: "We Have the Facts and We're Voting Yes",
-  description: 'lorem ipsum',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio lorem, molestie ac maximus tincidunt, feugiat ac libero. Sed blandit mauris sed imperdiet tristique. Donec porttitor feugiat diam, ut interdum mauris. Proin ultricies nisl vitae erat sodales scelerisque. Aliquam tincidunt, sem ac hendrerit fringilla, mauris erat maximus quam, ut pharetra risus eros a magna. Quisque eu est quis ligula vulputate accumsan. Quisque in libero nisi. Aliquam ac mauris vel lorem hendrerit lacinia eget sit amet nisl. Proin sit amet risus nec urna bibendum convallis sit amet eget erat. Proin auctor lectus at leo ultrices, id consectetur ligula pellentesque. Sed id maximus magna. Donec lacinia eu tellus at lacinia. Ut non magna ipsum. Nulla vel dui ipsum.
+
+Ut suscipit, eros id porttitor pharetra, neque turpis mattis ligula, vitae venenatis sapien erat et mauris. Ut et venenatis enim, at fermentum tortor. Quisque molestie volutpat eros sed malesuada. Nulla non interdum velit. Aliquam vestibulum sit amet lectus at ultricies. Pellentesque tempor quam sit amet iaculis eleifend. Nulla in neque fermentum mauris blandit posuere. Proin et sem semper, volutpat mi vel, luctus massa. Fusce ullamcorper dapibus ex nec varius. Nulla quis viverra magna. Aenean non orci sem. Donec mattis maximus tortor id fermentum. Donec mollis maximus ultrices. Cras luctus lorem rutrum congue fermentum. Fusce tortor diam, scelerisque nec lorem in, rhoncus pharetra ante. Phasellus accumsan feugiat risus nec bibendum.
+
+',
   image_location: 'https://en.wikipedia.org/wiki/We_Have_the_Facts_and_We%27re_Voting_Yes'
 )
 
 album5 = Album.create(
   band_id: band6.id,
   name: 'Push and Pop',
-  description: 'lorem',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio lorem, molestie ac maximus tincidunt, feugiat ac libero. Sed blandit mauris sed imperdiet tristique. Donec porttitor feugiat diam, ut interdum mauris. Proin ultricies nisl vitae erat sodales scelerisque. Aliquam tincidunt, sem ac hendrerit fringilla, mauris erat maximus quam, ut pharetra risus eros a magna. Quisque eu est quis ligula vulputate accumsan. Quisque in libero nisi. Aliquam ac mauris vel lorem hendrerit lacinia eget sit amet nisl. Proin sit amet risus nec urna bibendum convallis sit amet eget erat. Proin auctor lectus at leo ultrices, id consectetur ligula pellentesque. Sed id maximus magna. Donec lacinia eu tellus at lacinia. Ut non magna ipsum. Nulla vel dui ipsum.
+
+Ut suscipit, eros id porttitor pharetra, neque turpis mattis ligula, vitae venenatis sapien erat et mauris. Ut et venenatis enim, at fermentum tortor. Quisque molestie volutpat eros sed malesuada. Nulla non interdum velit. Aliquam vestibulum sit amet lectus at ultricies. Pellentesque tempor quam sit amet iaculis eleifend. Nulla in neque fermentum mauris blandit posuere. Proin et sem semper, volutpat mi vel, luctus massa. Fusce ullamcorper dapibus ex nec varius. Nulla quis viverra magna. Aenean non orci sem. Donec mattis maximus tortor id fermentum. Donec mollis maximus ultrices. Cras luctus lorem rutrum congue fermentum. Fusce tortor diam, scelerisque nec lorem in, rhoncus pharetra ante. Phasellus accumsan feugiat risus nec bibendum.
+
+',
   image_location: 'https://upload.wikimedia.org/wikipedia/en/7/79/Push_and_Shove_-_No_Doubt_album_cover.jpg'
 )
 
