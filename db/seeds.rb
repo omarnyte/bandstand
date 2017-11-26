@@ -91,20 +91,22 @@ band10 = Band.create(
   band_name: 'ASYNC',
   location: 'Orlando, Florida',
   mini_bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel malesuada nulla, a ultrices enim. Vivamus velit nisi, imperdiet vitae vehicula et, mollis vel dolor. Fusce vitae massa mauris.',
-  location: 'http://3.bp.blogspot.com/-3iyDsJqXzeQ/UUx52FxLFiI/AAAAAAAANZQ/mwdTFG82eLU/s1600/nsync+1998+justin+timberlake+jc+chasez+joey+fatone+lance+bass+chris+kirkpatrick.jpg'
+  image_location: 'http://3.bp.blogspot.com/-3iyDsJqXzeQ/UUx52FxLFiI/AAAAAAAANZQ/mwdTFG82eLU/s1600/nsync+1998+justin+timberlake+jc+chasez+joey+fatone+lance+bass+chris+kirkpatrick.jpg'
 )
 
 # ALBUMS
 album1 = Album.create(
   band_id: band5.id,
   name: 'Nodes and Keys',
-  description: 'lorem ipsum'
+  description: 'lorem ipsum',
+  image_location: 'https://upload.wikimedia.org/wikipedia/en/5/5b/Codes_And_Keys_Death_Cab_For_Cutie.jpg'
 )
 
 album2 = Album.create(
   band_id: band6.id,
   name: 'Push and Pop',
-  description: 'lorem'
+  description: 'lorem',
+  image_location: 'https://upload.wikimedia.org/wikipedia/en/7/79/Push_and_Shove_-_No_Doubt_album_cover.jpg'
 )
 
 # SONGS

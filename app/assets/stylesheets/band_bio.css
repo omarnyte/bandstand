@@ -2,6 +2,24 @@
   border: 1px solid pink;
   background-color: pink;
 
-
   width: 120px;
+}
+
+.band-bio-image {
+  width: 120px;
+  height: 133px;
+}
+
+.band-name-and-location > h2 {
+  font-size: 12px;
+  font-weight: 700px;
+}
+.band-name-and-location > h3 {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;:
+}
+
+.mini-bio {
+  font-size: 12px; 
 }
