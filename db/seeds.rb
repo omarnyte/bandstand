@@ -103,6 +103,27 @@ album1 = Album.create(
 )
 
 album2 = Album.create(
+  band_id: band5.id,
+  name: 'Narrow Stairs',
+  description: 'lorem ipsum',
+  image_location: 'https://en.wikipedia.org/wiki/Narrow_Stairs#/media/File:Narrow_stairs.jpg'
+)
+
+album3 = Album.create(
+  band_id: band5.id,
+  name: 'The Photo Album',
+  description: 'lorem ipsum',
+  image_location: 'https://en.wikipedia.org/wiki/The_Photo_Album#/media/File:DeathCabPhotoAlbum.jpg'
+)
+
+album4 = Album.create(
+  band_id: band5.id,
+  name: "We Have the Facts and We're Voting Yes",
+  description: 'lorem ipsum',
+  image_location: 'https://en.wikipedia.org/wiki/We_Have_the_Facts_and_We%27re_Voting_Yes'
+)
+
+album5 = Album.create(
   band_id: band6.id,
   name: 'Push and Pop',
   description: 'lorem',

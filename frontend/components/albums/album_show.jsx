@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+
 
 import SongPlayer from '../song_player/song_player';
+import BandBio from '../bands/band_bio';
 
-class AlbumPage extends React.Component {
+class AlbumShow extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -24,7 +26,7 @@ class AlbumPage extends React.Component {
   }
 
   render() {
-    const { currentAlbum } = this.props;
+    const { currentAlbum, currentBand } = this.props;
 
     // if (!currentAlbum) {
     //   return <div> No album found! </div>;
@@ -45,22 +47,16 @@ class AlbumPage extends React.Component {
         <div className='album-page-mid'>
           <img
             className='current-album-cover'
-            src='https://images-na.ssl-images-amazon.com/images/I/61HYU2oNOsL._SX355_.jpg'/>
+            src={currentAlbum.image_location}/>
 
         </div>
 
         <div className='album-page-right'>
-          <img
-            className='band-bio-image'
-            src='http://f4.bcbits.com/img/0010184835_10.jpg'/>
-          <div className='band-name-and-location'>
-            <h2>Sufjan Stevens[no link]</h2>
-            <h3>New York [no link]</h3>
-          </div>
+          <BandBio band={currentBand} />
         </div>
       </div>
     );
   }
 }
 
-export default AlbumPage;
+export default withRouter(AlbumShow);

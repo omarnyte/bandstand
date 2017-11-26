@@ -3,10 +3,22 @@
   background-color: gray;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+}
+
+.band-name-header {
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+  font-size: 35px;
+  font-family: 'Bowlby One SC';
 }
 
 .album-index-and-band-bio {
+  border: 1px solid black;
+
   width: 975px;
   display: flex;
   justify-content: space-around;
