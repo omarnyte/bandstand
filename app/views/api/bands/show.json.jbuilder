@@ -1,5 +1,7 @@
-# Returns a single object with :id, :username, :email, and :band_name
-json.extract! @band, :id, :band_name, :location, :mini_bio, :image_location
+json.band do
+  json.partial! 'api/bands/band', band: @band
+end
 
- # TODO: DRY out with partial
- # TODO: replicate index structure (key of id : value of object)
+json.albums do
+  json.array! @band.albums, partial: 'api/albums/album', as: :album
+end

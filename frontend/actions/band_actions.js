@@ -21,7 +21,7 @@ const receiveAllBands = (bands) => ({
   bands
 });
 
-const receiveBand = (band) => ({
+const receiveBand = (payload) => ({
   type: RECEIVE_BAND,
-  band
+  payload
 });

@@ -10,7 +10,11 @@ const BandsReducer = (oldState = {}, action) => {
     case RECEIVE_ALL_BANDS:
       return merge({}, action.bands);
     case RECEIVE_BAND:
-      return merge({}, oldState, {[action.band.id]: action.band});
+      // adds and array of album indeces under the received band's 
+      // slice of state
+      const bandBundle = action.payload.band;
+      bandBundle.song_ids = action.payload.albums.map(album => album.id);
+      return merge({}, oldState, {[bandBundle.id]: bandBundle});
     case RECEIVE_ALBUM:
       return merge({}, oldState, {[action.payload.band.id]: action.payload.band});
     default:
