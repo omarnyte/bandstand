@@ -8,13 +8,12 @@
     <%= javascript_include_tag 'application' %>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
-    <% if current_band %>
+    <% if current_user %>
       <script>
-        window.currentBand= {
-          'id': <%= current_band.id %>,
-          'username': '<%= current_band.username %>',
-          'email': '<%= current_band.email %>',
-          'band_name': '<%= current_band.band_name %>',
+        window.currentUser= {
+          'id': <%= current_user.id %>,
+          'username': '<%= current_user.username %>',
+          'email': '<%= current_user.email %>',
         }
       </script>
     <% end %>

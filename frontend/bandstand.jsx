@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
 
   let preloadedState = undefined;
-  if (window.currentBand) {
+  if (window.currentUser) {
     preloadedState = {
       session: {
-        currentBand: window.currentBand
+        currentUser: window.currentUser
       }
     };
   }

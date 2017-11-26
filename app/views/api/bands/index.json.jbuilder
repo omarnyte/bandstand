@@ -2,7 +2,7 @@
 # band objects as values
 @bands.each do |band|
   json.set! band.id do
-    json.extract! band, :id, :username, :email, :band_name
+    json.extract! band, :id, :band_name, :location, :mini_bio, :image_location 
   end
 end
 

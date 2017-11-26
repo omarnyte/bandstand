@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // will only be rendered if a user is logged in
-const Navbar = ({ currentBand, logout, path }) => {
-  const display = currentBand ? (
+const Navbar = ({ currentUser , logout, path }) => {
+  const display = currentUser ? (
     <div className='right-nav'>
       <input
         className='temp-search-bar'
         type='text'
         placeholder='Search for artist, track, or album'/>
-      <p>Hello, {currentBand.band_name}</p>
+      <p>Hello, {currentUser.username}</p>
       <button onClick={logout}>log out</button>
     </div>
   ) : (

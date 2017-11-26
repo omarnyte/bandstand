@@ -25,15 +25,15 @@ class LogIn extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     // redirects new user to landing page
-    this.props.signup(this.state)
+    this.props.login(this.state)
       .then( () => this.props.history.push('/'));
   }
 
   handleSubmitDemo(e) {
     e.preventDefault();
     // redirects new user to landing page
-    const demo = {username: 'dc4qt', password: 'password'};
-    this.props.signup(demo)
+    const demo = {username: 'username1', password: 'password'};
+    this.props.login(demo)
       .then( () => this.props.history.push('/'));
   }
 

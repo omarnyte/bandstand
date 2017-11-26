@@ -8,7 +8,6 @@ class Signup extends React.Component {
       email: '',
       password: '',
       username: '',
-      band_name: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -73,13 +72,6 @@ class Signup extends React.Component {
                 type='text'
                 value={this.state.username}
                 onChange={this.handleInput('username')}
-                />
-
-              <p>Band Name</p>
-              <input
-                type='text'
-                value={this.state.band_name}
-                onChange={this.handleInput('band_name')}
                 />
 
             {this.renderErrors()}

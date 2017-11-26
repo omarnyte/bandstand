@@ -5,7 +5,7 @@ import Navbar from './navbar';
 import { login, logout, signup} from '../../actions/session_actions';
 
 const mapStateToProps = (state, ownProps)  => ({
-  currentBand: state.session.currentBand,
+  currentUser: state.session.currentUser,
   path: ownProps.location.pathname.slice(1)
 });
 
