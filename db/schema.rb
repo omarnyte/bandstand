@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171126032026) do
+ActiveRecord::Schema.define(version: 20171126032354) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,9 @@ ActiveRecord::Schema.define(version: 20171126032026) do
     t.string "band_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "location", null: false
+    t.string "mini_bio", null: false
+    t.string "image_location", null: false
     t.index ["band_name"], name: "index_bands_on_band_name", unique: true
   end
 
