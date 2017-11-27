@@ -8,6 +8,11 @@ export const selectBand = ({ bands }, id) => {
   return band;
 };
 
+export const selectSong = ({ songs }, id) => {
+  const song = songs[id] || null;
+  return song;
+}; 
+
 export const selectAlbumsByBand = (state, band) => {
   return band ? band.album_ids.map(id => state.entities.albums[id]): [];
 };

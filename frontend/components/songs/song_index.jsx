@@ -1,21 +1,23 @@
 import React from 'react';
 
 import SongIndexItem from './song_index_item';
+// import SongIndexItemContainer from './song_index_item_container';
 
-class SongIndexContainer extends React.Component {
+
+class SongIndex extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  componentDidMount() {
-    this.props.fetchAlbum(this.props.match.params.albumId);
-  }
-
-  componentWillReceiveProps(nextProps)  {
-    if (!nextProps.currentAlbum) {
-      this.props.fetchAlbum(nextProps.match.params.albumId);
-    }
-  }
+  // componentDidMount() {
+  //   this.props.fetchAlbum(this.props.match.params.albumId);
+  // }
+  //
+  // componentWillReceiveProps(nextProps)  {
+  //   if (!nextProps.currentAlbum) {
+  //     this.props.fetchAlbum(nextProps.match.params.albumId);
+  //   }
+  // }
 
   render() {
     const { currentSongs } = this.props;
@@ -34,4 +36,4 @@ class SongIndexContainer extends React.Component {
   }
 }
 
-export default SongIndexContainer;
+export default SongIndex;

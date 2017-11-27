@@ -17,13 +17,14 @@ class AlbumShow extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    // if (this.props.match.params.albumId !== nextProps.match.params.albumID) {
-    //   this.props.fetchAlbum(this.props.match.params.albumId);
-    // }
+    if (this.props.match.params.albumId !== nextProps.match.params.albumId) {
 
-    if (!nextProps.currentAlbum) {
       this.props.fetchAlbum(nextProps.match.params.albumId);
     }
+
+    // if (!nextProps.currentAlbum) {
+    //   this.props.fetchAlbum(nextProps.match.params.albumId);
+    // }
   }
 
   render() {
@@ -47,7 +48,6 @@ class AlbumShow extends React.Component {
                 </Link>
               </h2>
 
-              <SongIndexContainer /> 
 
             </div>
             <p className='album-description'>

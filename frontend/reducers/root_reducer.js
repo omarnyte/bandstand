@@ -7,6 +7,7 @@ import errorsReducer from './errors_reducer';
 
 export default combineReducers({
   entities: entitiesReduer,
+  playback: playbackReducer,
   session: sessionReducer,
   errors: errorsReducer
 });

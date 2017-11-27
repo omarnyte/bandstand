@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { selectSong } from '../../reducers/selectors';
+
 class SongIndexItem extends React.Component {
   constructor(props) {
     super(props);
@@ -8,6 +10,7 @@ class SongIndexItem extends React.Component {
 
   handleClick(e) {
     alert(`clicked ${e.target.value}`);
+    // this.props.receiveSong(this.song);
   }
 
 

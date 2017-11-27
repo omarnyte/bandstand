@@ -25,7 +25,6 @@ class BandShow extends React.Component {
 
   render () {
     const { currentBand, currentAlbums } = this.props;
-    console.log(currentAlbums); 
 
     // debugger
     // if (!currentBand) return null;
