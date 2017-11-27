@@ -13,7 +13,7 @@ const mapStateToProps = (state, { match }) => {
 
   return {
     currentBand,
-    bandId, 
+    bandId,
     albums
   };
 };

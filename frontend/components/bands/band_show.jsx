@@ -10,6 +10,7 @@ class BandShow extends React.Component {
   }
 
   componentDidMount() {
+  
     this.props.fetchBand(this.props.match.params.bandId);
   }
 
@@ -17,7 +18,7 @@ class BandShow extends React.Component {
     // if (!this.props.currentBand) {
     //   this.props.fetchBand(nextProps.match.params.bandId);
     // }
-    if (this.props.match.params.albumId !== nextProps.match.params.albumId) {
+    if (this.props.match.params.bandId !== nextProps.match.params.bandId) {
       this.props.fetchBand(nextProps.match.params.bandId);
     }
   }

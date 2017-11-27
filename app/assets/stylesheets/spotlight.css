@@ -1,0 +1,26 @@
+.spotlight-component {
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-spotlight: {
+  background-color: #BBCE6B;
+
+  width: 70%;
+
+}
+
+.side-spotlight {
+
+  border: 1px solid green;
+
+}
+
+.side-spotlight > img {
+  border: 1px solid white;
+
+  width: 300px;
+  height: 225px;
+}

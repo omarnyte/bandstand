@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
-import SongPlayer from '../song_player/song_player';
+import SongShow from '../songs/song_show';
 import BandBio from '../bands/band_bio';
 
 class AlbumShow extends React.Component {
@@ -20,8 +20,9 @@ class AlbumShow extends React.Component {
     // if (this.props.match.params.albumId !== nextProps.match.params.albumID) {
     //   this.props.fetchAlbum(this.props.match.params.albumId);
     // }
+
     if (!nextProps.currentAlbum) {
-      this.props.fetchAlbum(this.props.match.params.albumId);
+      this.props.fetchAlbum(nextProps.match.params.albumId);
     }
   }
 
@@ -39,9 +40,12 @@ class AlbumShow extends React.Component {
           <div className='album-page-left'>
             <div className='album-and-band-name'>
               <h1>{currentAlbum.name}</h1>
-              <h2>by {currentBand.band_name}</h2>
+              <h2>by
+                <Link to={`/bands/${currentBand.id}`}>
+                  <strong className='link-to-band'> {currentBand.band_name}</strong>
+                </Link>
+              </h2>
             </div>
-            <SongPlayer album={currentAlbum}/>
             <p className='album-description'>
               {currentAlbum.description}
             </p>
@@ -65,4 +69,4 @@ class AlbumShow extends React.Component {
   }
 }
 
-export default withRouter(AlbumShow);
+export default AlbumShow;

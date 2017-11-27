@@ -7,7 +7,6 @@ import Spotlight from './spotlight';
 const SplashPage = ({ currentBand, logout }) => {
   return (
     <div>
-      <NavbarContainer currentBand={currentBand} logout={logout} />
       <Spotlight />
     </div>
   );
