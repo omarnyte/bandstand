@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import { selectSongsByAlbum } from '../../reducers/selectors';
+import { fetchAlbum } from '../../actions/album_actions';
 import SongIndex from './song_index';
 
 const mapStateToProps = (state, { match }) => {
@@ -12,7 +13,9 @@ const mapStateToProps = (state, { match }) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => ({});
+const mapDispatchToProps = (dispatch) => ({
+  fetchAlbum: (albumId) => fetchAlbum(albumId)
+});
 
 export default withRouter(connect(
   mapStateToProps,

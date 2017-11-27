@@ -15,3 +15,5 @@ class SongIndexItem extends React.Component {
     );
   }
 }
+
+export default SongIndexItem;
