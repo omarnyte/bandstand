@@ -34,30 +34,33 @@ class AlbumShow extends React.Component {
     if (!currentAlbum) return null;
 
     return (
-      <div className='album-component'>
-        <div className='album-page-left'>
-          <div className='album-and-band-name'>
-            <h1>{currentAlbum.name}</h1>
-            <h2>by {currentBand.band_name}</h2>
+      <div className='album-show-component'>
+        <div className='album-show-box'>
+          <div className='album-page-left'>
+            <div className='album-and-band-name'>
+              <h1>{currentAlbum.name}</h1>
+              <h2>by {currentBand.band_name}</h2>
+            </div>
+            <SongPlayer album={currentAlbum}/>
+            <p className='album-description'>
+              {currentAlbum.description}
+            </p>
+
           </div>
-          <SongPlayer album={currentAlbum}/>
-          <p className='album-description'>
-            {currentAlbum.description}
-          </p>
 
-        </div>
+          <div className='album-page-mid'>
+            <img
+              className='current-album-cover'
+              src={currentAlbum.image_location}/>
 
-        <div className='album-page-mid'>
-          <img
-            className='current-album-cover'
-            src={currentAlbum.image_location}/>
+          </div>
 
-        </div>
-
-        <div className='album-page-right'>
-          <BandBio band={currentBand} />
+          <div className='album-page-right'>
+            <BandBio band={currentBand} />
+          </div>
         </div>
       </div>
+
     );
   }
 }

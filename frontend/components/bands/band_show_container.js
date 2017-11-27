@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom'; 
+import { withRouter } from 'react-router-dom';
 
 import BandShow from './band_show';
 import { selectBand, selectAlbumsByBand } from '../../reducers/selectors';
@@ -13,6 +13,7 @@ const mapStateToProps = (state, { match }) => {
 
   return {
     currentBand,
+    bandId, 
     albums
   };
 };

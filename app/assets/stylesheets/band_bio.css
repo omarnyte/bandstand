@@ -1,14 +1,13 @@
 .band-bio-component {
-  border: 1px solid pink;
-  background-color: pink;
-
   width: 120px;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .band-bio-image {
   width: 120px;
   height: 133px;
+  margin-bottom: 5px;
 }
 
 .band-name-and-location > h2 {
@@ -16,9 +15,13 @@
   font-weight: 700px;
 }
 .band-name-and-location > h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+
   font-size: 12px;
   font-weight: 400;
-  text-transform: uppercase;:
+  color: #666666;
+  text-transform: uppercase;
 }
 
 .mini-bio {
@@ -31,9 +34,10 @@
 }
 
 .band-location {
-  font-size: 10px;
+  font-size: 9px;
 }
 
 .mini-bio {
-  font-size: 11px;
+  font-size: 12px;
+  color: black;
 }

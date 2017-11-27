@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom'; 
+import { withRouter } from 'react-router-dom';
 
 import AlbumIndex from '../albums/album_index';
 import BandBio from './band_bio';
@@ -32,9 +32,7 @@ class BandShow extends React.Component {
 
     return (
       <div className='band-show-component'>
-
         <h1 className='band-name-header'>{currentBand.band_name}</h1>
-
         <div className='album-index-and-band-bio'>
           <AlbumIndex albums={albums}/>
           <BandBio band={currentBand} />

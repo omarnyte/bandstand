@@ -1,8 +1,14 @@
-.album-component {
+.album-show-component {
+  background-color: #E7E7E7;
+}
+
+.album-show-box {
   border: 1px solid green;
-  height: 2000px;
   width: 975px;
   margin: 0 auto;
+  margin-bottom: 30px;
+
+  background-color: #F7F7F7;
 
   display: flex;
   justify-content: space-around;
@@ -12,10 +18,12 @@
   border: 1px solid blue;
 
   width: 375px;
+  margin-top: 30px;
 }
 
 .album-and-band-name > h1 {
   font-size: 23px;
+  font-weight: 700; 
 }
 
 .album-and-band-name > h2 {
@@ -23,12 +31,14 @@
 }
 
 .album-description {
-  font-size: 11px; 
+  font-size: 11px;
 }
 
 
 .album-page-mid {
   border: 1px solid red;
+
+  margin-top: 30px;
 }
 
 .current-album-cover {

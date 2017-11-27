@@ -93,6 +93,27 @@ band10 = Band.create(
   mini_bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel malesuada nulla, a ultrices enim. Vivamus velit nisi, imperdiet vitae vehicula et, mollis vel dolor. Fusce vitae massa mauris.',
   image_location: 'http://3.bp.blogspot.com/-3iyDsJqXzeQ/UUx52FxLFiI/AAAAAAAANZQ/mwdTFG82eLU/s1600/nsync+1998+justin+timberlake+jc+chasez+joey+fatone+lance+bass+chris+kirkpatrick.jpg'
 )
+band11 = Band.create(
+  band_name: 'Linkedin Park',
+  location: 'Agoura Hilla, California',
+  mini_bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel malesuada nulla, a ultrices enim. Vivamus velit nisi, imperdiet vitae vehicula et, mollis vel dolor. Fusce vitae massa mauris.',
+  image_location: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/LPLogo-black.svg/2000px-LPLogo-black.svg.png'
+)
+
+band12 = Band.create(
+  band_name: 'Alice in Blockchains',
+  location: 'Seattle, Washington',
+  mini_bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel malesuada nulla, a ultrices enim. Vivamus velit nisi, imperdiet vitae vehicula et, mollis vel dolor. Fusce vitae massa mauris.',
+  image_location: 'https://upload.wikimedia.org/wikipedia/commons/9/9e/Alice_In_Chains_-_Jimmy_Kimmel_Live.jpg'
+)
+
+band12 = Band.create(
+  band_name: 'Popup Roach',
+  location: 'Vacaville, California',
+  mini_bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel malesuada nulla, a ultrices enim. Vivamus velit nisi, imperdiet vitae vehicula et, mollis vel dolor. Fusce vitae massa mauris.',
+  image_location: 'https://upload.wikimedia.org/wikipedia/commons/9/9e/Papa_roach_sziget2010_erdoedy.jpg'
+)
+
 
 # ALBUMS
 album1 = Album.create(
