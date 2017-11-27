@@ -1,0 +1,15 @@
+.song-index-item-component {
+
+
+}
+
+.song-index-item {
+  margin: 5px;
+
+  font-size: 12px;
+  color: #802830;
+}
+
+.song-index-item:hover {
+  text-decoration: underline;
+}
