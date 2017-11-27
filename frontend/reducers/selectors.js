@@ -14,4 +14,4 @@ export const selectAlbumsByBand = (state, band) => {
 
 export const selectSongsByAlbum = (state, album) => {
   return album ? album.song_ids.map(id => state.entities.songs[id]) : [];
-}; 
+};

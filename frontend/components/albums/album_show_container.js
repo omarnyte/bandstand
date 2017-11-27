@@ -12,11 +12,14 @@ import AlbumShow from './album_show';
 const mapStateToProps = (state, { match }) => {
   const albumId = parseInt(match.params.albumId);
   let currentBand = null;
+  // let currentSongs = null;
   const currentAlbum = selectAlbum(state.entities, albumId);
   if (currentAlbum !== null) {
-    currentBand = selectBand(state.entities, currentAlbum.band_id); 
+    currentBand = selectBand(state.entities, currentAlbum.band_id);
   }
-  // const currentSongs = selectSongsByAlbum(state.entities, currentAlbum);
+  // if (currentSongs !== null) {
+  //   currentSongs = selectSongsByAlbum(state.entities, currentAlbum);
+  // }
   return {
     currentAlbum,
     currentBand,

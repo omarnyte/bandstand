@@ -10,7 +10,7 @@ class BandShow extends React.Component {
   }
 
   componentDidMount() {
-  
+
     this.props.fetchBand(this.props.match.params.bandId);
   }
 
@@ -24,7 +24,9 @@ class BandShow extends React.Component {
   }
 
   render () {
-    const { currentBand, albums } = this.props;
+    const { currentBand, currentAlbums } = this.props;
+    console.log(currentAlbums); 
+
     // debugger
     // if (!currentBand) return null;
     // if (!albums) return null;
@@ -35,7 +37,7 @@ class BandShow extends React.Component {
       <div className='band-show-component'>
         <h1 className='band-name-header'>{currentBand.band_name}</h1>
         <div className='album-index-and-band-bio'>
-          <AlbumIndex albums={albums}/>
+          <AlbumIndex albums={currentAlbums}/>
           <BandBio band={currentBand} />
         </div>
       </div>

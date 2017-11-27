@@ -8,13 +8,14 @@ import { fetchBand } from '../../actions/band_actions';
 const mapStateToProps = (state, { match }) => {
   const bandId = parseInt(match.params.bandId);
   const currentBand = selectBand(state.entities, bandId);
-
-  const albums = selectAlbumsByBand(state, currentBand);
-
+  let currentAlbums = null;
+  if (currentBand !== null) {
+    currentAlbums = selectAlbumsByBand(state, currentBand);
+  }
   return {
     currentBand,
     bandId,
-    albums
+    currentAlbums
   };
 };
 

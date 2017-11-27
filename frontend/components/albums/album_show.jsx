@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
-import SongShow from '../songs/song_show';
+// import SongShow from '../songs/song_show';
+import SongIndexContainer from '../songs/song_index_container';
 import BandBio from '../bands/band_bio';
 
 class AlbumShow extends React.Component {
@@ -28,6 +28,7 @@ class AlbumShow extends React.Component {
 
   render() {
     const { currentAlbum, currentBand } = this.props;
+    // console.log(currentSongs);
     // if (!currentAlbum) {
     //   return <div> No album found! </div>;
     // }
@@ -45,6 +46,9 @@ class AlbumShow extends React.Component {
                   <strong className='link-to-band'> {currentBand.band_name}</strong>
                 </Link>
               </h2>
+
+
+
             </div>
             <p className='album-description'>
               {currentAlbum.description}

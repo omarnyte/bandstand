@@ -6,16 +6,19 @@ class SongShow extends React.Component {
   }
 
   render() {
-      const { songs }= this.props;
-
+    const { songs } = this.props;
+    // console.log(songs);
     return (
       <div className='song-player-component'>
-        <ul>
-          {songs.map((song, idx) => <SongIndexItem key={idx} song={song} />)}
-        </ul>
       </div>
     );
   }
 }
 
 export default SongShow;
+
+
+
+// <ul>
+//   {songs.map((song, idx) => <SongIndexItem key={idx} song={song} />)}
+// </ul>
