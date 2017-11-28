@@ -47,7 +47,7 @@ class AlbumShow extends React.Component {
                 </Link>
               </h2>
 
-              <MediaPlayerContainer />
+              <MediaPlayerContainer currentSongs={currentSongs} />
               <SongIndex currentSongs={currentSongs}/>
 
             </div>
