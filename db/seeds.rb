@@ -1,4 +1,4 @@
-require 'faker' 
+require 'faker'
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
@@ -220,4 +220,32 @@ song5 = Song.create(
   title: 'You Are a Tourist',
   track_index: 5,
   song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/05+You+Are+a+Tourist.mp3'
+)
+
+song6 = Song.create(
+  album_id: album3.id,
+  title: 'Steadier Footing',
+  track_index: 1,
+  song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/01+Steadier+Footing.mp3'
+)
+
+song7 = Song.create(
+  album_id: album3.id,
+  title: 'A Movie Script Ending',
+  track_index: 2,
+  song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/02+A+Movie+Script+Ending.mp3'
+)
+
+song8 = Song.create(
+  album_id: album3.id,
+  title: 'We Laugh Indoors',
+  track_index: 3,
+  song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/03+We+Laugh+Indoors.mp3'
+)
+
+song9 = Song.create(
+  album_id: album3.id,
+  title: 'Information Travels Faster',
+  track_index: 4,
+  song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/04+Information+Travels+Faster.mp3'
 )

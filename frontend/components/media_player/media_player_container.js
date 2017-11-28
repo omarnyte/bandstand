@@ -1,18 +1,25 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
-import { clearSong } from '../../actions/playback_actions';
+import {  setFirstSong,
+          clearSong,
+          togglePlayPause,
+          handleVolumeChange } from '../../actions/playback_actions';
 import MediaPlayer from './media_player';
 
 const mapStateToProps = (state, { currentSongs }) => ({
-    currentSongs, 
+    currentSongs,
     playback: state.playback
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  clearSong: () => dispatch(clearSong())
+  setFirstSong: (currentSongs) => dispatch(setFirstSong(currentSongs)),
+  clearSong: () => dispatch(clearSong()),
+  togglePlayPause: () => dispatch(togglePlayPause()),
+  handleVolumeChange: (e) => dispatch(handleVolumeChange(e))
 });
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(MediaPlayer);
+)(MediaPlayer));
