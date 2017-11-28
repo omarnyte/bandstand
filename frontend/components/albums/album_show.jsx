@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 // import SongShow from '../songs/song_show';
 // import SongIndexContainer from '../songs/song_index_container';
 import SongIndex from '../songs/song_index';
+import MediaPlayerContainer from '../media_player/media_player_container';
 import BandBio from '../bands/band_bio';
 
 class AlbumShow extends React.Component {
@@ -46,6 +47,8 @@ class AlbumShow extends React.Component {
                 </Link>
               </h2>
 
+              <MediaPlayerContainer />
+              <SongIndex currentSongs={currentSongs}/>
 
             </div>
             <p className='album-description'>

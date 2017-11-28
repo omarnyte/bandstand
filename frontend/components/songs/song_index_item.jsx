@@ -7,7 +7,7 @@ class SongIndexItem extends React.Component {
   }
 
   handleClick(e) {
-    alert(`clicked ${e.target.value}`);
+    // alert(`clicked ${e.target.value}`);
     this.props.receiveSong(this.props.song);
   }
 

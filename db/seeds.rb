@@ -174,26 +174,31 @@ Ut suscipit, eros id porttitor pharetra, neque turpis mattis ligula, vitae venen
 # SONGS
 song1 = Song.create(
   album_id: album1.id,
-  title: 'song1',
-  track_index: 1
+  title: 'Home is a Fire',
+  track_index: 1,
+  song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/01+Home+Is+a+Fire.mp3'
 )
 song2 = Song.create(
   album_id: album1.id,
-  title: 'song2',
-  track_index: 2
+  title: 'Codes and Keys',
+  track_index: 2,
+  song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/02+Codes+and+Keys.mp3'
 )
 song3 = Song.create(
   album_id: album1.id,
-  title: 'song3',
-  track_index: 3
+  title: 'Some Boys',
+  track_index: 3,
+  song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/03+Some+Boys.mp3'
 )
 song4 = Song.create(
   album_id: album1.id,
   title: 'song4',
-  track_index: 4
+  track_index: 4,
+  image_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/04+Doors+Unlocked+and+Open.mp3'
 )
 song5 = Song.create(
   album_id: album1.id,
-  title: 'song5',
-  track_index: 5
+  title: 'You Are a Tourist',
+  track_index: 5,
+  image_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/05+You+Are+a+Tourist.mp3'
 )
