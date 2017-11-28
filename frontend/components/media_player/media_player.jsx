@@ -36,6 +36,7 @@ class MediaPlayer extends React.Component {
 
   render () {
     const { playback } = this.props;
+    debugger 
     return (
       <div className='media-player-component'>
         <div className='play-pause'>

@@ -28,7 +28,6 @@ class SongIndexItem extends React.Component {
             onClick={this.handleClick}>
             {song.title}
           </li>
-
         }
       </div>
     );
