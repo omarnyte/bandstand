@@ -46,7 +46,6 @@ class AlbumShow extends React.Component {
                 </Link>
               </h2>
 
-              <SongIndex currentSongs={currentSongs} />
 
             </div>
             <p className='album-description'>

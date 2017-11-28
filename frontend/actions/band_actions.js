@@ -1,7 +1,7 @@
 import * as BandAPIUtil from '../utils/band_api_util';
 
 export const RECEIVE_ALL_BANDS = 'RECEIVE_ALL_BANDS';
-export const RECEIVE_BAND = 'RECEIVE_BANDS';
+export const RECEIVE_BAND = 'RECEIVE_BAND';
 
 // Thunk actions
 export const fetchBands = () => dispatch => (

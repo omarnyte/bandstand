@@ -9,9 +9,10 @@ const mapStateToProps = (state, { match }) => {
   const bandId = parseInt(match.params.bandId);
   const currentBand = selectBand(state.entities, bandId);
   let currentAlbums = null;
-  if (currentBand !== null) {
+  if (currentBand) {
     currentAlbums = selectAlbumsByBand(state, currentBand);
   }
+  
   return {
     currentBand,
     bandId,
