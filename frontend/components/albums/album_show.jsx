@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // import SongShow from '../songs/song_show';
-import SongIndexContainer from '../songs/song_index_container';
+// import SongIndexContainer from '../songs/song_index_container';
+import SongIndex from '../songs/song_index';
 import BandBio from '../bands/band_bio';
 
 class AlbumShow extends React.Component {
@@ -28,13 +29,10 @@ class AlbumShow extends React.Component {
   }
 
   render() {
-    const { currentAlbum, currentBand } = this.props;
-    // console.log(currentSongs);
-    // if (!currentAlbum) {
-    //   return <div> No album found! </div>;
-    // }
-
-    if (!currentAlbum) return null;
+    const { currentSongs, currentAlbum, currentBand } = this.props;
+    if (!currentAlbum) {
+      return null;
+    }
 
     return (
       <div className='album-show-component'>
@@ -48,6 +46,7 @@ class AlbumShow extends React.Component {
                 </Link>
               </h2>
 
+              <SongIndex currentSongs={currentSongs} />
 
             </div>
             <p className='album-description'>

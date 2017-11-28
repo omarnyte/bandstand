@@ -10,7 +10,6 @@ class BandShow extends React.Component {
   }
 
   componentDidMount() {
-
     this.props.fetchBand(this.props.match.params.bandId);
   }
 
@@ -26,9 +25,6 @@ class BandShow extends React.Component {
   render () {
     const { currentBand, currentAlbums } = this.props;
 
-    // debugger
-    // if (!currentBand) return null;
-    // if (!albums) return null;
 
     if (!currentBand) return null;
 

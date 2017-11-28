@@ -1,6 +1,7 @@
 import React from 'react';
 
-import SongIndexItem from './song_index_item';
+import SongIndexItemContainer from './song_index_item_container';
+// import SongIndexItem from './song_index_item';
 // import SongIndexItemContainer from './song_index_item_container';
 
 
@@ -28,7 +29,7 @@ class SongIndex extends React.Component {
       <div>
         <ol>
           {currentSongs.map(song => (
-            <SongIndexItem key={song.id} song={song} />
+            <SongIndexItemContainer key={song.id} song={song} />
           ))}
         </ol>
       </div>

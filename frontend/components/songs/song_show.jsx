@@ -7,7 +7,6 @@ class SongShow extends React.Component {
 
   render() {
     const { songs } = this.props;
-    // console.log(songs);
     return (
       <div className='song-player-component'>
       </div>

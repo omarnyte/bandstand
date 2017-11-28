@@ -1,18 +1,15 @@
-import connect from 'react-redux';
+import { connect } from 'react-redux';
 
 import { selectSong } from '../../reducers/selectors';
 import { receiveSong } from '../../actions/playback_actions';
 import SongIndexItem from './song_index_item';
 
-const mapStateToProps = (state, { song }) => {
-  const currentSong = song;
-  return {
-    currentSong
-  };
-};
+const mapStateToProps = (state, { song }) => ({
+  song
+});
 
 const mapDispatchToProps = (dispatch) => ({
-  receiveSong: (song) => receiveSong(song)
+  receiveSong: (song) => dispatch(receiveSong(song)) 
 });
 
 export default connect(

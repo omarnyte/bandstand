@@ -6,7 +6,7 @@ const PlaybackReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   switch (action.type) {
     case RECEIVE_SONG:
-      return merge({}, action.song);
+      return merge({}, action.song); 
     default:
       return oldState;
   }
