@@ -10,7 +10,7 @@ const mapStateToProps = (state, { match }) => {
   const albumId = parseInt(match.params.albumId);
   const currentSongs = selectSongsByAlbum(state, state.entities.albums[albumId]);
   return {
-    currentSongs
+    currentSongs,
   };
 };
 

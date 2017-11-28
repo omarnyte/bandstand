@@ -44,9 +44,10 @@ class MediaPlayer extends React.Component {
             <i class="fa fa-play" aria-hidden="true" onClick={this.handlePlayPause}></i>}
         </div>
 
-        the current song is {playback.title}
-        the current volume is {this.state.volume}
-
+        <div className='title-and-duration'>
+          <span className='t-and-d-title'>{playback.title}</span>
+          <span className='t-and-d-duration'>duration</span>
+        </div>
         <div>
           <input
             type='range'

@@ -7,21 +7,29 @@ class SongIndexItem extends React.Component {
   }
 
   handleClick(e) {
-    // alert(`clicked ${e.target.value}`);
     this.props.receiveSong(this.props.song);
   }
 
 
   render () {
-    const { song } = this.props;
+    const { song, currentSong } = this.props;
 
     return (
       <div className='song-index-item-component'>
-        <li
-          className='song-index-item'
-          onClick={this.handleClick}>
-          {song.title}
-        </li>
+        { currentSong.id === song.id ?
+          <li
+            className='song-index-item-playing'
+            onClick={this.handleClick}>
+            {song.title}
+          </li>
+          :
+          <li
+            className='song-index-item'
+            onClick={this.handleClick}>
+            {song.title}
+          </li>
+
+        }
       </div>
     );
   }

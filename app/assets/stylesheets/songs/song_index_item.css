@@ -1,13 +1,16 @@
 .song-index-item-component {
+  margin: 5px;
 
-
+  color: #802830;
+  font-size: 12px;
 }
 
 .song-index-item {
-  margin: 5px;
+  font-weight: normal;
+}
 
-  font-size: 12px;
-  color: #802830;
+.song-index-item-playing {
+  font-weight: bold;
 }
 
 .song-index-item:hover {
