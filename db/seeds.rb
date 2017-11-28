@@ -114,6 +114,20 @@ band12 = Band.create(
   image_location: 'https://upload.wikimedia.org/wikipedia/commons/9/9e/Papa_roach_sziget2010_erdoedy.jpg'
 )
 
+band13 = Band.create(
+  band_name: 'JSON Derulo',
+  location: 'Miramar, Florida',
+  mini_bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel malesuada nulla, a ultrices enim. Vivamus velit nisi, imperdiet vitae vehicula et, mollis vel dolor. Fusce vitae massa mauris.',
+  image_location: 'https://upload.wikimedia.org/wikipedia/commons/7/74/Jason-Derulo.jpg'
+)
+
+band13 = Band.create(
+  band_name: 'Hashlee Simpson',
+  location: 'Waco, Texas',
+  mini_bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel malesuada nulla, a ultrices enim. Vivamus velit nisi, imperdiet vitae vehicula et, mollis vel dolor. Fusce vitae massa mauris.',
+  image_location: 'https://images-production.global.ssl.fastly.net/uploads/photos/file/166672/ashlee-simpson-jan-2003.jpg'
+)
+
 
 # ALBUMS
 album1 = Album.create(
@@ -192,13 +206,13 @@ song3 = Song.create(
 )
 song4 = Song.create(
   album_id: album1.id,
-  title: 'song4',
+  title: 'Doors Unlocked and Open',
   track_index: 4,
-  image_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/04+Doors+Unlocked+and+Open.mp3'
+  song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/04+Doors+Unlocked+and+Open.mp3'
 )
 song5 = Song.create(
   album_id: album1.id,
   title: 'You Are a Tourist',
   track_index: 5,
-  image_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/05+You+Are+a+Tourist.mp3'
+  song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/05+You+Are+a+Tourist.mp3'
 )

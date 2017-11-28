@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 
+import { clearSong } from '../../actions/playback_actions';
 import MediaPlayer from './media_player';
 
 const mapStateToProps = (state) => ({
@@ -7,7 +8,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-
+  clearSong: () => dispatch(clearSong())
 });
 
 export default connect(
