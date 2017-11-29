@@ -4,6 +4,7 @@ import ReactHowler from 'react-howler';
 class MediaPlayer extends React.Component {
   constructor(props) {
     super(props);
+    this.getDuration = this.getDuration.bind(this);
   }
 
   componentDidMount() {
@@ -14,6 +15,10 @@ class MediaPlayer extends React.Component {
     if (this.props.match.params.albumId !== nextProps.match.params.albumId) {
       this.props.setFirstSong(nextProps.currentSongs);
     }
+  }
+
+  getDuration() {
+    this.player.duration();
   }
 
   render() {
@@ -32,27 +37,37 @@ class MediaPlayer extends React.Component {
           ref={(ref) => (this.player = ref)}
           />
 
+        {playback.currently_playing ? <span>{this.getDuration()}</span> : <div></div> }
+
         <div className='play-pause'>
           {playback.currently_playing ?
+
             <i class="fa fa-pause" aria-hidden="true" onClick={this.props.togglePlayPause}></i> :
-              <i class="fa fa-play" aria-hidden="true" onClick={this.props.togglePlayPause}></i>}
+            <i class="fa fa-play" aria-hidden="true" onClick={this.props.togglePlayPause}></i>}
         </div>
 
-        <div className='title-and-duration'>
+        <div className='title-and-progress'>
           <span className='t-and-d-title'>{playback.title}</span>
+
+          <input
+            className='progress-range'
+            type='range'
+            value='0'
+          />
+
+
+
         </div>
 
         <input
-          className='volume-input'
+          className='volume-range'
           type='range'
           min='0'
           max='1'
           step='.01'
           value={playback.volume}
           onChange={this.props.handleVolumeChange}
-          />
-
-
+        />
 
       </div>
     );

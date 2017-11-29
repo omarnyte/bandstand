@@ -19,6 +19,12 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
+  has_many :follows,
+    primary_key: :id,
+    foreign_key: :follower_id,
+    class_name: 'Follow'
+  has_many :followed_bands, through: :follows, source: :followee
+
   attr_reader :password
 
   def self.find_by_credentials(username, password)

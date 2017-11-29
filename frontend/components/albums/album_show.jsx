@@ -33,6 +33,9 @@ class AlbumShow extends React.Component {
     if (!currentAlbum) {
       return null;
     }
+    // Line 49 ensures that media player only renders when an album has songs.
+    // Helps prevent an issue where the page had to be refreshed
+    // in order to render songs.
 
     return (
       <div className='album-show-component'>
@@ -46,9 +49,6 @@ class AlbumShow extends React.Component {
                 </Link>
               </h2>
 
-              // Ensures that media player only renders when an album has songs.
-              // Helps prevent an issue where the page had to be refreshed
-              // in order to render songs.
               {currentSongs.length > 0 &&
                 <MediaPlayerContainer currentSongs={currentSongs} />
               }

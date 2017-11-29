@@ -27,6 +27,17 @@ user3 = User.create(
   email: 'email3@email.com'
 )
 
+user4 = User.create(
+  username: 'username4',
+  password: 'password',
+  email: 'email4@email.com'
+)
+user5 = User.create(
+  username: 'username5',
+  password: 'password',
+  email: 'email5@email.com'
+)
+
 # BANDS
 mini_bio_rand = rand(1) + 1
 
@@ -248,4 +259,35 @@ song9 = Song.create(
   title: 'Information Travels Faster',
   track_index: 4,
   song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/04+Information+Travels+Faster.mp3'
+)
+
+## FOLLOWS
+follow1 = Follow.create(
+  follower_id: user1.id,
+  followee_id: band5.id
+)
+
+follow2 = Follow.create(
+  follower_id: user2.id,
+  followee_id: band5.id
+)
+
+follow3 = Follow.create(
+  follower_id: user3.id,
+  followee_id: band5.id
+)
+
+follow4 = Follow.create(
+  follower_id: user4.id,
+  followee_id: band5.id
+)
+
+follow5= Follow.create(
+  follower_id: user5.id,
+  followee_id: band5.id
+)
+
+follow6= Follow.create(
+  follower_id: user1.id,
+  followee_id: band1.id
 )

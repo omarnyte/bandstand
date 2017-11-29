@@ -6,9 +6,16 @@
 
 }
 
-.title-and-duration {
+.title-and-progress {
+  width: 500px;
+
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.progress-range {
+  margin-left: 10px;
 }
 
 .t-and-d-title {
@@ -32,10 +39,10 @@
   border: 1px solid #d9d9d9;
 }
 
-.volume-input {
+.volume-range {
   width: 60px;
   height: 25px;
   margin: 0;
-  transform-origin: 133px -80px;
+  /*transform-origin: 133px -80px;*/
   transform: rotate(-90deg);
 }

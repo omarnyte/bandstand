@@ -18,4 +18,12 @@ class Band < ApplicationRecord
 
   has_many :albums
   has_many :songs, through: :albums
+  has_many :follows,
+    primary_key: :id,
+    foreign_key: :followee_id,
+    class_name: 'Follow'
+  has_many :followers,
+    through: :follows,
+    source: :follower
+
 end
