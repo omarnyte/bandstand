@@ -7,5 +7,6 @@ json.songs do
 end
 
 json.band do
-  json.extract! @album.band, :id, :band_name, :location, :mini_bio, :image_location
+  json.extract! @album.band, :id, :band_name, :location, :mini_bio, :image_location,
+    :follower_ids 
 end

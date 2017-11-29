@@ -31,11 +31,12 @@
 }
 
 .link-to-band {
-  color: #802830; 
+  color: #802830;
 }
 
 .album-description {
   font-size: 11px;
+  margin-bottom: 20px; 
 }
 
 
