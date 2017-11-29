@@ -11,7 +11,9 @@ import {
   fetchAlbums,
   fetchAlbum,
   createAlbum,
-  deleteAlbum } from './actions/album_actions';
+  deleteAlbum
+} from './actions/album_actions';
+import { searchDB } from './actions/search_actions';
 // end test
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -41,5 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.fetchAlbum = fetchAlbum;
   window.createAlbum = createAlbum;
   window.deleteAlbum = deleteAlbum;
+  window.searchDB = searchDB; 
   // end test
 });

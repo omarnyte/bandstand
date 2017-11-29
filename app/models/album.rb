@@ -19,6 +19,11 @@ class Album < ApplicationRecord
   }
 
   belongs_to :band
-  has_many :songs 
+  has_many :songs
+
+  def self.top_results(query_param)
+    param = '%' + query_param.downcase + '%'
+    Album.where('lower(name) LIKE ?', param).limit(5)
+  end
 
 end

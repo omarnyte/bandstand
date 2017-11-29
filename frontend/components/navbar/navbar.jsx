@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import SearchContainer from '../search/search_container';
+
 // will only be rendered if a user is logged in
 const Navbar = ({ currentUser , logout, path }) => {
   const display = currentUser ? (
@@ -14,10 +16,7 @@ const Navbar = ({ currentUser , logout, path }) => {
     </div>
   ) : (
     <div className='right-nav'>
-      <input
-        className='temp-search-bar'
-        type='text'
-        placeholder='Search for artist, track, or album'/>
+      <SearchContainer />
       <ul className='session-links'>
         <Link to='/discover' className='session-link'>discover</Link>
         <Link to='/signup' className='session-link'>sign up</Link>

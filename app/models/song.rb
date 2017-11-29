@@ -20,4 +20,9 @@ class Song < ApplicationRecord
 
   belongs_to :album
 
+  def self.top_results(query_param)
+    param = '%' + query_param.downcase + '%'
+    Song.where('lower(title) LIKE ?', param).limit(5)
+  end
+
 end

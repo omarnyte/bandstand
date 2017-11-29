@@ -147,6 +147,7 @@ band14 = Band.create(
 
 # ALBUMS
 album_description_rand = rand(10) + 10
+
 album1 = Album.create(
   band_id: band5.id,
   name: 'Nodes and Keys',

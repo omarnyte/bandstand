@@ -34,4 +34,9 @@ class Band < ApplicationRecord
 
     followers
   end
+
+  def self.top_results(query_param)
+    param = '%' + query_param.downcase + '%'
+    Band.where('lower(band_name) LIKE ?', param).limit(5)
+  end
 end
