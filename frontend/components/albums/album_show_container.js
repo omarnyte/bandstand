@@ -16,7 +16,7 @@ const mapStateToProps = (state, { match }) => {
   if (currentAlbum !== null) {
     currentBand = selectBand(state.entities, currentAlbum.band_id);
   }
-  
+
   let currentSongs = null;
   if (currentAlbum !== null) {
     currentSongs = selectSongsByAlbum(state, currentAlbum);

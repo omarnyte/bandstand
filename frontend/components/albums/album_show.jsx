@@ -20,7 +20,6 @@ class AlbumShow extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.albumId !== nextProps.match.params.albumId) {
-
       this.props.fetchAlbum(nextProps.match.params.albumId);
     }
 

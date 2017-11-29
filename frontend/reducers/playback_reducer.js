@@ -1,6 +1,8 @@
 import merge from 'lodash/merge';
 
-import {  SET_FIRST_SONG,
+import { FETCH_ALBUM } from '../actions/album_actions';
+import {
+          SET_FIRST_SONG,
           RECEIVE_SONG,
           CLEAR_SONG,
           TOGGLE_PLAY_PAUSE,
@@ -17,8 +19,14 @@ const PlaybackReducer = (oldState = _nullSong, action) => {
   let newState = merge({}, oldState);
   switch (action.type) {
 
+    case FETCH_ALBUM:
+    newState.currently_playing = false;
+      return merge({}, newState, action.payload.songs[0]);
+
     case SET_FIRST_SONG:
+    newState.currently_playing = false;
       return merge({}, newState, action.currentSongs[0]);
+
     case RECEIVE_SONG:
       if (oldState.id === action.song.id) {
         newState.currently_playing = !oldState.currently_playing;

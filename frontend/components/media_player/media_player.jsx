@@ -6,22 +6,21 @@ class MediaPlayer extends React.Component {
     super(props);
   }
 
-  // componentWillMount() {
+  // componentDidMount() {
   //   this.props.setFirstSong(this.props.currentSongs);
   // }
 
-  // componentWillReceiveProps(nextProps) {
-  //   if (this.props.match.params.albumId !== nextProps.match.params.albumId) {
-  //     this.props.setFirstSong(nextProps.currentSongs);
-  //   }
-  // }
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.albumId !== nextProps.match.params.albumId) {
+      this.props.setFirstSong(nextProps.currentSongs);
+    }
+  }
 
   render() {
     const {playback} = this.props;
     // console.log(playback);
     // console.log(this.props);
-
-    // if (playback === null ) return null;
+    if (playback === null) return null;
 
     return (
       <div className='media-player-component'>
