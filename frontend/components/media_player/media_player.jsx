@@ -6,9 +6,9 @@ class MediaPlayer extends React.Component {
     super(props);
   }
 
-  componentWillMount() {
-    this.props.setFirstSong(this.props.currentSongs);
-  }
+  // componentWillMount() {
+  //   this.props.setFirstSong(this.props.currentSongs);
+  // }
 
   // componentWillReceiveProps(nextProps) {
   //   if (this.props.match.params.albumId !== nextProps.match.params.albumId) {
@@ -21,7 +21,7 @@ class MediaPlayer extends React.Component {
     // console.log(playback);
     // console.log(this.props);
 
-    if (!playback) return null;
+    // if (playback === null ) return null;
 
     return (
       <div className='media-player-component'>
