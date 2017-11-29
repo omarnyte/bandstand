@@ -4,7 +4,13 @@ import ReactHowler from 'react-howler';
 class MediaPlayer extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      duration: 0,
+    };
+    this.handleOnLoad = this.handleOnLoad.bind(this);
     this.getDuration = this.getDuration.bind(this);
+    this.getSeek = this.getSeek.bind(this);
+    this.formatTime = this.formatTime.bind(this);
   }
 
   componentDidMount() {
@@ -17,26 +23,41 @@ class MediaPlayer extends React.Component {
     }
   }
 
+  handleOnLoad() {
+    let duration = Math.floor(this.player.duration);
+    this.setState({duration: this.player.duration()});
+  }
+
   getDuration() {
     return this.player.duration();
   }
 
+  formatTime(seconds) {
+    let minutes = Math.floor(seconds / 60);
+    seconds = Math.floor(seconds % 60);
+
+    return (minutes < 10 ? `0${minutes}` : minutes) + ':' + (seconds < 10 ? `0${seconds}` : seconds);
+  }
+
+  getSeek () {
+    return this.player.seek();
+  }
+
   render() {
     const {playback} = this.props;
-
     if (playback.length === 0) return null;
 
     return (
       <div className='media-player-component'>
         <ReactHowler
+          preload='true'
+          onLoad={this.handleOnLoad}
           src={[playback.song_location]}
           playing={playback.currently_playing}
           volume={playback.volume}
           ref={(ref) => (this.player = ref)}
           />
 
-        {playback.currently_playing ? <span className='duration-span'>{this.getDuration()}</span> : <div></div> }
-        {playback.currently_playing ? <span className='duration-span'>{this.player.howlerState()}</span> : <div></div> }
         <div className='play-pause'>
           {playback.currently_playing ?
 
@@ -45,27 +66,22 @@ class MediaPlayer extends React.Component {
         </div>
 
         <div className='title-and-progress'>
-          <span className='t-and-d-title'>{playback.title}</span>
+          <div className='title-with-duration'>
+            <span className='t-and-d-title'>{playback.title}</span>
+            <span className='t-and-d-duration'>{this.formatTime(this.state.duration)}</span>
+          </div>
 
           <input
-            className='progress-range'
+            className='volume-range'
             type='range'
-            value='0'
-          />
-
-
-
+            min='0'
+            max='1'
+            step='.01'
+            value={playback.volume}
+            onChange={this.props.handleVolumeChange}
+            />
         </div>
 
-        <input
-          className='volume-range'
-          type='range'
-          min='0'
-          max='1'
-          step='.01'
-          value={playback.volume}
-          onChange={this.props.handleVolumeChange}
-        />
 
       </div>
     );
@@ -74,69 +90,21 @@ class MediaPlayer extends React.Component {
 }
 
 export default MediaPlayer;
+// {this.player.howlerState() === 'loaded' ? <span className='duration-span'>{this.getDuration()}</span> : <div></div> }
+// {playback.currently_playing ? <span className='duration-span'>{this.player.howlerState()}</span> : <div></div> }
+// {playback.currently_playing ? <span className='duration-span'>{this.getSeek()}</span> : <div></div> }
+
+
 // {playback.currently_playing ? <span className='duration-span'>{this.getDuration()}</span> : <div></div> }
 
+// {playback.currently_playing ? <span className='duration-span'>{this.getDuration()}</span> : <div></div> }
+// {playback.currently_playing ? <span className='duration-span'>{this.player.howlerState()}</span> : <div></div> }
+// {playback.currently_playing ? <span className='duration-span'>{this.getSeek()}</span> : <div></div> }
 
-
-// <i class="fa fa-fast-backward" aria-hidden="true"></i>
-// <i class="fa fa-fast-forward" aria-hidden="true"></i>
-
-
-
-// constructor(props) {
-//   super(props);
-//   this.state = {
-//     currentSong: this.currentSong,
-//     playing: this.props.playback.currently_playing,
-//     volume: 1.0
-//   };
-//   this.currentSong = this.currentSong.bind(this);
-//   this.handlePlayPause = this.handlePlayPause.bind(this);
-//   this.handleVolumeChange = this.handleVolumeChange.bind(this);
-//   this.getDuration = this.getDuration.bind(this);
-// }
-//
-// componentWillUnmount() {
-//   this.props.clearSong();
-// }
-//
-// currentSong() {
-//   const firstSong = this.props.currentSongs[0].song_location;
-//   return this.props.playback.song_location ? this.props.playback.song_location : firstSong;
-// }
-//
-// handlePlayPause() {
-//   const playing = !this.state.playing;
-//   this.setState({playing});
-// }
-//
-// handleVolumeChange(e) {
-//      //   const volume = e.target.value;
-//   this.setState({volume});
-// }
-//
-// getDuration () {
-// this.player.duration();
-// }
-//
-// render () {
-//   const { playback } = this.props;
-//
-//   return (
-//     <div className='media-player-component'>
-//       <span>Duration: {this.getDuration}</span>
-//
-//
-
-//       </div>
-//       <div>
-//
-//       <ReactHowler
-//         src={[playback.song_location]}
-//         playing={playback.currently_playing}
-//         onPause={this.state.onPause}
-//         volume={this.state.volume}
-//       />
-//     </div>
-//   );
-// }
+// <input
+//   className='progress-range'
+//   type='range'
+//   min='0'
+//   max='300'
+//   step='1'
+// />

@@ -14,8 +14,14 @@
   justify-content: space-around;
 }
 
-.progress-range {
-  margin-left: 10px;
+.title-with-duration {
+  display: flex;
+  justify-content: space-between;
+}
+
+.t-and-d {
+  display: flex;
+  justify-content: space-between;
 }
 
 .t-and-d-title {
@@ -39,10 +45,14 @@
   border: 1px solid #d9d9d9;
 }
 
-.volume-range {
+.volume-range{
+  margin-left: 10px;
+  width: 200px;
+}
+/*.volume-range {
   width: 60px;
   height: 25px;
   margin: 0;
-  /*transform-origin: 133px -80px;*/
+  transform-origin: 133px -80px;
   transform: rotate(-90deg);
-}
+}*/

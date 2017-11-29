@@ -19,12 +19,8 @@ const PlaybackReducer = (oldState = _nullSong, action) => {
   let newState = merge({}, oldState);
   switch (action.type) {
 
-    // case FETCH_ALBUM:
-    // newState.currently_playing = false;
-    //   return merge({}, newState, action.payload.songs[0]);
-
     case SET_FIRST_SONG:
-    newState.currently_playing = false;
+      newState.currently_playing = false;
       return merge({}, newState, action.currentSongs[0]);
 
     case RECEIVE_SONG:
