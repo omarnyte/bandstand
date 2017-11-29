@@ -5,7 +5,7 @@
 
 }
 
-.title-and-duration: {
+.title-and-duration {
   display: flex;
   justify-content: space-between;
 }

@@ -6,7 +6,7 @@ class MediaPlayer extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.setFirstSong(this.props.currentSongs);
   }
 
