@@ -46,6 +46,9 @@ class AlbumShow extends React.Component {
                 </Link>
               </h2>
 
+              // Ensures that media player only renders when an album has songs.
+              // Helps prevent an issue where the page had to be refreshed
+              // in order to render songs.
               {currentSongs.length > 0 &&
                 <MediaPlayerContainer currentSongs={currentSongs} />
               }

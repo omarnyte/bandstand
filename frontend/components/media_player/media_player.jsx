@@ -32,25 +32,27 @@ class MediaPlayer extends React.Component {
           ref={(ref) => (this.player = ref)}
           />
 
-          <div className='title-and-duration'>
-            <span className='t-and-d-title'>{playback.title}</span>
-          </div>
-
-          <input
-            type='range'
-            min='0'
-            max='1'
-            step='.01'
-            value={playback.volume}
-            onChange={this.props.handleVolumeChange}
-            />
-
-
         <div className='play-pause'>
           {playback.currently_playing ?
             <i class="fa fa-pause" aria-hidden="true" onClick={this.props.togglePlayPause}></i> :
-            <i class="fa fa-play" aria-hidden="true" onClick={this.props.togglePlayPause}></i>}
+              <i class="fa fa-play" aria-hidden="true" onClick={this.props.togglePlayPause}></i>}
         </div>
+
+        <div className='title-and-duration'>
+          <span className='t-and-d-title'>{playback.title}</span>
+        </div>
+
+        <input
+          className='volume-input'
+          type='range'
+          min='0'
+          max='1'
+          step='.01'
+          value={playback.volume}
+          onChange={this.props.handleVolumeChange}
+          />
+
+
 
       </div>
     );

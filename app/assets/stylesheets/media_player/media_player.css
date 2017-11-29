@@ -1,5 +1,6 @@
 .media-player-component {
-  border: 1px solid gray;
+  /*border: 1px solid gray;*/
+  margin-top: 25px;
 
   display: flex;
 
@@ -11,7 +12,10 @@
 }
 
 .t-and-d-title {
+  margin-left: 10px;
+
   font-size: 12px;
+  font-weight: bold;
 }
 
 .t-and-d-duration {
@@ -19,10 +23,19 @@
 }
 
 .play-pause > i {
-  padding: 15px;
+  padding: 15px 17px 15px 17px;
+  border: 1px solid #D9D9D9;
 
   font-size: 20px;
 
   background-color: #fff;
   border: 1px solid #d9d9d9;
+}
+
+.volume-input {
+  width: 60px;
+  height: 25px;
+  margin: 0;
+  transform-origin: 133px -80px;
+  transform: rotate(-90deg);
 }

@@ -16,13 +16,25 @@ class SongIndexItem extends React.Component {
 
     return (
       <div className='song-index-item-component'>
+        { currentSong.currently_playing && currentSong.id === song.id ?
+          <i
+            className="fa fa-pause"
+            aria-hidden="true"
+            onClick={this.handleClick}>
+          </i> :
+          <i
+            className="fa fa-play"
+            aria-hidden="true"
+            onClick={this.handleClick}>
+          </i>
+        }
+
         { currentSong.id === song.id ?
           <li
             className='song-index-item-playing'
             onClick={this.handleClick}>
             {song.title}
-          </li>
-          :
+          </li> :
           <li
             className='song-index-item'
             onClick={this.handleClick}>
