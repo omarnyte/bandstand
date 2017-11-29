@@ -18,13 +18,11 @@ class MediaPlayer extends React.Component {
   }
 
   getDuration() {
-    this.player.duration();
+    return this.player.duration();
   }
 
   render() {
     const {playback} = this.props;
-    // console.log(playback);
-    // console.log(this.props);
 
     if (playback.length === 0) return null;
 
@@ -37,8 +35,8 @@ class MediaPlayer extends React.Component {
           ref={(ref) => (this.player = ref)}
           />
 
-        {playback.currently_playing ? <span>{this.getDuration()}</span> : <div></div> }
-
+        {playback.currently_playing ? <span className='duration-span'>{this.getDuration()}</span> : <div></div> }
+        {playback.currently_playing ? <span className='duration-span'>{this.player.howlerState()}</span> : <div></div> }
         <div className='play-pause'>
           {playback.currently_playing ?
 
@@ -76,6 +74,7 @@ class MediaPlayer extends React.Component {
 }
 
 export default MediaPlayer;
+// {playback.currently_playing ? <span className='duration-span'>{this.getDuration()}</span> : <div></div> }
 
 
 
