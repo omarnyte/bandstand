@@ -26,4 +26,12 @@ class Band < ApplicationRecord
     through: :follows,
     source: :follower
 
+  def follower_ids
+    followers = []
+    self.followers.each do |follower|
+      followers << follower.id
+    end
+
+    followers
+  end
 end
