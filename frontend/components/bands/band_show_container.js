@@ -12,11 +12,11 @@ const mapStateToProps = (state, { match }) => {
   if (currentBand) {
     currentAlbums = selectAlbumsByBand(state, currentBand);
   }
-  
+
   return {
     currentBand,
     bandId,
-    currentAlbums
+    currentAlbums,
   };
 };
 

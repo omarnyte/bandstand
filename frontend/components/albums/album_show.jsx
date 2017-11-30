@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 // import SongIndexContainer from '../songs/song_index_container';
 import SongIndex from '../songs/song_index';
 import MediaPlayerContainer from '../media_player/media_player_container';
+// import BandBio from '../bands/band_bio';
 import BandBio from '../bands/band_bio';
 
 class AlbumShow extends React.Component {
