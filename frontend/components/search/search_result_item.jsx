@@ -5,7 +5,6 @@ class SearchResultItem extends React.Component {
 
   constructor(props) {
     super(props);
-    this.renderBand = this.renderBand.bind(this);
   }
 
     renderBand(result) {
@@ -28,8 +27,9 @@ class SearchResultItem extends React.Component {
           <div className='result-headings'>
             <span className='result-type'>ALBUM</span>
             <Link to={`/albums/${result.id}`}>
-              <strong className='result-title'> {result.album_name}</strong>
+              <strong className='result-title'> {result.name}</strong>
             </Link>
+            <span className='result-subtitle'>by {result.band_name}</span>
           </div>
         );
       }
@@ -41,6 +41,7 @@ class SearchResultItem extends React.Component {
           <div className='search-result-item-component'>
             <img className='search-result-image' src={result.image_location}/>
             {this.renderBand(result)}
+            {this.renderAlbum(result)}
           </div>
         );
     }

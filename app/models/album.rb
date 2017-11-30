@@ -26,4 +26,8 @@ class Album < ApplicationRecord
     Album.where('lower(name) LIKE ?', param).limit(5)
   end
 
+  def band_name
+    self.band.band_name 
+  end
+
 end
