@@ -4,14 +4,10 @@
 }
 
 .search-results-box {
-  border: 1px solid black;
-
   width: 975px;
 }
 
 .search-result-item-component{
-  border: 1px solid red;
-
   margin: 20px;
 
   display: flex;
@@ -23,15 +19,13 @@
 }
 
 .result-headings {
-  border: 1px solid blue;
-
   margin-left: 20px;
   display: flex;
   flex-direction: column;
 }
 
 .result-type {
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
   font-size: 10px;
   color: #999;
 
