@@ -6,6 +6,9 @@ json.searchResults do
 
     json.array! @albums.each do |album|
       json.set! :type, 'album'
+      json.band_name do
+        album.band.band_name
+      end
       json.partial! 'api/albums/album', album: album
     end
 

@@ -13,8 +13,23 @@ class SearchResultItem extends React.Component {
         return(
           <div className='result-headings'>
             <span className='result-type'>ARTIST</span>
-            <span className='result-title'>{result.band_name}</span>
-            <span className='resut-subtitle'>{result.location}</span>
+            <Link to={`/bands/${result.id}`}>
+              <strong className='result-title'> {result.band_name}</strong>
+            </Link>
+            <span className='result-subtitle'>{result.location}</span>
+          </div>
+        );
+      }
+    }
+
+    renderAlbum(result) {
+      if (result.type === 'album') {
+        return(
+          <div className='result-headings'>
+            <span className='result-type'>ALBUM</span>
+            <Link to={`/albums/${result.id}`}>
+              <strong className='result-title'> {result.album_name}</strong>
+            </Link>
           </div>
         );
       }

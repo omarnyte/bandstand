@@ -10,10 +10,12 @@ class SearchResults extends React.Component {
   render () {
   const { searchResults } = this.props;
 
-    if (!searchResults) return null; 
+    if (!searchResults) return null;
     return (
       <div className='search-results-component'>
-        {searchResults.map(result => <SearchResultItem result={result}/>)}
+        <div className='search-results-box'>
+          {searchResults.map(result => <SearchResultItem result={result}/>)}
+        </div>
       </div>
     );
   }
