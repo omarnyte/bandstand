@@ -25,7 +25,11 @@ class Song < ApplicationRecord
     Song.where('lower(title) LIKE ?', param).limit(5)
   end
 
-  def album_image_location
+  def image_location
     self.album.image_location
+  end
+
+  def album_name
+    self.album.name 
   end
 end
