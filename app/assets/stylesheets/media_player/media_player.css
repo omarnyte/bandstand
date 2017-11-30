@@ -36,6 +36,7 @@
 }
 
 .play-pause > i {
+  width: 15px;
   padding: 15px 17px 15px 17px;
   border: 1px solid #D9D9D9;
 
@@ -45,14 +46,11 @@
   border: 1px solid #d9d9d9;
 }
 
-.volume-range{
-  margin-left: 10px;
-  width: 200px;
-}
-/*.volume-range {
+
+.volume-range {
   width: 60px;
   height: 25px;
   margin: 0;
-  transform-origin: 133px -80px;
+  transform-origin: 176px -150px;
   transform: rotate(-90deg);
-}*/
+}

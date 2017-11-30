@@ -13,8 +13,6 @@ class AlbumShow extends React.Component {
     super(props);
   }
 
-  // ensures that a fetch attempt occurs even if a user visits the album
-  // page via the url
   componentDidMount() {
     this.props.fetchAlbum(this.props.match.params.albumId);
   }
@@ -23,10 +21,6 @@ class AlbumShow extends React.Component {
     if (this.props.match.params.albumId !== nextProps.match.params.albumId) {
       this.props.fetchAlbum(nextProps.match.params.albumId);
     }
-
-    // if (!nextProps.currentAlbum) {
-    //   this.props.fetchAlbum(nextProps.match.params.albumId);
-    // }
   }
 
   render() {
