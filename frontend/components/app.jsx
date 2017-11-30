@@ -7,7 +7,7 @@ import LogInContainer from './session_form/login_container';
 import SignupContainer from './session_form/signup_container';
 import BandShowContainer from './bands/band_show_container';
 import AlbumShowContainer from './albums/album_show_container';
-import SearchResults from './search/search_results';
+import SearchResultsContainer from './search/search_results_container';
 import Footer from './footer/footer';
 import { AuthRoute } from '../utils/route_utils';
 
@@ -21,7 +21,7 @@ const App = () => (
 
       <Route path='/bands/:bandId' component={BandShowContainer}/>
       <Route path='/albums/:albumId' component={AlbumShowContainer}/>
-      <Route path='/search' component={SearchResults}/>s
+      <Route path='/search' component={SearchResultsContainer}/>
     </Switch>
 
     <Footer />

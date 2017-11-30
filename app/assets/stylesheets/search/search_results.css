@@ -1,0 +1,29 @@
+.search-result-item-component{
+  border: 1px solid red;
+
+  display: flex;
+}
+
+.search-result-image {
+  width: 145px;
+  height: 145px;
+}
+
+.result-headings {
+  border: 1px solid blue; 
+
+  display: flex;
+  flex-direction: column;
+}
+
+.result-type {
+
+}
+
+.result-title {
+
+}
+
+.result-subtitle {
+
+}

@@ -7,6 +7,10 @@ class SearchForm extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      query: ''
+    };
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -20,7 +24,7 @@ class SearchForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-     this.props.history.push('/search'); 
+    this.props.history.push(`/search`);
   }
 
   render () {
@@ -32,7 +36,6 @@ class SearchForm extends React.Component {
             type='text'
             placeholder='Search for artist, track, or album'
             onChange={this.handleChange}
-
             />
         </form>
 

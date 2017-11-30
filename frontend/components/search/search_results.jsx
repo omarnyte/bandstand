@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import SearchResultItem from './search_result_item';
 
 class SearchResults extends React.Component {
   constructor(props) {
@@ -7,19 +8,12 @@ class SearchResults extends React.Component {
   }
 
   render () {
+  const { searchResults } = this.props;
+
+    if (!searchResults) return null; 
     return (
       <div className='search-results-component'>
-        <div className='band-results'>
-          bands
-        </div>
-
-        <div className='album-results'>
-          albums
-        </div>
-
-        <div className='song-results'>
-          songs
-        </div>
+        {searchResults.map(result => <SearchResultItem result={result}/>)}
       </div>
     );
   }
