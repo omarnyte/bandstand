@@ -30,7 +30,9 @@ const Navbar = ({ currentUser , logout, path }) => {
   return (
     <nav className='navbar'>
       <div className='left-nav'>
-        <img className='logo' src="http://www.drunkenwerewolf.com/wp-content/uploads/2017/04/Bandcamp.png"/>
+        <Link to='/'>
+          <img className='logo' src="https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Site+Images/Bandcamp+logo.png"/>
+        </Link>
           <h2 className='slogan'>Discover amazing new music, and directly support the artists who make it.</h2>
       </div>
       {display}

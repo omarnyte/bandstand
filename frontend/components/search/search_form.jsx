@@ -21,7 +21,7 @@ class SearchForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.history.push(`/search`);
+    if (this.props.path !== 'search') return this.props.history.push(`/search`);
   }
 
   render () {
