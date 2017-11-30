@@ -22,12 +22,14 @@ class Album < ApplicationRecord
   has_many :songs
 
   def self.top_results(query_param)
-    param = '%' + query_param.downcase + '%'
+    param = query_param.downcase.split('')
+    param = param.join('%')
+    param = '%' + param + '%'
     Album.where('lower(name) LIKE ?', param).limit(5)
   end
 
   def band_name
-    self.band.band_name 
+    self.band.band_name
   end
 
 end

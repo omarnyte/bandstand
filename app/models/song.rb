@@ -21,7 +21,9 @@ class Song < ApplicationRecord
   belongs_to :album
 
   def self.top_results(query_param)
-    param = '%' + query_param.downcase + '%'
+    param = query_param.downcase.split('')
+    param = param.join('%')
+    param = '%' + param + '%'
     Song.where('lower(title) LIKE ?', param).limit(5)
   end
 
@@ -30,6 +32,6 @@ class Song < ApplicationRecord
   end
 
   def album_name
-    self.album.name 
+    self.album.name
   end
 end
