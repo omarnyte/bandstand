@@ -41,9 +41,14 @@ user5 = User.create(
 # BANDS
 mini_bio_rand = rand(1) + 1
 
+band_photos = [
+  'https://pixabay.com/get/eb3cb70e21f1083ed1534705fb0938c9bd22ffd41cb0134193f7c77ca3/girl-2961959_1920.jpg',
+  'https://static.pexels.com/photos/654690/pexels-photo-654690.jpeg'
+]
+
 band1 = Band.create(
   band_name: 'Lana Dell Rey',
-  location: 'New York, NY',
+  location: 'New York, New York',
   mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
   image_location: 'https://upload.wikimedia.org/wikipedia/en/1/14/Coachella_-_Woodstock_In_My_Mind_-_Lana_Del_Rey.jpg'
 )
@@ -144,9 +149,46 @@ band14 = Band.create(
   image_location: 'https://images-production.global.ssl.fastly.net/uploads/photos/file/166672/ashlee-simpson-jan-2003.jpg'
 )
 
+band15= Band.create(
+  band_name: 'The Keystrokes',
+  location: 'New York, New York',
+  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
+  image_location: 'https://upload.wikimedia.org/wikipedia/commons/6/65/The_Strokes_by_Roger_Woolman.jpg'
+)
+
+band15= Band.create(
+  band_name: 'The Farray',
+  location: 'Denver, Colorado',
+  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
+  image_location: 'https://iscale.iheart.com/v3/url/aHR0cDovL2ltYWdlLmloZWFydC5jb20vaW1hZ2VzL3JvdmkvMTA4MC8wMDAzLzU0NC9NSTAwMDM1NDQ2NjUuanBn'
+)
+
+band16= Band.create(
+  band_name: 'Fat Arrow Smith',
+  location: 'Boston, Massachussets',
+  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
+  image_location: 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Steven_Tyler_1.jpg'
+)
+
 
 # ALBUMS
 album_description_rand = rand(10) + 10
+
+album_art = [
+  'https://pixabay.com/get/eb3cb60721f0053ed1534705fb0938c9bd22ffd41cb0134193f7c37aa0/cd-cover-2978944_1920.jpg',
+  'https://pixabay.com/get/eb3cb90b21f1073ed1534705fb0938c9bd22ffd41cb0134193f7c27cae/cd-cover-2984956_1920.jpg',
+  'https://pixabay.com/get/eb3cb70b2bf6013ed1534705fb0938c9bd22ffd41cb0134193f7c57aa7/cd-cover-2964320_1920.jpg',
+  'https://pixabay.com/get/eb3cb70721f0053ed1534705fb0938c9bd22ffd41cb0134193f7c57faf/cd-cover-2968944_1920.jpg',
+  'https://pixabay.com/get/eb3cb60d2ff0073ed1534705fb0938c9bd22ffd41cb0134193f7c479a1/cd-cover-2972746_1920.jpg',
+  'https://pixabay.com/get/eb32b50e28fc043ed1534705fb0938c9bd22ffd41cb0134193f7c47ca2/wolf-2741085_1920.jpg',
+  'https://pixabay.com/get/eb3cb90a2ef0093ed1584d05fb0938c9bd22ffd41cb0134193f7c67caf/floral-2985648_1280.jpg',
+  'https://pixabay.com/get/eb31b0082bf7053ed1534705fb0938c9bd22ffd41cb0134193f7c97da5/rose-2417334_1920.jpg',
+  'https://pixabay.com/get/eb3cb6092ef3053ed1534705fb0938c9bd22ffd41cb0134193f7c971a4/rose-2976674_1920.jpg',
+  'https://pixabay.com/get/eb3cb60a2bf4073ed1534705fb0938c9bd22ffd41cb0134193f7c87aae/nature-2975306_1920.jpg',
+  'https://pixabay.com/get/eb3cb40f2bf4043ed1534705fb0938c9bd22ffd41cb0134193f8c17ba3/architectural-2950305_1920.jpg',
+  'https://pixabay.com/get/eb33b00e2af4023ed1534705fb0938c9bd22ffd41cb0134193f8c17fa6/jerusalem-church-2611203_1920.jpg',
+  'https://pixabay.com/get/eb3cb70629f4033ed1534705fb0938c9bd22ffd41cb0134193f8c07ba1/cd-cover-2969102_1920.jpg'
+]
 
 album1 = Album.create(
   band_id: band5.id,
