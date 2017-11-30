@@ -7,10 +7,7 @@ import SearchContainer from '../search/search_container';
 const Navbar = ({ currentUser , logout, path }) => {
   const display = currentUser ? (
     <div className='right-nav'>
-      <input
-        className='temp-search-bar'
-        type='text'
-        placeholder='Search for artist, track, or album'/>
+      <SearchContainer />
       <p>Hello, {currentUser.username}</p>
       <button onClick={logout}>log out</button>
     </div>

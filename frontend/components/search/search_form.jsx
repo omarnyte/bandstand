@@ -16,9 +16,6 @@ class SearchForm extends React.Component {
   }
 
   handleChange(e) {
-    // const searchQuery = e.target.value;
-    // this.setState({searchQuery});
-    e.preventDefault();
     this.props.searchDB(e.target.value);
   }
 

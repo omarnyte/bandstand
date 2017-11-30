@@ -14,7 +14,7 @@ class SearchResults extends React.Component {
     return (
       <div className='search-results-component'>
         <div className='search-results-box'>
-          {searchResults.map(result => <SearchResultItem result={result}/>)}
+          {searchResults.map((result, idx) => <SearchResultItem key={idx} result={result}/>)}
         </div>
       </div>
     );
