@@ -1,0 +1,13 @@
+.search-index {
+  border: 1px solid blue;
+
+  width: 250px;
+}
+
+.search-index-hidden {
+  visibility: hidden;
+}
+
+.search-index-visible {
+  visibility: visible;
+}
