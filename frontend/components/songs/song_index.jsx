@@ -10,23 +10,24 @@ class SongIndex extends React.Component {
     super(props);
   }
 
-  // componentDidMount() {
-  //   this.props.fetchAlbum(this.props.match.params.albumId);
-  // }
-  //
-  // componentWillReceiveProps(nextProps)  {
-  //   if (!nextProps.currentAlbum) {
-  //     this.props.fetchAlbum(nextProps.match.params.albumId);
-  //   }
-  // }
+  renderNoSongs(currentSongs) {
+    if (currentSongs.length === 0) {
+      return(
+        <div className='no-songs'>
+          <img src='https://pixabay.com/get/ef3cb0092cfd1c22d9584518a33219c8b66ae3d018b311469cf6c27a/room-691649_1920.jpg' />
+          <h1>Album doesn't have any songs!</h1>
+        </div>
+      );
+    }
+  }
 
   render() {
     const { currentSongs } = this.props;
-
-    if (currentSongs.length < 1) return <h1>Albums doesn't have any songs!</h1>;
+    if (currentSongs.length === 0) this.renderNoSongs(currentSongs);
 
     return (
       <div>
+        {this.renderNoSongs(currentSongs)}
         <ol>
           {currentSongs.map(song => (
             <SongIndexItemContainer key={song.id} song={song} />

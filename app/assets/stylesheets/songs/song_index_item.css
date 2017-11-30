@@ -1,3 +1,11 @@
+.no-songs {
+  margin-top: 10px; 
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .song-index-item-component {
   margin: 5px;
 
@@ -26,14 +34,14 @@
 
 .song-index-item {
   margin-left: 25px;
-  width: 200px;
+  width: 350px;
 
   font-weight: normal;
 }
 
 .song-index-item-playing {
   margin-left: 25px;
-  width: 200px;
+  width: 350px;
 
 
   font-weight: bold;

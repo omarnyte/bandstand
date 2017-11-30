@@ -2,9 +2,11 @@ class Api::FollowsController < ApplicationController
 
   def create
     # TODO ensure that a user cannot create likes for anyone else
-    @follow = Follow.new()
+    @follow = Follow.new(
+      follower_id: params[:follower_id],
+      followee_id: params[:followee_id])
     @user = User.find(params[:follower_id])
-    @band = User.find(params[:followee_id])
+    @band = Band.find(params[:followee_id])
 
     if @follow.save
       render :show
