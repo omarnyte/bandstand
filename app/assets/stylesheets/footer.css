@@ -2,5 +2,22 @@
   height: 200px;
 
   background-color: #477987;
-  color: #abc1c7
+  color: #abc1c7;
+
+  display: flex;
+  justify-content: center;
+}
+
+.professional-links-div{
+  width: 250px;
+
+  margin-top: 20px; 
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.professional-links-div > a > img{
+  width: 30px;
+  height: 30px;
 }

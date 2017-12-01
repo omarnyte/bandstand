@@ -7,6 +7,7 @@ import SongIndex from '../songs/song_index';
 import MediaPlayerContainer from '../media_player/media_player_container';
 // import BandBio from '../bands/band_bio';
 import BandBio from '../bands/band_bio';
+import BandBioContainer from '../bands/band_bio_container';
 
 class AlbumShow extends React.Component {
   constructor(props) {
@@ -64,7 +65,7 @@ class AlbumShow extends React.Component {
           </div>
 
           <div className='album-page-right'>
-            <BandBio band={currentBand} />
+            <BandBioContainer band={currentBand} />
           </div>
         </div>
       </div>

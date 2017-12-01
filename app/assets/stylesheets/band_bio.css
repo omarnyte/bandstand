@@ -53,6 +53,12 @@
   color: #802830;
 }
 
+.unfollow {
+  color: white;
+  background-color: #619aa9;
+  border: 1px solid  #619aa9;
+}
+
 .mini-bio {
   font-size: 12px;
   color: black;

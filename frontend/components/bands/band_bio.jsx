@@ -9,13 +9,14 @@ class BandBio extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.band.id !== nextProps.band.id) {
-      this.props.fetchBand(nextProps.band.id); 
+      this.props.fetchBand(nextProps.band.id);
     }
   }
 
   handleClick(e) {
     e.preventDefault();
-    if (!currentUser)  {
+    console.log(this.props.currentUser);
+    if (this.props.currentUser === null)  {
       alert('You must be logged in to follow a band!')
     } else if (this.props.band.followed_by_current_user) {
       this.props.unfollowBand(this.props.band.id)
@@ -28,7 +29,7 @@ class BandBio extends React.Component {
     if (band.followed_by_current_user) {
       return (
         <div>
-          <button className='follow-unfollow' onClick={this.handleClick}>
+          <button className='follow-unfollow unfollow' onClick={this.handleClick}>
             Unfollow
           </button>
         </div>
@@ -36,7 +37,7 @@ class BandBio extends React.Component {
     } else {
       return (
         <div>
-          <button className='follow-unfollow' onClick={this.handleClick}>
+          <button className='follow-unfollow follow' onClick={this.handleClick}>
             Follow
           </button>
         </div>

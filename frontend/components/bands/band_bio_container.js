@@ -9,12 +9,12 @@ import { fetchBand, followBand, unfollowBand } from '../../actions/band_actions'
 const mapStateToProps = (state, { band }) => {
   return {
     band,
-    currentUser: state.entities.currentUser
+    currentUser: state.session.currentUser
   };
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchBand: (bandId) => fetchBand(bandId), 
+  fetchBand: (bandId) => fetchBand(bandId),
   followBand: (bandId) => dispatch(followBand(bandId)),
   unfollowBand: (bandId) => dispatch(unfollowBand(bandId))
 });
