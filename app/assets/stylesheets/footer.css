@@ -1,5 +1,5 @@
 .footer-div {
-  height: 200px;
+  height: 75px;
 
   background-color: #477987;
   color: #abc1c7;
@@ -11,7 +11,7 @@
 .professional-links-div{
   width: 250px;
 
-  margin-top: 20px; 
+  margin-top: 20px;
 
   display: flex;
   justify-content: space-between;

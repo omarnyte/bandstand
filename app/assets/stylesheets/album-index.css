@@ -4,5 +4,10 @@
 
   display: flex;
   justify-content: space-around;
+}
 
+.no-albums {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }

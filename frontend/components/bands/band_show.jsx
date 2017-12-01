@@ -22,12 +22,12 @@ class BandShow extends React.Component {
     }
   }
 
+
   render () {
     const { currentBand, currentAlbums } = this.props;
 
 
     if (!currentBand) return null;
-
     return (
       <div className='band-show-component'>
         <h1 className='band-name-header'>{currentBand.band_name}</h1>
