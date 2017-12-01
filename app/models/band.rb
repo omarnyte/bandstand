@@ -35,6 +35,13 @@ class Band < ApplicationRecord
     followers
   end
 
+  def followed_by_current_user(current_user_id)
+    self.followers.each do |follower|
+      return true if follower.id == current_user_id
+    end
+    false
+  end
+
   def self.top_results(query_param)
     param = query_param.downcase.split('')
     param = param.join('%')

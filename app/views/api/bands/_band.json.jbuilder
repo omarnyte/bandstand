@@ -1,5 +1,5 @@
 json.extract! band, :id, :band_name, :location, :mini_bio, :image_location,
-  :follower_ids
+  :follower_ids, :followed_by_current_user
 
 
   # json.array! band.followers.each do |follower|

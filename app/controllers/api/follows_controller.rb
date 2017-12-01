@@ -1,12 +1,12 @@
 class Api::FollowsController < ApplicationController
 
   def create
-    # TODO ensure that a user cannot create likes for anyone else
-    @follow = Follow.new(
-      follower_id: params[:follower_id],
-      followee_id: params[:followee_id])
-    @user = User.find(params[:follower_id])
+    @user = current_user
     @band = Band.find(params[:followee_id])
+    @follow = Follow.new(
+      follower_id: @current_user.id,
+      followee_id: params[:followee_id]
+    )
 
     if @follow.save
       render :show
@@ -17,15 +17,19 @@ class Api::FollowsController < ApplicationController
   end
 
   def destroy
-    @follow = Follow.find(params[:id])
-    # @user = User.find(paraFolms[:follower_id])
-    # @band = User.find(params[:followee_id])
+    @current_user = current_user
+    @band = Band.find(params[:id])
+    @follow = Follow.find_by(
+      follower_id: @current_user.id,
+      followee_id: @band.id
+    )
 
-    # TODO conditionally destroy follow only if current_user.id matches
-    # params[follower_id]
-    if @follow.destroy
+    if @follow
+      @follow.destroy
       render :show
     else
+      # TODO figure out which error status to use
+      render json: @band.errors.full_messages, status: 422
     end
   end
 end
