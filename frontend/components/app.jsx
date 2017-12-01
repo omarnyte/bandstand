@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import NavbarContainer from './navbar/navbar_container';
+import SplashPageContainer from './splash_page/splash_page_container';
 import SplashPage from './splash_page/splash_page';
 import LogInContainer from './session_form/login_container';
 import SignupContainer from './session_form/signup_container';
@@ -14,6 +15,7 @@ import { AuthRoute } from '../utils/route_utils';
 const App = () => (
   <div className='app-div'>
     <NavbarContainer />
+    <Route exact path='/' component={SplashPageContainer }/>
 
     <Switch>
       <AuthRoute path='/login' component={LogInContainer} />
@@ -22,6 +24,7 @@ const App = () => (
       <Route path='/bands/:bandId' component={BandShowContainer}/>
       <Route path='/albums/:albumId' component={AlbumShowContainer}/>
       <Route path='/search' component={SearchResultsContainer}/>
+
     </Switch>
 
     <Footer />
