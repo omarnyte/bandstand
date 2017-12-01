@@ -1,4 +1,5 @@
 import React from 'react';
+import * as debounce from "lodash.debounce";
 
 import SearchIndexContainer from './search_index_container';
 import SearchResults from './search_results';
@@ -8,7 +9,8 @@ class SearchForm extends React.Component {
     super(props);
 
     this.state = {
-      query: ''
+      query: '',
+      quickSearchTimeout: null
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -21,7 +23,10 @@ class SearchForm extends React.Component {
   }
 
   handleChange(e) {
-    this.props.searchDB(e.target.value);
+    clearTimeout(this.quickSearchTimeout);
+    const query = e.target.value;
+    this.setState({query});
+    this.quickSearchTimeout = setTimeout(() => this.props.searchDB(this.state.query), 1000);
   }
 
   handleSubmit(e) {
@@ -36,6 +41,7 @@ class SearchForm extends React.Component {
             className='temp-search-bar'
             type='text'
             placeholder='Search for artist, track, or album'
+            value={this.state.query}
             onFocus={this.handleFocus}
             onChange={this.handleChange}
             />
