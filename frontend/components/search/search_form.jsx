@@ -23,10 +23,11 @@ class SearchForm extends React.Component {
   }
 
   handleChange(e) {
+    // waits half a second after the last keystroke to dispatch searchDB 
     clearTimeout(this.quickSearchTimeout);
     const query = e.target.value;
     this.setState({query});
-    this.quickSearchTimeout = setTimeout(() => this.props.searchDB(this.state.query), 1000);
+    this.quickSearchTimeout = setTimeout(() => this.props.searchDB(this.state.query), 500);
   }
 
   handleSubmit(e) {

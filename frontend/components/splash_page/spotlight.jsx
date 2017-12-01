@@ -2,9 +2,10 @@ import React from 'react';
 
 const Spotlight = () => (
   <div className='spotlight-component'>
-
     <div className='main-spotlight'>
-      <img src='https://static.pexels.com/photos/157557/pexels-photo-157557.jpeg' />
+      <span className='spotlight-overlayed-text'>
+        Discover new music while supporting independent artists.
+      </span>
     </div>
 
   </div>
