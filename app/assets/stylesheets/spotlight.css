@@ -1,4 +1,4 @@
-.spotlight-component {
+/*.spotlight-component {
 
   width: 100%;
   display: flex;
@@ -23,4 +23,15 @@
 
   width: 300px;
   height: 225px;
+}*/
+
+.spotlight-component {
+  background-color: #222;
+
+  display: flex;
+  justify-content: center;
+}
+
+.main-spotlight {
+  width: 1065px; 
 }

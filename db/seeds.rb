@@ -315,3 +315,91 @@ follow6= Follow.create(
   follower_id: user1.id,
   followee_id: band1.id
 )
+
+# CREATIVE COMMONS MUSIC
+
+# http://freemusicarchive.org/music/Evie_Sands/
+band100 = Band.create(
+  band_name: 'Evie Sanders',
+  location: 'Los Angeles, California',
+  mini_bio: 'Evie Sands is a singer, songwriter, player & producer. Her career has traversed the musical spectrum of Tin Pan Alley, teenage package tours, national TV exposure, major label hits, cult fandom, Indie label #1’s and digital DIY with her own synthesis of sophisticated soulful pop.',
+  image_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Evie+Sands/Band+Image.jpg'
+)
+
+  # http://freemusicarchive.org/music/Evie_Sands/Live_at_WFMU_with_Gaylord_Fields_10292017/
+  album100 = Album.create(
+    band_id: band100.id,
+    name: 'Live at WFMU with Gaylord Fields',
+    description: Faker::Hipster.paragraph(album_description_rand),
+    image_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Evie+Sands/Live+at+WFMU+with+Gaylord+Fields/Album+Art.jpg'
+  )
+
+    song101 = Song.create(
+      album_id: album100.id,
+      title: 'You Can Do It',
+      track_index: 1,
+      song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Evie+Sands/Live+at+WFMU+with+Gaylord+Fields/Evie_Sands_-_01_-_You_Can_Do_It.mp3'
+    )
+
+    song102 = Song.create(
+      album_id: album100.id,
+      title: 'Another Side on the Other Side of the Line',
+      track_index: 2,
+      song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Evie+Sands/Live+at+WFMU+with+Gaylord+Fields/Evie_Sands_-_02_-_Another_Night_On_The_Other_Side_Of_The_Line.mp3'
+    )
+
+    song103 = Song.create(
+      album_id: album100.id,
+      title: 'While I Look At You',
+      track_index: 3,
+      song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Evie+Sands/Live+at+WFMU+with+Gaylord+Fields/Evie_Sands_-_03_-_While_I_Look_At_You.mp3'
+    )
+
+    song104 = Song.create(
+      album_id: album100.id,
+      title: 'Don\'t Look Back, Don\'t Look Down',
+      track_index: 4,
+      song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Evie+Sands/Live+at+WFMU+with+Gaylord+Fields/Evie_Sands_-_04_-_Dont_Look_Back_Dont_Look_Down.mp3'
+    )
+
+    song105 = Song.create(
+      album_id: album100.id,
+      title: 'Without You',
+      track_index: 5,
+      song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Evie+Sands/Live+at+WFMU+with+Gaylord+Fields/Evie_Sands_-_05_-_Without_You.mp3'
+    )
+
+    song106 = Song.create(
+      album_id: album100.id,
+      title: 'Fingerprint Me, Baby',
+      track_index: 6,
+      song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Evie+Sands/Live+at+WFMU+with+Gaylord+Fields/Evie_Sands_-_06_-_Fingerprint_Me_Baby.mp3'
+    )
+
+    song107 = Song.create(
+      album_id: album100.id,
+      title: 'Rodeo',
+      track_index: 7,
+      song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Evie+Sands/Live+at+WFMU+with+Gaylord+Fields/Evie_Sands_-_07_-_Rodeo.mp3'
+    )
+
+    song108 = Song.create(
+      album_id: album100.id,
+      title: 'Any Way That You Want Me',
+      track_index: 8,
+      song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Evie+Sands/Live+at+WFMU+with+Gaylord+Fields/Evie_Sands_-_09_-_Any_Way_That_You_Want_Me.mp3'
+    )
+
+    song109 = Song.create(
+      album_id: album100.id,
+      title: 'Get Up',
+      track_index: 9,
+      song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Evie+Sands/Live+at+WFMU+with+Gaylord+Fields/Evie_Sands_-_10_-_Get_Up.mp3'
+    )
+
+    song110 = Song.create(
+      album_id: album100.id,
+      title: 'Shine For Me',
+      track_index: 10,
+      song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Evie+Sands/Live+at+WFMU+with+Gaylord+Fields/Evie_Sands_-_11_-_Shine_For_Me.mp3'
+    )

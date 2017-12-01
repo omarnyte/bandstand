@@ -10,12 +10,17 @@ class SearchResultItem extends React.Component {
     renderBand(result) {
       if (result.type === 'band') {
         return(
-          <div className='result-headings'>
-            <span className='result-type'>ARTIST</span>
+          <div className='search-result-item-component'>
             <Link to={`/bands/${result.id}`}>
-              <strong className='result-title'> {result.band_name}</strong>
+              <img className='search-result-image' src={result.image_location}/>
             </Link>
-            <span className='result-subtitle'>{result.location}</span>
+              <div className='result-headings'>
+                <span className='result-type'>ARTIST</span>
+                <Link to={`/bands/${result.id}`}>
+                  <strong className='result-title'> {result.band_name}</strong>
+                </Link>
+                <span className='result-subtitle'>{result.location}</span>
+              </div>
           </div>
         );
       }
@@ -24,12 +29,17 @@ class SearchResultItem extends React.Component {
     renderAlbum(result) {
       if (result.type === 'album') {
         return(
-          <div className='result-headings'>
-            <span className='result-type'>ALBUM</span>
+          <div className='search-result-item-component'>
             <Link to={`/albums/${result.id}`}>
-              <strong className='result-title'> {result.name}</strong>
+              <img className='search-result-image' src={result.image_location}/>
             </Link>
-            <span className='result-subtitle'>by {result.band_name}</span>
+              <div className='result-headings'>
+                <span className='result-type'>ALBUM</span>
+                <Link to={`/albums/${result.id}`}>
+                  <strong className='result-title'> {result.name}</strong>
+                </Link>
+                <span className='result-subtitle'>by {result.band_name}</span>
+              </div>
           </div>
         );
       }
@@ -38,12 +48,17 @@ class SearchResultItem extends React.Component {
     renderSong(result) {
       if (result.type === 'song') {
         return(
-          <div className='result-headings'>
-            <span className='result-type'>TRACK</span>
+          <div className='search-result-item-component'>
             <Link to={`/albums/${result.album_id}`}>
-              <strong className='result-title'> {result.title}</strong>
+              <img className='search-result-image' src={result.image_location}/>
             </Link>
-            <span className='result-subtitle'>from {result.album_name}</span>
+              <div className='result-headings'>
+                <span className='result-type'>SONG</span>
+                <Link to={`/albums/${result.album_id}`}>
+                  <strong className='result-title'> {result.title}</strong>
+                </Link>
+                <span className='result-subtitle'>from {result.album_name}</span>
+              </div>
           </div>
         );
       }
@@ -52,8 +67,7 @@ class SearchResultItem extends React.Component {
     render() {
       const { result } = this.props;
         return(
-          <div className='search-result-item-component'>
-            <img className='search-result-image' src={result.image_location}/>
+          <div>
             {this.renderBand(result)}
             {this.renderAlbum(result)}
             {this.renderSong(result)}
@@ -61,8 +75,5 @@ class SearchResultItem extends React.Component {
         );
     }
   }
-
-
-
 
 export default SearchResultItem;
