@@ -71,6 +71,7 @@ class SearchResultItem extends React.Component {
             {this.renderBand(result)}
             {this.renderAlbum(result)}
             {this.renderSong(result)}
+            <div className='search-result-item-border'></div>
           </div>
         );
     }

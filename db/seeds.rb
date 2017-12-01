@@ -172,118 +172,140 @@ band16= Band.create(
 
 
 # ALBUMS
-album_description_rand = rand(10) + 10
+def album_name
+  rand_string = Faker::Hipster.sentence(rand(4)+1).chop!
+  rand_string = rand_string.split.map do |word|
+    word.capitalize
+  end
+  rand_string.join(' ')
+end
+album_description = Faker::Hipster.paragraph((rand(10) + 10))
 
 album_art = [
-  'https://pixabay.com/get/eb3cb60721f0053ed1534705fb0938c9bd22ffd41cb0134193f7c37aa0/cd-cover-2978944_1920.jpg',
-  'https://pixabay.com/get/eb3cb90b21f1073ed1534705fb0938c9bd22ffd41cb0134193f7c27cae/cd-cover-2984956_1920.jpg',
-  'https://pixabay.com/get/eb3cb70b2bf6013ed1534705fb0938c9bd22ffd41cb0134193f7c57aa7/cd-cover-2964320_1920.jpg',
-  'https://pixabay.com/get/eb3cb70721f0053ed1534705fb0938c9bd22ffd41cb0134193f7c57faf/cd-cover-2968944_1920.jpg',
-  'https://pixabay.com/get/eb3cb60d2ff0073ed1534705fb0938c9bd22ffd41cb0134193f7c479a1/cd-cover-2972746_1920.jpg',
-  'https://pixabay.com/get/eb32b50e28fc043ed1534705fb0938c9bd22ffd41cb0134193f7c47ca2/wolf-2741085_1920.jpg',
-  'https://pixabay.com/get/eb3cb90a2ef0093ed1584d05fb0938c9bd22ffd41cb0134193f7c67caf/floral-2985648_1280.jpg',
-  'https://pixabay.com/get/eb31b0082bf7053ed1534705fb0938c9bd22ffd41cb0134193f7c97da5/rose-2417334_1920.jpg',
-  'https://pixabay.com/get/eb3cb6092ef3053ed1534705fb0938c9bd22ffd41cb0134193f7c971a4/rose-2976674_1920.jpg',
-  'https://pixabay.com/get/eb3cb60a2bf4073ed1534705fb0938c9bd22ffd41cb0134193f7c87aae/nature-2975306_1920.jpg',
-  'https://pixabay.com/get/eb3cb40f2bf4043ed1534705fb0938c9bd22ffd41cb0134193f8c17ba3/architectural-2950305_1920.jpg',
-  'https://pixabay.com/get/eb33b00e2af4023ed1534705fb0938c9bd22ffd41cb0134193f8c17fa6/jerusalem-church-2611203_1920.jpg',
-  'https://pixabay.com/get/eb3cb70629f4033ed1534705fb0938c9bd22ffd41cb0134193f8c07ba1/cd-cover-2969102_1920.jpg'
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+1.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+10.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+11.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+12.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+13.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+14.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+15.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+16.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+17.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+18.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+2.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+3.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+4.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+5.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+6.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+7.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+8.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+9.jpg'
 ]
+
+album_art.each do |album|
+  Album.create(
+    band_id: (rand(16) + 1),
+    name: album_name,
+    description: album_description,
+    image_location: album
+  )
+end
 
 album1 = Album.create(
   band_id: band5.id,
   name: 'Nodes and Keys',
-  description: Faker::Hipster.paragraph(album_description_rand),
+  description: album_description,
   image_location: 'https://upload.wikimedia.org/wikipedia/en/5/5b/Codes_And_Keys_Death_Cab_For_Cutie.jpg'
 )
 
 album2 = Album.create(
-  band_id: band5.id,
-  name: 'Narrow Stairs',
-  description: Faker::Hipster.paragraph(album_description_rand),
-  image_location: 'https://en.wikipedia.org/wiki/Narrow_Stairs#/media/File:Narrow_stairs.jpg'
-)
-
-album3 = Album.create(
-  band_id: band5.id,
-  name: 'The Photo Album',
-  description: Faker::Hipster.paragraph(album_description_rand),
-  image_location: 'https://en.wikipedia.org/wiki/The_Photo_Album#/media/File:DeathCabPhotoAlbum.jpg'
-)
-
-album4 = Album.create(
-  band_id: band5.id,
-  name: "We Have the Facts and We're Voting Yes",
-  description: Faker::Hipster.paragraph(album_description_rand),
-  image_location: 'https://en.wikipedia.org/wiki/We_Have_the_Facts_and_We%27re_Voting_Yes'
-)
-
-album5 = Album.create(
   band_id: band6.id,
   name: 'Push and Pop',
-  description: Faker::Hipster.paragraph(album_description_rand),
+  description: album_description,
   image_location: 'https://upload.wikimedia.org/wikipedia/en/7/79/Push_and_Shove_-_No_Doubt_album_cover.jpg'
 )
 
+# album2 = Album.create(
+#   band_id: band5.id,
+#   name: 'Narrow Stairs',
+#   description: Faker::Hipster.paragraph(album_description_rand),
+#   image_location: 'https://en.wikipedia.org/wiki/Narrow_Stairs#/media/File:Narrow_stairs.jpg'
+# )
+#
+# album3 = Album.create(
+#   band_id: band5.id,
+#   name: 'The Photo Album',
+#   description: Faker::Hipster.paragraph(album_description_rand),
+#   image_location: 'https://en.wikipedia.org/wiki/The_Photo_Album#/media/File:DeathCabPhotoAlbum.jpg'
+# )
+#
+# album4 = Album.create(
+#   band_id: band5.id,
+#   name: "We Have the Facts and We're Voting Yes",
+#   description: Faker::Hipster.paragraph(album_description_rand),
+#   image_location: 'https://en.wikipedia.org/wiki/We_Have_the_Facts_and_We%27re_Voting_Yes'
+# )
+
+
 # SONGS
-song1 = Song.create(
-  album_id: album1.id,
-  title: 'Home is a Fire',
-  track_index: 1,
-  song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/01+Home+Is+a+Fire.mp3'
-)
-song2 = Song.create(
-  album_id: album1.id,
-  title: 'Codes and Keys',
-  track_index: 2,
-  song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/02+Codes+and+Keys.mp3'
-)
-song3 = Song.create(
-  album_id: album1.id,
-  title: 'Some Boys',
-  track_index: 3,
-  song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/03+Some+Boys.mp3'
-)
-song4 = Song.create(
-  album_id: album1.id,
-  title: 'Doors Unlocked and Open',
-  track_index: 4,
-  song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/04+Doors+Unlocked+and+Open.mp3'
-)
-song5 = Song.create(
-  album_id: album1.id,
-  title: 'You Are a Tourist',
-  track_index: 5,
-  song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/05+You+Are+a+Tourist.mp3'
-)
-
-song6 = Song.create(
-  album_id: album3.id,
-  title: 'Steadier Footing',
-  track_index: 1,
-  song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/01+Steadier+Footing.mp3'
-)
-
-song7 = Song.create(
-  album_id: album3.id,
-  title: 'A Movie Script Ending',
-  track_index: 2,
-  song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/02+A+Movie+Script+Ending.mp3'
-)
-
-song8 = Song.create(
-  album_id: album3.id,
-  title: 'We Laugh Indoors',
-  track_index: 3,
-  song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/03+We+Laugh+Indoors.mp3'
-)
-
-song9 = Song.create(
-  album_id: album3.id,
-  title: 'Information Travels Faster',
-  track_index: 4,
-  song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/04+Information+Travels+Faster.mp3'
-)
+# song1 = Song.create(
+#   album_id: album1.id,
+#   title: 'Home is a Fire',
+#   track_index: 1,
+#   song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/01+Home+Is+a+Fire.mp3'
+# )
+# song2 = Song.create(
+#   album_id: album1.id,
+#   title: 'Codes and Keys',
+#   track_index: 2,
+#   song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/02+Codes+and+Keys.mp3'
+# )
+# song3 = Song.create(
+#   album_id: album1.id,
+#   title: 'Some Boys',
+#   track_index: 3,
+#   song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/03+Some+Boys.mp3'
+# )
+# song4 = Song.create(
+#   album_id: album1.id,
+#   title: 'Doors Unlocked and Open',
+#   track_index: 4,
+#   song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/04+Doors+Unlocked+and+Open.mp3'
+# )
+# song5 = Song.create(
+#   album_id: album1.id,
+#   title: 'You Are a Tourist',
+#   track_index: 5,
+#   song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/05+You+Are+a+Tourist.mp3'
+# )
+#
+# song6 = Song.create(
+#   album_id: album3.id,
+#   title: 'Steadier Footing',
+#   track_index: 1,
+#   song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/01+Steadier+Footing.mp3'
+# )
+#
+# song7 = Song.create(
+#   album_id: album3.id,
+#   title: 'A Movie Script Ending',
+#   track_index: 2,
+#   song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/02+A+Movie+Script+Ending.mp3'
+# )
+#
+# song8 = Song.create(
+#   album_id: album3.id,
+#   title: 'We Laugh Indoors',
+#   track_index: 3,
+#   song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/03+We+Laugh+Indoors.mp3'
+# )
+#
+# song9 = Song.create(
+#   album_id: album3.id,
+#   title: 'Information Travels Faster',
+#   track_index: 4,
+#   song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Music/04+Information+Travels+Faster.mp3'
+# )
 
 ## FOLLOWS
 follow1 = Follow.create(
@@ -330,7 +352,7 @@ band100 = Band.create(
   album100 = Album.create(
     band_id: band100.id,
     name: 'Live at WFMU with Gaylord Fields',
-    description: Faker::Hipster.paragraph(album_description_rand),
+    description: album_description,
     image_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Evie+Sands/Live+at+WFMU+with+Gaylord+Fields/Album+Art.jpg'
   )
 

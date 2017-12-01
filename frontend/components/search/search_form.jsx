@@ -13,6 +13,11 @@ class SearchForm extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleFocus = this.handleFocus.bind(this); 
+  }
+
+  handleFocus() {
+    if (this.props.path !== 'search') return this.props.history.push(`/search`);
   }
 
   handleChange(e) {
@@ -21,7 +26,7 @@ class SearchForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    if (this.props.path !== 'search') return this.props.history.push(`/search`);
+    // if (this.props.path !== 'search') return this.props.history.push(`/search`);
   }
 
   render () {
@@ -32,6 +37,7 @@ class SearchForm extends React.Component {
             className='temp-search-bar'
             type='text'
             placeholder='Search for artist, track, or album'
+            onFocus={this.handleFocus}
             onChange={this.handleChange}
             />
         </form>
@@ -42,11 +48,3 @@ class SearchForm extends React.Component {
 }
 
 export default SearchForm;
-
-// <input
-//   className='temp-search-bar'
-//   type='text'
-//   placeholder='Search for artist, track, or album'
-//   onChange={this.handleChange}
-//   onSubmit={this.handleSubmit}
-//   />
