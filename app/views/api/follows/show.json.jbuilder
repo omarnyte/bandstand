@@ -3,5 +3,5 @@ json.user do
 end
 
 json.band do
-  json.partial! '/api/bands/band', band: @band
+  json.partial! '/api/bands/band', band: @band, user: @user 
 end

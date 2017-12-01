@@ -7,6 +7,7 @@ json.songs do
 end
 
 json.band do
-  json.extract! @album.band, :id, :band_name, :location, :mini_bio, :image_location,
-    :follower_ids 
+  # json.extract! @album.band, :id, :band_name, :location, :mini_bio, :image_location,
+  #   :follower_ids
+  json.partial! 'api/bands/band', band: @album.band
 end
