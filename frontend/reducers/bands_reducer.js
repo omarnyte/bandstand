@@ -4,6 +4,8 @@ import { RECEIVE_ALL_BANDS,
          RECEIVE_BAND } from '../actions/band_actions';
 import { RECEIVE_ALBUM } from '../actions/album_actions';
 
+
+
 const BandsReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   switch (action.type) {

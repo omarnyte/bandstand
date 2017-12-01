@@ -1,6 +1,11 @@
 json.extract! band, :id, :band_name, :location, :mini_bio, :image_location,
   :follower_ids
-json.followed_by_current_user band.followed_by_current_user(current_user.id)
+
+if current_user
+  json.followed_by_current_user !!band.followers.find(current_user.id)
+else
+  json.followed_by_current_user false
+end
 
 # json.array! band.followers.each do |follower|
 #   json.extract! follower, :id
