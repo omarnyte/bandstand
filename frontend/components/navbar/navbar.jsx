@@ -31,7 +31,7 @@ const Navbar = ({ currentUser , logout, path }) => {
     <nav className='navbar'>
       <div className='left-nav'>
         <Link to='/'>
-          <img className='logo' src="https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Site+Images/Bandcamp+logo.png"/>
+          <img className='logo' src="https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Site+Images/Bandstand+Logo.png"/>
         </Link>
           <h2 className='slogan'>Discover amazing new music, and directly support the artists who make it.</h2>
       </div>
