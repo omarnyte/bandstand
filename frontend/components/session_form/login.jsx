@@ -54,7 +54,7 @@ class LogIn extends React.Component {
           <Link to='/'>
             <img
               className='login-logo'
-              src='https://www.seeklogo.net/wp-content/uploads/2017/02/bandcamp-logo.png'/>
+              src='https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Site+Images/Bandstand+Logo.png'/>
           </Link>
         </header>
 
