@@ -7,12 +7,12 @@ export const RECEIVE_BAND = 'RECEIVE_BAND';
 // Thunk actions
 export const fetchBands = () => dispatch => (
   BandAPIUtil.fetchBands()
-  .then(bandsResp => dispatch(receiveAllBands(bandsResp)))
+    .then(bandsResp => dispatch(receiveAllBands(bandsResp)))
 );
 
 export const fetchBand = (bandId) => dispatch => (
   BandAPIUtil.fetchBand(bandId)
-  .then(bandResp => dispatch(receiveBand(bandResp)))
+    .then(bandResp => dispatch(receiveBand(bandResp)))
 );
 
 export const followBand = (bandId) => dispatch => (
@@ -22,7 +22,7 @@ export const followBand = (bandId) => dispatch => (
 
 export const unfollowBand = (bandId) => dispatch => (
   FollowAPIUtil.unfollowBand(bandId)
-    .then(bandResp => dispatch(receiveBand))
+    .then(bandResp => dispatch(receiveBand(bandResp)))
 );
 
 

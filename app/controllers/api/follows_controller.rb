@@ -4,7 +4,7 @@ class Api::FollowsController < ApplicationController
     @user = current_user
     @band = Band.find(params[:followee_id])
     @follow = Follow.new(
-      follower_id: @current_user.id,
+      follower_id: @user.id,
       followee_id: params[:followee_id]
     )
 
@@ -17,10 +17,10 @@ class Api::FollowsController < ApplicationController
   end
 
   def destroy
-    @current_user = current_user
+    @user = current_user
     @band = Band.find(params[:id])
     @follow = Follow.find_by(
-      follower_id: @current_user.id,
+      follower_id: @user.id,
       followee_id: @band.id
     )
 
