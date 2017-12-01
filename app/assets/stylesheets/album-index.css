@@ -1,6 +1,7 @@
 .album-index-component {
   width: 795px;
   margin-top: 30px;
+  margin-bottom: 20px; 
 
   display: flex;
   justify-content: space-around;
@@ -9,5 +10,8 @@
 .no-albums {
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
+
+  margin-bottom: 20px;
+
 }

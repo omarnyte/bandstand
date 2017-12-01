@@ -9,7 +9,7 @@ const Footer = () => {
           <img src='https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Site+Images/github.png'/>
         </a>
 
-        <a target="_blank" href='https://github.com/omarnyte' >
+        <a target="_blank" href='https://www.linkedin.com/in/omardls/' >
           <img src='https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Site+Images/linkedin-black.png'/>
         </a>
 
