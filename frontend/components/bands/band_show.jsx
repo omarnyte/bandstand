@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 import AlbumIndex from '../albums/album_index';
-import BandBio from './band_bio';
+import BandBioContainer from './band_bio_container';
 
 class BandShow extends React.Component {
   constructor(props) {
@@ -33,7 +33,7 @@ class BandShow extends React.Component {
         <h1 className='band-name-header'>{currentBand.band_name}</h1>
         <div className='album-index-and-band-bio'>
           <AlbumIndex albums={currentAlbums}/>
-          <BandBio band={currentBand} />
+          <BandBioContainer band={currentBand} />
         </div>
       </div>
 

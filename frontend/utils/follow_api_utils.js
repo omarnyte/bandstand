@@ -1,8 +1,8 @@
-export const followBand = (data) => {
+export const followBand = (followee_id) => {
   $.ajax ({
     method: 'POST',
     url: 'api/follows',
-    data
+    data: { followee_id }
   });
 };
 

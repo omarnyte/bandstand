@@ -15,8 +15,8 @@ export const fetchBand = (bandId) => dispatch => (
   .then(bandResp => dispatch(receiveBand(bandResp)))
 );
 
-export const followBand = (band) => dispatch => (
-  FollowAPIUtil.followBand()
+export const followBand = (bandId) => dispatch => (
+  FollowAPIUtil.followBand(bandId)
     .then(bandResp => dispatch(receiveBand(bandResp)))
 );
 
