@@ -227,6 +227,9 @@ ALBUM_ART = [
   'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+16.jpg',
   'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+17.jpg',
   'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+18.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+19.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+20.jpg',
+  'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+21.jpg',
   'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+2.jpg',
   'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+3.jpg',
   'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+4.jpg',
@@ -257,8 +260,6 @@ ALBUM_ART.each do |album|
     )
     i += 1
   end
-
-
 end
 
 album1 = Album.create(

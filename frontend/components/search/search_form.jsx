@@ -13,7 +13,7 @@ class SearchForm extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleFocus = this.handleFocus.bind(this); 
+    this.handleFocus = this.handleFocus.bind(this);
   }
 
   handleFocus() {
@@ -26,7 +26,6 @@ class SearchForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // if (this.props.path !== 'search') return this.props.history.push(`/search`);
   }
 
   render () {
