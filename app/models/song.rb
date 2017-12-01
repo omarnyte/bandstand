@@ -13,7 +13,7 @@
 
 class Song < ApplicationRecord
   validates :album_id, :title, :track_index, presence: true
-  validates :title, :track_index, uniqueness: {
+  validates :title, uniqueness: {
     scope: :album_id,
     message: 'Track index number must be unique within an album'
   }

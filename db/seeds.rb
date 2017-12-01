@@ -170,10 +170,45 @@ band16= Band.create(
   image_location: 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Steven_Tyler_1.jpg'
 )
 
+SONGS = [
+  # http://freemusicarchive.org/music/Greg_Atkinson/7_Gifts/
+  {title: 'Gifts', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Greg+Atkinson/7+Gifts/7+Gifts/Greg_Atkinson_-_01_-_7_Gifts.mp3'},
+  {title: 'Superfortess', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Greg+Atkinson/7+Gifts/7+Gifts/Greg_Atkinson_-_02_-_Superfortress.mp3'},
+  {title: 'Poison Me and You Die', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Greg+Atkinson/7+Gifts/7+Gifts/Greg_Atkinson_-_03_-_Poison_me_and_You_Die.mp3'},
+  {title: 'Reason to Reason', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Greg+Atkinson/7+Gifts/7+Gifts/Greg_Atkinson_-_04_-_Reason_to_Reason.mp3'},
+  {title: 'White Horses', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Greg+Atkinson/7+Gifts/7+Gifts/Greg_Atkinson_-_05_-_White_Horses.mp3'},
+  {title: 'Two Metres', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Greg+Atkinson/7+Gifts/7+Gifts/Greg_Atkinson_-_06_-_Two_metres.mp3'},
+  {title: 'Terracotta Child', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Greg+Atkinson/7+Gifts/7+Gifts/Greg_Atkinson_-_07_-_Terracotta_Child.mp3'},
 
-# ALBUMS
+  # http://freemusicarchive.org/music/Greg_Atkinson/Christmas_Losers/
+  {title: 'Losing Over Christmas', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Greg+Atkinson/7+Gifts/7+Gifts/Greg_Atkinson_-_07_-_Terracotta_Child.mp3'},
+  {title: 'Pantomime Cow', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Greg+Atkinson/Christmas+Losers/Greg_Atkinson_-_02_-_Pantomime_Cow.mp3'},
+  {title: 'Loses on a Christmas Eve', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Greg+Atkinson/Christmas+Losers/Greg_Atkinson_-_03_-_Losers_on_a_Christmas_Eve.mp3'},
+
+  # http://freemusicarchive.org/music/Greg_Atkinson/Hikikomori_EP/
+  {title: 'Hikkomorio', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Greg+Atkinson/Hikikomori+EP/Greg_Atkinson_-_01_-_Hikikomori.mp3'},
+  {title: 'Slow Enough', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Greg+Atkinson/Hikikomori+EP/Greg_Atkinson_-_02_-_Slow_Enough.mp3'},
+  {title: 'Erudite Girl', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Greg+Atkinson/Hikikomori+EP/Greg_Atkinson_-_03_-_Erudite_Girl.mp3'},
+  {title: 'If You Stay', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Greg+Atkinson/Hikikomori+EP/Greg_Atkinson_-_04_-_If_You_Stay.mp3'},
+
+  # http://freemusicarchive.org/music/Soft_and_Furious/
+  {title: 'You\re Magic', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Soft+and+Furious/The+truth+abouth+RW/Soft_and_Furious_-_01_-_Youre_Magic.mp3'},
+  {title: 'Game On', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Soft+and+Furious/The+truth+abouth+RW/Soft_and_Furious_-_02_-_Game_On.mp3'},
+  {title: 'Incredible You', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Soft+and+Furious/The+truth+abouth+RW/Soft_and_Furious_-_03_-_Incredible_You.mp3'},
+  {title: 'Next Time', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Soft+and+Furious/The+truth+abouth+RW/Soft_and_Furious_-_04_-_Next_Time.mp3'},
+  {title: 'Probably Not', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Soft+and+Furious/The+truth+abouth+RW/Soft_and_Furious_-_05_-_Probably_Not.mp3'},
+  {title: 'Shining End', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Soft+and+Furious/The+truth+abouth+RW/Soft_and_Furious_-_06_-_Shining_Ending.mp3'},
+
+  # http://freemusicarchive.org/music/Lea_Thomas/Live_at_WFMU_for_Shrunken_Planet_with_Jeffrey_Davison_10282017
+  {title: 'Some Days Are Longer', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Lea+Thomas/Live+at+WFMU+for+Shrunken+Planet+with+Jeffrey+Davison/Lea_Thomas_-_01_-_Some_Days_Are_Longer.mp3'},
+  {title: 'Talk Like the Trees', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Lea+Thomas/Live+at+WFMU+for+Shrunken+Planet+with+Jeffrey+Davison/Lea_Thomas_-_02_-_Talk_Like_the_Trees.mp3'},
+  {title: 'Upstream', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Lea+Thomas/Live+at+WFMU+for+Shrunken+Planet+with+Jeffrey+Davison/Lea_Thomas_-_04_-_Want_For_Nothing.mp3'}
+]
+
+### ALBUMS ###
 def album_name
-  rand_string = Faker::Hipster.sentence(rand(4)+1).chop!
+  rand_album_num = rand(4) + 1
+  rand_string = Faker::Hipster.sentence(rand_album_num).chop!
   rand_string = rand_string.split.map do |word|
     word.capitalize
   end
@@ -181,7 +216,7 @@ def album_name
 end
 album_description = Faker::Hipster.paragraph((rand(10) + 10))
 
-album_art = [
+ALBUM_ART = [
   'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+1.jpg',
   'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+10.jpg',
   'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+11.jpg',
@@ -202,13 +237,28 @@ album_art = [
   'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Random+Album+Art/Album+Art+9.jpg'
 ]
 
-album_art.each do |album|
-  Album.create(
-    band_id: (rand(16) + 1),
-    name: album_name,
-    description: album_description,
-    image_location: album
-  )
+ALBUM_ART.each do |album|
+  album = Album.create(
+      band_id: (rand(16) + 1),
+      name: album_name,
+      description: album_description,
+      image_location: album
+    )
+
+  rand_num_of_tracks = rand(7) + 5
+  rand_songs = SONGS.sample(rand_num_of_tracks)
+  rand_songs.each do |song|
+    i = 1
+    Song.create(
+      album_id: album.id,
+      title: song[:title],
+      track_index: i,
+      song_location: song[:song_location]
+    )
+    i += 1
+  end
+
+
 end
 
 album1 = Album.create(
@@ -247,7 +297,8 @@ album2 = Album.create(
 # )
 
 
-# SONGS
+
+
 # song1 = Song.create(
 #   album_id: album1.id,
 #   title: 'Home is a Fire',

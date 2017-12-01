@@ -1,5 +1,5 @@
 .album-index-item {
-
+  max-width: 168px;
 }
 
 .album-cover-thumb {
@@ -8,8 +8,6 @@
 }
 
 .album-index-item-title {
-  max-width: 168px;
-
   font-size: 11px;
   font-weight: 700;
   color: #802830;
