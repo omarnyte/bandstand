@@ -34,20 +34,20 @@ document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(<Root store={ store } />, root);
 
   // begin test
-  window.store = store;
-  window.login = login;
-  window.logout = logout;
-
-  window.signup = signup;
-  window.fetchBands = fetchBands;
-  window.fetchBand = fetchBand;
-
-  window.fetchAlbums = fetchAlbums;
-  window.fetchAlbum = fetchAlbum;
-  window.createAlbum = createAlbum;
-  window.deleteAlbum = deleteAlbum;
-  window.searchDB = searchDB;
-  window.followBand = followBand;
-  window.unfollowBand = unfollowBand;
+  // window.store = store;
+  // window.login = login;
+  // window.logout = logout;
+  //
+  // window.signup = signup;
+  // window.fetchBands = fetchBands;
+  // window.fetchBand = fetchBand;
+  //
+  // window.fetchAlbums = fetchAlbums;
+  // window.fetchAlbum = fetchAlbum;
+  // window.createAlbum = createAlbum;
+  // window.deleteAlbum = deleteAlbum;
+  // window.searchDB = searchDB;
+  // window.followBand = followBand;
+  // window.unfollowBand = unfollowBand;
   // end test
 });
