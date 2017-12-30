@@ -60,12 +60,6 @@ class Signup extends React.Component {
                 onChange={this.handleInput('email')}
                 />
 
-              <p>Password</p>
-              <input
-                type='password'
-                value ={this.state.password}
-                onChange={this.handleInput('password')}
-                />
 
               <p>Username</p>
               <input
@@ -74,6 +68,13 @@ class Signup extends React.Component {
                 onChange={this.handleInput('username')}
                 />
 
+              <p>Password</p>
+              <input
+                type='password'
+                value ={this.state.password}
+                onChange={this.handleInput('password')}
+                />
+              
             {this.renderErrors()}
 
             <button
