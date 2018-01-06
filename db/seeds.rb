@@ -150,26 +150,114 @@ band14 = Band.create(
   image_location: 'https://images-production.global.ssl.fastly.net/uploads/photos/file/166672/ashlee-simpson-jan-2003.jpg'
 )
 
-band15= Band.create(
+band15 = Band.create(
   band_name: 'The Keystrokes',
   location: 'New York, New York',
   mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
   image_location: 'https://upload.wikimedia.org/wikipedia/commons/6/65/The_Strokes_by_Roger_Woolman.jpg'
 )
 
-band15= Band.create(
+band15 = Band.create(
   band_name: 'The Farray',
   location: 'Denver, Colorado',
   mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
   image_location: 'https://iscale.iheart.com/v3/url/aHR0cDovL2ltYWdlLmloZWFydC5jb20vaW1hZ2VzL3JvdmkvMTA4MC8wMDAzLzU0NC9NSTAwMDM1NDQ2NjUuanBn'
 )
 
-band16= Band.create(
+band16 = Band.create(
   band_name: 'Fat Arrow Smith',
   location: 'Boston, Massachussets',
   mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
   image_location: 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Steven_Tyler_1.jpg'
 )
+
+band17 = Band.create(
+  band_name: 'Rage Against the Machine Learning',
+  location: 'Los Angeles, California',
+  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
+  image_location: 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Rage_Against_The_Machine.jpg'
+)
+
+band18 = Band.create(
+  band_name: 'Black IPs',
+  location: 'Los Angeles, CA',
+  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
+  image_location: 'https://i.scdn.co/image/b05032838bc3a4bfdd96b2daf7c51c719825ffdf'
+)
+
+band19 = Band.create(
+  band_name: 'Nine Inch Rails',
+  location: 'Cleveland, OH',
+  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
+  image_location: 'https://cps-static.rovicorp.com/3/JPG_400/MI0003/715/MI0003715454.jpg?partner=allrovi.com'
+)
+
+band20 = Band.create(
+  band_name: 'Chance the Wrapper',
+  location: 'Chicago, IL',
+  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
+  image_location: 'https://www.famousbirthdays.com/headshots/chance-rapper-1.jpg'
+)
+
+band21 = Band.create(
+  band_name: 'Car DB',
+  location: 'Bronx, New York',
+  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
+  image_location: 'https://media.pitchfork.com/photos/599e577e6c9e4147e946be7c/1:1/w_300/GettyImages-835868862.jpg'
+)
+
+band22 = Band.create(
+  band_name: 'Bashtreet Boys',
+  location: 'Orlando, Florida',
+  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
+  image_location: 'https://i.pinimg.com/736x/a0/95/95/a09595c04c0452a1bf1cc542f09a9c0d--boy-band-backstreet-boys.jpg'
+)
+
+band23 = Band.create(
+  band_name: 'Disclojure',
+  location: 'Reigate, Surrey',
+  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
+  image_location: 'http://www.themusicninja.com/wp-content/uploads/2013/05/Disclosure1-e1369836564281.jpg'
+)
+
+band24 = Band.create(
+  band_name: 'Schoolboy Queue',
+  location: 'Los Angeles, California',
+  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
+  image_location: 'http://www.rap-up.com/app/uploads/2014/12/sbq.jpg'
+)
+
+band25 = Band.create(
+  band_name: 'Big O Smalls',
+  location: 'Brooklyn, New York',
+  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
+  image_location: 'https://www.biography.com/.image/t_share/MTQ3Mzg2NDU3NDMzMDU2OTUx/biggie_smalls_photo_by_clarence_davis_new_york_daily_news_archive_getty_97348258.jpg'
+)
+
+band26 = Band.create(
+  band_name: 'Gitpull',
+  location: 'Miami Florida',
+  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
+  image_location: 'http://redalertpolitics.com/files/2013/04/Pitbull.jpg'
+)
+
+band27 = Band.create(
+  band_name: 'Splice Girls',
+  location: 'London, England',
+  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
+  image_location: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Spice_Girls_in_Toronto%2C_Ontario.jpg/1149px-Spice_Girls_in_Toronto%2C_Ontario.jpg'
+)
+
+band28 = Band.create(
+  band_name: 'Mariah Curry',
+  location: 'Huntington, New York',
+  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
+  image_location: 'https://upload.wikimedia.org/wikipedia/commons/4/45/Mariah_Carey_%40_2010_Academy_Awards.jpg'
+)
+
+
+
+
 
 ## GENRES
 alternative = Genre.create(genre: 'alternative')
@@ -178,6 +266,7 @@ alternative_metal = Genre.create(genre: 'alternative metal')
 alternative_rock = Genre.create(genre: 'alternative rock')
 baroque_pop = Genre.create(genre: 'baroque pop')
 blues_rock = Genre.create(genre: 'blues rock')
+conscious_hip_hop = Genre.create(genre: 'conscious hip hop')
 conscious_rap = Genre.create(genre: 'conscious rap')
 country = Genre.create(genre: 'country')
 dance_pop = Genre.create(genre: 'dance_pop')
@@ -187,6 +276,8 @@ dream_pop = Genre.create(genre: 'dream_pop')
 edm = Genre.create(genre: 'EDM')
 electronic_rock = Genre.create(genre: 'electronic rock')
 funk = Genre.create(genre: 'funk')
+funk_metal = Genre.create(genre: 'funk metal')
+gangsta_rap = Genre.create(genre: 'gangsta rap')
 garage_rock = Genre.create(genre: 'garage rock')
 glam_metal = Genre.create(genre: 'glam metal')
 grunge = Genre.create(genre: 'grunge')
@@ -198,6 +289,7 @@ indie = Genre.create(genre: 'indie')
 indie_pop = Genre.create(genre: 'indie pop')
 indie_rock = Genre.create(genre: 'indie rock')
 industrial_rock = Genre.create(genre: 'industrial rock')
+latin_rap = Genre.create(genre: 'latin rap')
 metal = Genre.create(genre: 'metal')
 nu_metal = Genre.create(genre: 'nu_metal')
 pop = Genre.create(genre: 'pop')
@@ -218,6 +310,7 @@ ska_punk = Genre.create(genre: 'ska punk')
 soft_rock = Genre.create(genre: 'soft rock')
 soul = Genre.create(genre: 'soul')
 synth_pop = Genre.create(genre: 'synth pop')
+trapp = Genre.create(genre: 'trap')
 
 
 ## BAND-GENRES
@@ -322,6 +415,72 @@ BandGenre.create(band_id: band16.id, genre_id: rock.id)
 BandGenre.create(band_id: band16.id, genre_id: hard_rock.id)
 BandGenre.create(band_id: band16.id, genre_id: blues_rock.id)
 BandGenre.create(band_id: band16.id, genre_id: glam_metal.id)
+
+# Rage Against the Machine Learning
+BandGenre.create(band_id: band17.id, genre_id: metal.id)
+BandGenre.create(band_id: band17.id, genre_id: funk_metal.id)
+BandGenre.create(band_id: band17.id, genre_id: alternative_metal.id)
+BandGenre.create(band_id: band17.id, genre_id: nu_metal.id)
+
+# Black IPs
+BandGenre.create(band_id: band18.id, genre_id: pop.id)
+BandGenre.create(band_id: band18.id, genre_id: hip_hop.id)
+BandGenre.create(band_id: band18.id, genre_id: dance_pop.id)
+BandGenre.create(band_id: band18.id, genre_id: edm.id)
+
+# Nine Inch Rails
+BandGenre.create(band_id: band19.id, genre_id: rock.id)
+BandGenre.create(band_id: band19.id, genre_id: alternative_rock.id)
+BandGenre.create(band_id: band19.id, genre_id: electronic_rock.id)
+
+# Chance the Wrapper
+BandGenre.create(band_id: band20.id, genre_id: rap.id)
+BandGenre.create(band_id: band20.id, genre_id: hip_hop.id)
+BandGenre.create(band_id: band20.id, genre_id: conscious_hip_hop.id)
+
+# Car DB
+BandGenre.create(band_id: band21.id, genre_id: hip_hop.id)
+BandGenre.create(band_id: band21.id, genre_id: trapp.id)
+
+# Bashtreet Boys
+BandGenre.create(band_id: band22.id, genre_id: pop.id)
+BandGenre.create(band_id: band22.id, genre_id: dance_pop.id)
+BandGenre.create(band_id: band22.id, genre_id: rb.id)
+BandGenre.create(band_id: band22.id, genre_id: pop_rock.id)
+
+# Disclojure
+BandGenre.create(band_id: band23.id, genre_id: house.id)
+BandGenre.create(band_id: band23.id, genre_id: deep_house.id)
+BandGenre.create(band_id: band23.id, genre_id: synth_pop.id)
+
+# Schoolboy Queue
+BandGenre.create(band_id: band24.id, genre_id: rap.id)
+BandGenre.create(band_id: band24.id, genre_id: pop_rap.id)
+BandGenre.create(band_id: band24.id, genre_id: gangsta_rap.id)
+
+# Big O Smalls
+BandGenre.create(band_id: band25.id, genre_id: rap.id)
+BandGenre.create(band_id: band25.id, genre_id: hip_hop.id)
+BandGenre.create(band_id: band25.id, genre_id: gangsta_rap.id)
+BandGenre.create(band_id: band25.id, genre_id: pop_rap.id)
+
+# Gitpull
+BandGenre.create(band_id: band26.id, genre_id: rap.id)
+BandGenre.create(band_id: band26.id, genre_id: dance_pop.id)
+BandGenre.create(band_id: band26.id, genre_id: latin_rap.id)
+
+# Splice Girls
+BandGenre.create(band_id: band27.id, genre_id: pop.id)
+BandGenre.create(band_id: band27.id, genre_id: dance_pop.id)
+BandGenre.create(band_id: band27.id, genre_id: rb.id)
+
+# Mariah Curry
+BandGenre.create(band_id: band28.id, genre_id: pop.id)
+BandGenre.create(band_id: band28.id, genre_id: rb.id)
+BandGenre.create(band_id: band28.id, genre_id: dance_pop.id)
+BandGenre.create(band_id: band28.id, genre_id: pop_rap.id)
+
+
 
 
 SONGS = [
