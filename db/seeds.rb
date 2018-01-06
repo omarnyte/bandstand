@@ -390,6 +390,47 @@ follow6= Follow.create(
   followee_id: band1.id
 )
 
+
+## GENRES
+alternative = Genre.create(genre: 'alternative')
+alternative_metal = Genre.create(genre: 'alternative metal')
+alternative_rock = Genre.create(genre: 'alternative rock')
+blues_rock = Genre.create(genre: 'blues rock')
+country = Genre.create(genre: 'country')
+dance_pop = Genre.create(genre: 'dance_pop')
+deep_house = Genre.create(genre: 'deep house')
+edm = Genre.create(genre: 'EDM')
+electronic_rock = Genre.create(genre: 'electronic rock')
+funk = Genre.create(genre: 'funk')
+garage_rock = Genre.create(genre: 'garage rock')
+glam_metal = Genre.create(genre: 'glam metal')
+grunge = Genre.create(genre: 'grunge')
+hard_rock = Genre.create(genre: 'hard rock')
+heavy_metal = Genre.create(genre: 'heavy_metal')
+hip_hop = Genre.create(genre: 'hip hop')
+house = Genre.create(genre: 'house')
+inde = Genre.create(genre: 'indie')
+inde_rock = Genre.create(genre: 'indie rock')
+industrial_rock = Genre.create(genre: 'industrial rock')
+metal = Genre.create(genre: 'metal')
+nu_metal = Genre.create(genre: 'nu_metal')
+pop = Genre.create(genre: 'pop')
+pop_punk = Genre.create(genre: 'pop punk')
+pop_rock = Genre.create(genre: 'pop rock')
+punk_rock = Genre.create(genre: 'punk rock')
+rap = Genre.create(genre: 'rap')
+rap_metal = Genre.create(genre: 'rap metal')
+rap_rock = Genre.create(genre: 'rap rock')
+reggaeton = Genre.create(genre: 'reggaeton')
+rb = Genre.create(genre: 'R&B')
+rock = Genre.create(genre: 'rock')
+singer_songwriter = Genre.create(genre: 'singer-songwriter')
+soft_rock = Genre.create(genre: 'soft rock')
+soul = Genre.create(genre: 'soul')
+synth_pop = Genre.create(genre: 'synth pop')
+
+
+
 # CREATIVE COMMONS MUSIC
 
 # http://freemusicarchive.org/music/Evie_Sands/
