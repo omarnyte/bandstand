@@ -95,7 +95,7 @@ band7 = Band.create(
   image_location: 'https://upload.wikimedia.org/wikipedia/commons/9/90/Blink182.jpg'
 )
 
-band7 = Band.create(
+band8 = Band.create(
   band_name: 'Maclemore',
   location: 'Seattle, Washington',
   mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
@@ -108,6 +108,7 @@ band9 = Band.create(
   mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
   image_location: 'https://upload.wikimedia.org/wikipedia/commons/a/ac/U2_360-UTEOTW-Toronto.JPG'
 )
+
 band10 = Band.create(
   band_name: 'ASYNC',
   location: 'Orlando, Florida',
@@ -169,6 +170,159 @@ band16= Band.create(
   mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
   image_location: 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Steven_Tyler_1.jpg'
 )
+
+## GENRES
+alternative = Genre.create(genre: 'alternative')
+alternative_hip_hop = Genre.create(genre: 'alternative hip hop')
+alternative_metal = Genre.create(genre: 'alternative metal')
+alternative_rock = Genre.create(genre: 'alternative rock')
+baroque_pop = Genre.create(genre: 'baroque pop')
+blues_rock = Genre.create(genre: 'blues rock')
+conscious_rap = Genre.create(genre: 'conscious rap')
+country = Genre.create(genre: 'country')
+dance_pop = Genre.create(genre: 'dance_pop')
+deep_house = Genre.create(genre: 'deep house')
+disco = Genre.create(genre: 'disco')
+dream_pop = Genre.create(genre: 'dream_pop')
+edm = Genre.create(genre: 'EDM')
+electronic_rock = Genre.create(genre: 'electronic rock')
+funk = Genre.create(genre: 'funk')
+garage_rock = Genre.create(genre: 'garage rock')
+glam_metal = Genre.create(genre: 'glam metal')
+grunge = Genre.create(genre: 'grunge')
+hard_rock = Genre.create(genre: 'hard rock')
+heavy_metal = Genre.create(genre: 'heavy_metal')
+hip_hop = Genre.create(genre: 'hip hop')
+house = Genre.create(genre: 'house')
+indie = Genre.create(genre: 'indie')
+indie_pop = Genre.create(genre: 'indie pop')
+indie_rock = Genre.create(genre: 'indie rock')
+industrial_rock = Genre.create(genre: 'industrial rock')
+metal = Genre.create(genre: 'metal')
+nu_metal = Genre.create(genre: 'nu_metal')
+pop = Genre.create(genre: 'pop')
+pop_punk = Genre.create(genre: 'pop punk')
+pop_rap = Genre.create(genre: 'pop rap')
+pop_rock = Genre.create(genre: 'pop rock')
+post_grunge = Genre.create(genre: 'post grunge')
+post_punk = Genre.create(genre: 'post punk')
+punk_rock = Genre.create(genre: 'punk rock')
+rap = Genre.create(genre: 'rap')
+rap_metal = Genre.create(genre: 'rap metal')
+rap_rock = Genre.create(genre: 'rap rock')
+reggaeton = Genre.create(genre: 'reggaeton')
+rb = Genre.create(genre: 'R&B')
+rock = Genre.create(genre: 'rock')
+singer_songwriter = Genre.create(genre: 'singer-songwriter')
+ska_punk = Genre.create(genre: 'ska punk')
+soft_rock = Genre.create(genre: 'soft rock')
+soul = Genre.create(genre: 'soul')
+synth_pop = Genre.create(genre: 'synth pop')
+
+
+## BAND-GENRES
+# Lana Dell Rey
+BandGenre.create(band_id: band1.id, genre_id: pop.id)
+BandGenre.create(band_id: band1.id, genre_id: baroque_pop.id)
+BandGenre.create(band_id: band1.id, genre_id: dream_pop.id)
+BandGenre.create(band_id: band1.id, genre_id: indie_pop.id)
+
+# Perl Jam
+BandGenre.create(band_id: band2.id, genre_id: rock.id)
+BandGenre.create(band_id: band2.id, genre_id: alternative_rock.id)
+BandGenre.create(band_id: band2.id, genre_id: grunge.id)
+BandGenre.create(band_id: band2.id, genre_id: hard_rock.id)
+
+# Foo Bar Fighters
+BandGenre.create(band_id: band3.id, genre_id: rock.id)
+BandGenre.create(band_id: band3.id, genre_id: alternative_rock.id)
+BandGenre.create(band_id: band3.id, genre_id: hard_rock.id)
+BandGenre.create(band_id: band3.id, genre_id: post_grunge.id)
+
+# Ajaxon Five
+BandGenre.create(band_id: band4.id, genre_id: pop.id)
+BandGenre.create(band_id: band4.id, genre_id: disco.id)
+BandGenre.create(band_id: band4.id, genre_id: rb.id)
+BandGenre.create(band_id: band4.id, genre_id: soul.id)
+
+# Death Cab For Queuetie
+BandGenre.create(band_id: band5.id, genre_id: indie.id)
+BandGenre.create(band_id: band5.id, genre_id: alternative_rock.id)
+BandGenre.create(band_id: band5.id, genre_id: indie_rock.id)
+BandGenre.create(band_id: band5.id, genre_id: indie_pop.id)
+
+# Node Out
+BandGenre.create(band_id: band6.id, genre_id: pop.id)
+BandGenre.create(band_id: band6.id, genre_id: ska_punk.id)
+BandGenre.create(band_id: band6.id, genre_id: alternative_rock.id)
+BandGenre.create(band_id: band6.id, genre_id: pop_rock.id)
+
+# Link 182
+BandGenre.create(band_id: band7.id, genre_id: rock.id)
+BandGenre.create(band_id: band7.id, genre_id: pop_punk.id)
+BandGenre.create(band_id: band7.id, genre_id: alternative_rock.id)
+BandGenre.create(band_id: band7.id, genre_id: punk_rock.id)
+
+# Maclemore
+BandGenre.create(band_id: band8.id, genre_id: hip_hop.id)
+BandGenre.create(band_id: band8.id, genre_id: alternative_hip_hop.id)
+BandGenre.create(band_id: band8.id, genre_id: pop_rap.id)
+
+# U2ube
+BandGenre.create(band_id: band9.id, genre_id: rock.id)
+BandGenre.create(band_id: band9.id, genre_id: alternative_rock.id)
+BandGenre.create(band_id: band9.id, genre_id: pop_rock.id)
+BandGenre.create(band_id: band9.id, genre_id: post_punk.id)
+
+# ASYNC
+BandGenre.create(band_id: band10.id, genre_id: pop.id)
+BandGenre.create(band_id: band10.id, genre_id: dance_pop.id)
+
+# Linkedin Park
+BandGenre.create(band_id: band11.id, genre_id: rock.id)
+BandGenre.create(band_id: band11.id, genre_id: alternative_rock.id)
+BandGenre.create(band_id: band11.id, genre_id: nu_metal.id)
+
+# Alice in Blockchains
+BandGenre.create(band_id: band12.id, genre_id: metal.id)
+BandGenre.create(band_id: band12.id, genre_id: alternative_metal.id)
+BandGenre.create(band_id: band12.id, genre_id: grunge.id)
+BandGenre.create(band_id: band12.id, genre_id: heavy_metal.id)
+
+# Popup Roach
+BandGenre.create(band_id: band12.id, genre_id: rock.id)
+BandGenre.create(band_id: band12.id, genre_id: hard_rock.id)
+BandGenre.create(band_id: band12.id, genre_id: nu_metal.id)
+BandGenre.create(band_id: band12.id, genre_id: rap_metal.id)
+
+# JSON Derulo
+BandGenre.create(band_id: band13.id, genre_id: rb.id)
+BandGenre.create(band_id: band13.id, genre_id: hip_hop.id)
+BandGenre.create(band_id: band13.id, genre_id: pop.id)
+
+# Hashlee Simpson
+BandGenre.create(band_id: band13.id, genre_id: pop.id)
+BandGenre.create(band_id: band13.id, genre_id: pop_rock.id)
+BandGenre.create(band_id: band13.id, genre_id: pop_punk.id)
+
+# The Keystrokes
+BandGenre.create(band_id: band14.id, genre_id: rock.id)
+BandGenre.create(band_id: band14.id, genre_id: indie_rock.id)
+BandGenre.create(band_id: band14.id, genre_id: garage_rock.id)
+BandGenre.create(band_id: band14.id, genre_id: post_punk.id)
+
+# The Fray
+BandGenre.create(band_id: band15.id, genre_id: rock.id)
+BandGenre.create(band_id: band15.id, genre_id: pop_rock.id)
+BandGenre.create(band_id: band15.id, genre_id: alternative_rock.id)
+BandGenre.create(band_id: band15.id, genre_id: soft_rock.id)
+
+# Fat Arrow Smith
+BandGenre.create(band_id: band16.id, genre_id: rock.id)
+BandGenre.create(band_id: band16.id, genre_id: hard_rock.id)
+BandGenre.create(band_id: band16.id, genre_id: blues_rock.id)
+BandGenre.create(band_id: band16.id, genre_id: glam_metal.id)
+
 
 SONGS = [
   # http://freemusicarchive.org/music/Greg_Atkinson/7_Gifts/
@@ -391,43 +545,6 @@ follow6= Follow.create(
 )
 
 
-## GENRES
-alternative = Genre.create(genre: 'alternative')
-alternative_metal = Genre.create(genre: 'alternative metal')
-alternative_rock = Genre.create(genre: 'alternative rock')
-blues_rock = Genre.create(genre: 'blues rock')
-country = Genre.create(genre: 'country')
-dance_pop = Genre.create(genre: 'dance_pop')
-deep_house = Genre.create(genre: 'deep house')
-edm = Genre.create(genre: 'EDM')
-electronic_rock = Genre.create(genre: 'electronic rock')
-funk = Genre.create(genre: 'funk')
-garage_rock = Genre.create(genre: 'garage rock')
-glam_metal = Genre.create(genre: 'glam metal')
-grunge = Genre.create(genre: 'grunge')
-hard_rock = Genre.create(genre: 'hard rock')
-heavy_metal = Genre.create(genre: 'heavy_metal')
-hip_hop = Genre.create(genre: 'hip hop')
-house = Genre.create(genre: 'house')
-inde = Genre.create(genre: 'indie')
-inde_rock = Genre.create(genre: 'indie rock')
-industrial_rock = Genre.create(genre: 'industrial rock')
-metal = Genre.create(genre: 'metal')
-nu_metal = Genre.create(genre: 'nu_metal')
-pop = Genre.create(genre: 'pop')
-pop_punk = Genre.create(genre: 'pop punk')
-pop_rock = Genre.create(genre: 'pop rock')
-punk_rock = Genre.create(genre: 'punk rock')
-rap = Genre.create(genre: 'rap')
-rap_metal = Genre.create(genre: 'rap metal')
-rap_rock = Genre.create(genre: 'rap rock')
-reggaeton = Genre.create(genre: 'reggaeton')
-rb = Genre.create(genre: 'R&B')
-rock = Genre.create(genre: 'rock')
-singer_songwriter = Genre.create(genre: 'singer-songwriter')
-soft_rock = Genre.create(genre: 'soft rock')
-soul = Genre.create(genre: 'soul')
-synth_pop = Genre.create(genre: 'synth pop')
 
 
 
