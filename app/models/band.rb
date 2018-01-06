@@ -28,6 +28,15 @@ class Band < ApplicationRecord
     through: :follows,
     source: :follower
 
+  def genre_names
+    genres = []
+    self.genres.each do |genre|
+      genres.push(genre.genre)
+    end
+
+    genres
+  end
+
   def follower_ids
     followers = []
     self.followers.each do |follower|

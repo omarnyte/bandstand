@@ -1,5 +1,5 @@
 json.extract! band, :id, :band_name, :location, :mini_bio, :image_location,
-  :follower_ids
+  :follower_ids, :genre_names
 
 if logged_in?
   json.followed_by_current_user !!band.followers.find_by(id: current_user.id)
