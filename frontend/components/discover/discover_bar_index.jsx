@@ -11,12 +11,12 @@ class DiscoverBarIndex extends React.Component {
   render() {
     const genres = [
       'all',
+      'grunge',
       'hip hop',
       'house',
       'indie',
       'metal',
       'pop',
-      'punk',
       'rap',
       'R&B',
       'rock'
