@@ -23,10 +23,12 @@ class DiscoverBarIndex extends React.Component {
     ];
 
     return (
-      <div className='discover-bar-index-div'>
-        {genres.map((genre, idx) =>
-          <DiscoverBarIndexItemContainer key={idx} genre={genre}/>
-        )}
+      <div className='discover-bar-index-outer-div'>
+        <div className='discover-bar-index-div'>
+          {genres.map((genre, idx) =>
+            <DiscoverBarIndexItemContainer key={idx} genre={genre}/>
+          )}
+        </div>
       </div>
     );
   }
