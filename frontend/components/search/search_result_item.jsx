@@ -8,6 +8,7 @@ class SearchResultItem extends React.Component {
   }
 
     renderBand(result) {
+      // const genresString = genre_names.empty ? '' :  `genres: ${result.genre_names.join(' ')}`;
       if (result.type === 'band') {
         return(
           <div className='search-result-item-component'>
@@ -20,6 +21,8 @@ class SearchResultItem extends React.Component {
                   <strong className='result-title'> {result.band_name}</strong>
                 </Link>
                 <span className='result-subtitle'>{result.location}</span>
+                <br></br>
+                <span className='result-genres'>genres: {result.genre_names.join(', ')}</span>
               </div>
           </div>
         );

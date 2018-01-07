@@ -1,3 +1,8 @@
+.result-genres {
+  font-size: 11px;
+  color: #999
+}
+
 .search-results-component {
   display: flex;
   justify-content: center;

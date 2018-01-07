@@ -123,13 +123,6 @@ band11 = Band.create(
 )
 
 band12 = Band.create(
-  band_name: 'Alice in Blockchains',
-  location: 'Seattle, Washington',
-  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
-  image_location: 'https://upload.wikimedia.org/wikipedia/commons/9/9e/Alice_In_Chains_-_Jimmy_Kimmel_Live.jpg'
-)
-
-band12 = Band.create(
   band_name: 'Popup Roach',
   location: 'Vacaville, California',
   mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
@@ -255,7 +248,12 @@ band28 = Band.create(
   image_location: 'https://upload.wikimedia.org/wikipedia/commons/4/45/Mariah_Carey_%40_2010_Academy_Awards.jpg'
 )
 
-
+band29 = Band.create(
+  band_name: 'Alice in Blockchains',
+  location: 'Seattle, Washington',
+  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
+  image_location: 'https://upload.wikimedia.org/wikipedia/commons/9/9e/Alice_In_Chains_-_Jimmy_Kimmel_Live.jpg'
+)
 
 
 
@@ -376,12 +374,6 @@ BandGenre.create(band_id: band11.id, genre_id: rock.id)
 BandGenre.create(band_id: band11.id, genre_id: alternative_rock.id)
 BandGenre.create(band_id: band11.id, genre_id: nu_metal.id)
 
-# Alice in Blockchains
-BandGenre.create(band_id: band12.id, genre_id: metal.id)
-BandGenre.create(band_id: band12.id, genre_id: alternative_metal.id)
-BandGenre.create(band_id: band12.id, genre_id: grunge.id)
-BandGenre.create(band_id: band12.id, genre_id: heavy_metal.id)
-
 # Popup Roach
 BandGenre.create(band_id: band12.id, genre_id: rock.id)
 BandGenre.create(band_id: band12.id, genre_id: hard_rock.id)
@@ -479,6 +471,13 @@ BandGenre.create(band_id: band28.id, genre_id: pop.id)
 BandGenre.create(band_id: band28.id, genre_id: rb.id)
 BandGenre.create(band_id: band28.id, genre_id: dance_pop.id)
 BandGenre.create(band_id: band28.id, genre_id: pop_rap.id)
+
+# Alice in Blockchains
+BandGenre.create(band_id: band29.id, genre_id: metal.id)
+BandGenre.create(band_id: band29.id, genre_id: alternative_metal.id)
+BandGenre.create(band_id: band29.id, genre_id: grunge.id)
+BandGenre.create(band_id: band29.id, genre_id: heavy_metal.id)
+
 
 
 
