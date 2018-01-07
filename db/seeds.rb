@@ -480,8 +480,6 @@ BandGenre.create(band_id: band29.id, genre_id: heavy_metal.id)
 
 
 
-
-
 SONGS = [
   # http://freemusicarchive.org/music/Greg_Atkinson/7_Gifts/
   {title: 'Gifts', song_location: 'https://s3-us-west-1.amazonaws.com/bandstandapp-dev/AWS+Files/Creative+Commons+Music/Greg+Atkinson/7+Gifts/7+Gifts/Greg_Atkinson_-_01_-_7_Gifts.mp3'},

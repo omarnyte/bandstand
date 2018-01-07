@@ -1,0 +1,13 @@
+.discover-bar-index-div {
+  border: 1px solid red;
+
+  height: 40px;
+
+  display: flex;
+}
+
+.discover-genre-name {
+  border: 1px solid blue;
+
+  padding: 6px 10px; 
+}
