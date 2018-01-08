@@ -11,11 +11,11 @@ class Api::GenresController < ApplicationController
       rb = Genre.find_by('genre': 'R&B'),
       rock = Genre.find_by('genre': 'rock')
     ]
-    p @genres
     render 'api/genres/index'
   end
 
   def show
-    @bands = Genre.bands_by_genre(param.name)
+    @bands = Genre.bands_by_genreId(params[:id])
+    render 'api/genres/show'
   end
 end
