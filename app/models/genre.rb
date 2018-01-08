@@ -41,4 +41,23 @@ class Genre < ApplicationRecord
     end
   end
 
+  def self.bands_by_genreId(id)
+    genres = {
+      21 => 'grunge',
+      24 => 'hip hop',
+      25 => 'house',
+      26 => 'indie',
+      31 => 'metal',
+      33 => 'pop',
+      40 => 'rap',
+      44 => 'R&B',
+      45 => 'rock'
+    }
+    if id == 100
+      Band.all.sample(10)
+    else
+      Genre.find(id).bands
+    end
+  end
+
 end
