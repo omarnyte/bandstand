@@ -5,7 +5,7 @@ export const fetchGenres = () => (
   })
 );
 
-export const fetchGenre = (genreId) => (
+export const fetchBandsByGenreId = (genreId) => (
   $.ajax({
     method: 'GET',
     url: `api/genres/${genreId}`
