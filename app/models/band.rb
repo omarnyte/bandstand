@@ -38,9 +38,9 @@ class Band < ApplicationRecord
   end
 
   def genres_by_id
-    genres = {}
+    genres = []
     self.genres.each do |genre|
-      genres[genre.id] = genre
+      genres.push(genre)
     end
 
     genres

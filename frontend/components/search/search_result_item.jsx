@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class SearchResultItem extends React.Component {
-
   constructor(props) {
     super(props);
   }
@@ -10,6 +9,11 @@ class SearchResultItem extends React.Component {
     renderBand(result) {
       // const genresString = genre_names.empty ? '' :  `genres: ${result.genre_names.join(' ')}`;
       if (result.type === 'band') {
+        const genreNames = result.genres_by_id.map(genreObject => {
+          return genreObject.genre;
+        });
+        console.log({genreNames});
+
         return(
           <div className='search-result-item-component'>
             <Link to={`/bands/${result.id}`}>
@@ -22,7 +26,7 @@ class SearchResultItem extends React.Component {
                 </Link>
                 <span className='result-subtitle'>{result.location}</span>
                 <br></br>
-                <span className='result-genres'>genres: {result.genre_names.join(', ')}</span>
+                <span className='result-genres'>genres: {genreNames.join(', ')}</span>
               </div>
           </div>
         );
