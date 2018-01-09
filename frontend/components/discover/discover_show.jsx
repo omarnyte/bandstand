@@ -7,6 +7,19 @@ import DiscoverBarIndex from './discover_bar_index';
 import DiscoverArtistIndexContainer from './discover_artist_index_container';
 // import DiscoverArtistIndex from './discover_artist_index';
 
+const genreNames = [
+  'all',
+  'grunge',
+  'hip hop',
+  'house',
+  'indie',
+  'metal',
+  'pop',
+  'rap',
+  'R&B',
+  'rock'
+];
+
 class DiscoverShow extends React.Component {
   constructor(props) {
     super(props);
@@ -22,12 +35,14 @@ class DiscoverShow extends React.Component {
 
   selectGenre(idx) {
     this.setState({selectedGenreIndex: idx});
+    this.props.fetchBandsByGenre(genreNames[idx]);
   }
 
   render () {
     return (
       <div>
         <DiscoverBar
+          genreNames={genreNames}
           selectedGenreIndex={this.state.selectedGenreIndex}
           onGenreChosen={this.selectGenre} />
         <DiscoverArtistIndexContainer />

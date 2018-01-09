@@ -6,9 +6,9 @@ class DiscoverArtistIndex extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
-    this.props.fetchBandsByGenre('all');
-  }
+  // componentDidMount() {
+  //   this.props.fetchBandsByGenre('all');
+  // }
 
   render() {
 

@@ -3,20 +3,9 @@ import { Link } from 'react-router-dom';
 
 class DiscoverBar extends React.Component {
   render() {
-    let genreNames = [
-      'all',
-      'grunge',
-      'hip hop',
-      'house',
-      'indie',
-      'metal',
-      'pop',
-      'rap',
-      'R&B',
-      'rock'
-    ];
 
     let selectedIndex = this.props.selectedGenreIndex;
+    const genreNames = this.props.genreNames;
     let genres = genreNames.map((genre, index) => {
       let genreName = genre;
       let klass = 'discover-genre-name';
