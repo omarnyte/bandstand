@@ -17,7 +17,7 @@ class DiscoverShow extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchPermittedGenres();
+    // this.props.fetchPermittedGenres();
   }
 
   selectGenre(idx) {

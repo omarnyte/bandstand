@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPermittedGenres: () => dispatch(fetchPermittedGenres())
+  // fetchPermittedGenres: () => dispatch(fetchPermittedGenres())
 });
 
 export default withRouter(connect(

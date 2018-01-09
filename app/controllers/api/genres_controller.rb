@@ -20,7 +20,7 @@ class Api::GenresController < ApplicationController
   end
 
   def create
-    @bands = Genre.bands_by_genre_name(params[:genre_name])
+    @bands = Genre.bands_by_genre(params[:genre])
     render 'api/bands/index'
   end
 end

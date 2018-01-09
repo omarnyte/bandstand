@@ -6,7 +6,12 @@ class DiscoverArtistIndex extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.fetchBandsByGenre('all');
+  }
+
   render() {
+
     return (
       <div className='discover-artist-index-div'>
         in the discover artist index

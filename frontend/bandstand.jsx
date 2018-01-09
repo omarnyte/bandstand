@@ -18,8 +18,9 @@ import {
   deleteAlbum } from './actions/album_actions';
 import { searchDB } from './actions/search_actions';
 import {
-  fetchPermittedGenres,
-  fetchBandsByGenreId } from './actions/discover_actions';
+  // fetchPermittedGenres,
+  // fetchBandsByGenreId,
+  fetchBandsByGenre} from './actions/discover_actions';
 // end test
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -49,9 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // window.fetchAlbum = fetchAlbum;
   // window.createAlbum = createAlbum;
   // window.deleteAlbum = deleteAlbum;
-  window.searchDB = searchDB;
-  window.fetchPermittedGenres = fetchPermittedGenres;
-  window.fetchBandsByGenreId = fetchBandsByGenreId;
+  // window.searchDB = searchDB;
+  // window.fetchPermittedGenres = fetchPermittedGenres;
+  // window.fetchBandsByGenreId = fetchBandsByGenreId;
+  window.fetchBandsByGenre = fetchBandsByGenre;
   // window.followBand = followBand;
   // window.unfollowBand = unfollowBand;
   // end test
