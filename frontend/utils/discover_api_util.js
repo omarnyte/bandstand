@@ -1,4 +1,4 @@
-export const fetchGenres = () => (
+export const fetchPermittedGenres = () => (
   $.ajax({
     method: 'GET',
     url: 'api/genres'

@@ -37,6 +37,15 @@ class Band < ApplicationRecord
     genres
   end
 
+  def genres_by_id
+    genres = {}
+    self.genres.each do |genre|
+      genres[genre.id] = genre
+    end
+
+    genres
+  end
+
   def follower_ids
     followers = []
     self.followers.each do |follower|

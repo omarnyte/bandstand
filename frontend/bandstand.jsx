@@ -17,6 +17,9 @@ import {
   createAlbum,
   deleteAlbum } from './actions/album_actions';
 import { searchDB } from './actions/search_actions';
+import {
+  fetchPermittedGenres,
+  fetchBandsByGenreId } from './actions/discover_actions';
 // end test
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -34,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(<Root store={ store } />, root);
 
   // begin test
-  // window.store = store;
+  window.store = store;
   // window.login = login;
   // window.logout = logout;
   //
@@ -46,7 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // window.fetchAlbum = fetchAlbum;
   // window.createAlbum = createAlbum;
   // window.deleteAlbum = deleteAlbum;
-  // window.searchDB = searchDB;
+  window.searchDB = searchDB;
+  window.fetchPermittedGenres = fetchPermittedGenres;
+  window.fetchBandsByGenreId = fetchBandsByGenreId;
   // window.followBand = followBand;
   // window.unfollowBand = unfollowBand;
   // end test

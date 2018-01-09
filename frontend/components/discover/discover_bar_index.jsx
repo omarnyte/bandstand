@@ -8,6 +8,11 @@ class DiscoverBarIndex extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.fetchPermittedGenres();
+  }
+
+
   render() {
     const genres = [
       'all',
