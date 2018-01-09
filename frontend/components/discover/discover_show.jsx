@@ -30,7 +30,7 @@ class DiscoverShow extends React.Component {
   }
 
   componentDidMount() {
-    // this.props.fetchPermittedGenres();
+    this.props.fetchBandsByGenre('all');
   }
 
   selectGenre(idx) {
