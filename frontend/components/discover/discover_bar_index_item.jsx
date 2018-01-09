@@ -7,9 +7,15 @@ class DiscoverBarIndexItem extends React.Component {
   }
 
   render() {
+
     return (
       <div className='discover-bar-index-item-div'>
-        <span className='discover-genre-name'>{this.props.genre}</span>
+        <span
+          className='discover-genre-name'
+          onClick={() => console.log('oh hi')}>
+          {this.props.genre}
+
+        </span>
       </div>
     );
   }

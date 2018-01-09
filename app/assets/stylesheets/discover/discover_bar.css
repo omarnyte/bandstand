@@ -1,4 +1,4 @@
-.discover-bar-index-div {
+/*.discover-bar-index-div {
   height: 40px;
   width: 1000px;
 
@@ -27,4 +27,43 @@
 
 .discover-genre-name:hover {
   background: rgba(0,0,0,0.5)
+}*/
+
+.discover-bar-div {
+  width: 100%;
+  background: rgb(66, 160, 189);
+
+  display: flex;
+  justify-content: center;}
+
+.discover-bar-genre-list {
+  height: 40px;
+  width: 1000px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.discover-genre-name {
+  padding: 6px 10px;
+  border-radius: 15px;
+  color: white;
+
+  font-size: 14px;
+
+  transition: 0.5s;
+}
+
+
+.discover-genre-name:hover {
+  background: rgba(0,0,0,0.5)
+}
+
+.discover-genre-name.selected {
+  background: rgba(0,0,0,0.8)
+}
+
+.discover-genre-name.selected:hover {
+  background: rgba(0,0,0,0.8)
 }

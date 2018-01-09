@@ -5,7 +5,7 @@ import DiscoverBarIndex from './discover_bar_index';
 import { fetchPermittedGenres } from '../../actions/discover_actions';
 
 const mapStateToProps = (state, ownProps) => ({
-
+  genres: state.entities.discoverBands
 });
 
 const mapDispatchToProps = dispatch => ({
