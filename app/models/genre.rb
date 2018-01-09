@@ -21,6 +21,12 @@ class Genre < ApplicationRecord
   #   end
   # end
 
+  def self.bands_by_genre_name(genre_name)
+    return Band.all.sample(10) if genre_name == 'all'
+
+    Genre.find_by('genre': genre_name).bands
+  end
+
   def self.bands_by_genre(genre)
     genres = {
       'grunge' => 21,

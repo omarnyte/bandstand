@@ -18,4 +18,9 @@ class Api::GenresController < ApplicationController
     @bands = Genre.bands_by_genreId(params[:id])
     render 'api/genres/show'
   end
+
+  def create
+    @bands = Genre.bands_by_genre_name(params[:genre_name])
+    render 'api/bands/index'
+  end
 end

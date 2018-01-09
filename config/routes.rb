@@ -6,12 +6,9 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :users, only: [:index, :show, :create]
     resources :bands, only: [:index, :show, :create]
-    resources :genres, only: [:index, :show]
+    resources :genres, only: [:index, :show, :create]
     resources :albums, except: [:create, :edit]
     resources :follows, only: [:create, :destroy]
     resources :searches, only: [:index]
   end
-
-# get 'API::GenresController/get/:name'
-
 end

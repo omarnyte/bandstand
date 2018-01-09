@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import DiscoverBar from './discover_bar';
 import DiscoverBarIndexContainer from './discover_bar_index_container';
 import DiscoverBarIndex from './discover_bar_index';
-// import DiscoverArtistIndexContainer from './discover_artist_index_container';
-import DiscoverArtistIndex from './discover_artist_index';
+import DiscoverArtistIndexContainer from './discover_artist_index_container';
+// import DiscoverArtistIndex from './discover_artist_index';
 
 class DiscoverShow extends React.Component {
   constructor(props) {
@@ -30,7 +30,7 @@ class DiscoverShow extends React.Component {
         <DiscoverBar
           selectedGenreIndex={this.state.selectedGenreIndex}
           onGenreChosen={this.selectGenre} />
-        <DiscoverArtistIndex />
+        <DiscoverArtistIndexContainer />
       </div>
         );
 

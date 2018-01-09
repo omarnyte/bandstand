@@ -11,3 +11,10 @@ export const fetchBandsByGenreId = (genreId) => (
     url: `api/genres/${genreId}`
   })
 );
+
+export const fetchBandsByGenre = (genre) => (
+  $.ajax({
+    method: 'PUT',
+    url: `api/genres/${genre}`
+  })
+);
