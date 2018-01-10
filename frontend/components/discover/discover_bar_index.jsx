@@ -19,7 +19,7 @@ class DiscoverBarIndex extends React.Component {
 
   render() {
 
-    
+
 
     if (!this.props.genres) return null;
     const genres = [
@@ -36,13 +36,13 @@ class DiscoverBarIndex extends React.Component {
     ];
 
     return (
-      <div className='discover-bar-index-outer-div'>
-        <div className='discover-bar-index-div'>
-          {genres.map((genre, idx) =>
-            <DiscoverBarIndexItem key={idx} genre={genre}/>
-            )}
-        </div>
-      </div>
+        <div className='discover-bar-index-outer-div'>
+          <div className='discover-bar-index-div'>
+            {genres.map((genre, idx) =>
+              <DiscoverBarIndexItem key={idx} genre={genre}/>
+              )}
+            </div>
+          </div>
     );
   }
 }

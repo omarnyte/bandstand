@@ -40,7 +40,7 @@ class DiscoverShow extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className='discover-show-div'>
         <DiscoverBar
           genreNames={genreNames}
           selectedGenreIndex={this.state.selectedGenreIndex}

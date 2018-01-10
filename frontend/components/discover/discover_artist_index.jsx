@@ -18,22 +18,19 @@ class DiscoverArtistIndex extends React.Component {
     if (Object.keys(bands).length === 0) return null;
 
     return (
-
+    <div className='discover-artist-index-outer-div'>
       <div className='discover-artist-index-div'>
         {
           Object.keys(bands).map((bandId) => (
-             <DiscoverArtistItem
+            <DiscoverArtistItem
               key={bandId}
               band={bands[bandId]} />
             ))
-          }
+        }
       </div>
+    </div>
     );
   }
 }
 
 export default DiscoverArtistIndex;
-
-// {
-//   Object.keys(bands).map(band => console.log('band'))
-// }

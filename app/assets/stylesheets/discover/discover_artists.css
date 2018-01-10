@@ -1,0 +1,28 @@
+.discover-artist-index-outer-div {
+  background: #EDF2F3;
+}
+
+.discover-artist-index-div {
+  max-width: 100%;
+  margin: 20px 100px 10px 100px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+
+.discover-artist-item-div {
+  margin: 10px 10px 20px 10px;
+}
+
+.discover-artist-item-image {
+  width: 250px;
+  height: 250px;
+}
+
+.discover-artist-band-name {
+  font-size: 15px;
+  font-weight: bold;
+}
