@@ -2,10 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import DiscoverBar from './discover_bar';
-import DiscoverBarIndexContainer from './discover_bar_index_container';
-import DiscoverBarIndex from './discover_bar_index';
 import DiscoverArtistIndexContainer from './discover_artist_index_container';
-// import DiscoverArtistIndex from './discover_artist_index';
 
 const genreNames = [
   'all',
