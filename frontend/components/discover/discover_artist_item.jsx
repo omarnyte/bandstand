@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 class DiscoverArtistItem extends React.Component {
   render() {
-    console.log(this.props);
     const { band_name, image_location } = this.props.band;
     return (
       <div className='discover-artist-item-div'>
