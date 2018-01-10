@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 import DiscoverBar from './discover_bar';
 import DiscoverArtistIndexContainer from './discover_artist_index_container';
 
-const genreNames = [
-  'all',
-  'grunge',
-  'hip hop',
-  'house',
-  'indie',
-  'metal',
-  'pop',
-  'rap',
-  'R&B',
-  'rock'
-];
+const genreNamesAndCSSColorSelector = {
+  'all': 'one',
+  'grunge': 'two',
+  'hip hop': 'three',
+  'house': 'four',
+  'indie': 'five',
+  'metal': 'six',
+  'pop': 'seven',
+  'rap': 'eight',
+  'R&B': 'nine',
+  'rock': 'ten'
+};
 
 class DiscoverShow extends React.Component {
   constructor(props) {
@@ -31,15 +31,25 @@ class DiscoverShow extends React.Component {
   }
 
   selectGenre(idx) {
+    const genreSelected = Object.keys(genreNamesAndCSSColorSelector)[idx];
+    const colorSelector = genreNamesAndCSSColorSelector[genreSelected];
+
+    // fetches bands by genres
     this.setState({selectedGenreIndex: idx});
-    this.props.fetchBandsByGenre(genreNames[idx]);
+    this.props.fetchBandsByGenre(genreSelected);
+
+    // changes color of parent discover-bar-div depending on genre selected 
+    let discoverBar = document.querySelector('.discover-bar-div');
+    discoverBar.className = (
+      `discover-bar-div ${colorSelector}`
+    );
   }
 
   render () {
     return (
       <div className='discover-show-div'>
         <DiscoverBar
-          genreNames={genreNames}
+          genreNames={Object.keys(genreNamesAndCSSColorSelector)}
           selectedGenreIndex={this.state.selectedGenreIndex}
           onGenreChosen={this.selectGenre} />
         <DiscoverArtistIndexContainer />
