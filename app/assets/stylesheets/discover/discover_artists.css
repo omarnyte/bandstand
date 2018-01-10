@@ -15,6 +15,9 @@
 
 .discover-artist-item-div {
   margin: 10px 10px 20px 10px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .discover-artist-item-image {
@@ -25,4 +28,9 @@
 .discover-artist-band-name {
   font-size: 15px;
   font-weight: bold;
+}
+
+.discover-artist-subgenres {
+  font-size: 12px;
+  font-weight: light;
 }

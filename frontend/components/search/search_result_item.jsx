@@ -12,7 +12,6 @@ class SearchResultItem extends React.Component {
         const genreNames = result.genres_by_id.map(genreObject => {
           return genreObject.genre;
         });
-        console.log({genreNames});
 
         return(
           <div className='search-result-item-component'>
