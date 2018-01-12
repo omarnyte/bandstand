@@ -12,7 +12,7 @@ class DiscoverArtistItem extends React.Component {
       <div className='discover-artist-item-div'>
         <img className='discover-artist-item-image' src={image_location} />
         <span className='discover-artist-band-name'>{band_name}</span>
-        <span className='discover-artist-subgenres'>{genreNames.join(' ')}</span>
+        <span className='discover-artist-subgenres'>{genreNames.join(', ')}</span>
       </div>
     );
  }
