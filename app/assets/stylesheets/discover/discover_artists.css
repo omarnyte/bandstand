@@ -30,7 +30,13 @@
   font-weight: bold;
 }
 
+.discover-artist-band-name:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .discover-artist-subgenres {
   font-size: 12px;
   font-weight: light;
+  color: #999;
 }

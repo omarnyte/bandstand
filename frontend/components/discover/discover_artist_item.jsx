@@ -10,7 +10,9 @@ class DiscoverArtistItem extends React.Component {
 
     return (
       <div className='discover-artist-item-div'>
-        <img className='discover-artist-item-image' src={image_location} />
+        <Link to={`/bands/${this.props.band.id}`}>
+          <img className='discover-artist-item-image' src={image_location} />
+        </Link>
         <span className='discover-artist-band-name'>{band_name}</span>
         <span className='discover-artist-subgenres'>{genreNames.join(', ')}</span>
       </div>

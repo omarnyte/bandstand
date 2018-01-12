@@ -34,11 +34,14 @@ class DiscoverShow extends React.Component {
     const genreSelected = Object.keys(genreNamesAndCSSColorSelector)[idx];
     const colorSelector = genreNamesAndCSSColorSelector[genreSelected];
 
+    // doesn't make a fetch request if genre clicked is the current genre
+    if (this.state.selectedGenreIndex === idx) return;
+
     // fetches bands by genres
     this.setState({selectedGenreIndex: idx});
     this.props.fetchBandsByGenre(genreSelected);
 
-    // changes color of parent discover-bar-div depending on genre selected 
+    // changes color of parent discover-bar-div depending on genre selected
     let discoverBar = document.querySelector('.discover-bar-div');
     discoverBar.className = (
       `discover-bar-div ${colorSelector}`
