@@ -255,6 +255,27 @@ band30 = Band.create(
   image_location: 'https://upload.wikimedia.org/wikipedia/commons/9/9e/Alice_In_Chains_-_Jimmy_Kimmel_Live.jpg'
 )
 
+band31 = Band.create(
+  band_name: 'Loope Fiasco',
+  location: 'Chicago, Illinois',
+  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
+  image_location: 'http://www.rap-up.com/app/uploads/2014/12/lupe-fiasco.jpg'
+)
+
+band32 = Band.create(
+  band_name: 'API',
+  location: 'Ukiah, California',
+  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
+  image_location: 'https://iscale.iheart.com/v3/url/aHR0cDovL2ltYWdlLmloZWFydC5jb20vaW1hZ2VzL3JvdmkvMTA4MC8wMDAxLzM2Ny9NSTAwMDEzNjcwOTEuanBn'
+)
+
+band33 = Band.create(
+  band_name: 'Nickelbackend',
+  location: 'Alberta, Canada',
+  mini_bio: Faker::Hipster.paragraph(mini_bio_rand),
+  image_location: 'http://images.genius.com/690ebb794f404ce292a2c2a9fba7e195.1000x1000x1.jpg'
+)
+
 
 
 ## GENRES
@@ -278,6 +299,7 @@ funk_metal = Genre.create(genre: 'funk metal')
 gangsta_rap = Genre.create(genre: 'gangsta rap')
 garage_rock = Genre.create(genre: 'garage rock')
 glam_metal = Genre.create(genre: 'glam metal')
+gothic_rock = Genre.create(genre: 'gothic rock')
 grunge = Genre.create(genre: 'grunge')
 hard_rock = Genre.create(genre: 'hard rock')
 heavy_metal = Genre.create(genre: 'heavy metal')
@@ -477,6 +499,19 @@ BandGenre.create(band_id: band30.id, genre_id: metal.id)
 BandGenre.create(band_id: band30.id, genre_id: alternative_metal.id)
 BandGenre.create(band_id: band30.id, genre_id: grunge.id)
 BandGenre.create(band_id: band30.id, genre_id: heavy_metal.id)
+
+# Loope Fiasco
+BandGenre.create(band_id: band31.id, genre_id: hip_hop.id)
+
+# API
+BandGenre.create(band_id: band32.id, genre_id: rock.id)
+BandGenre.create(band_id: band32.id, genre_id: punk_rock.id)
+
+# Nickelbackend
+BandGenre.create(band_id: band33.id, genre_id: rock.id)
+BandGenre.create(band_id: band33.id, genre_id: hard_rock.id)
+BandGenre.create(band_id: band33.id, genre_id: pop_rock.id)
+
 
 
 
