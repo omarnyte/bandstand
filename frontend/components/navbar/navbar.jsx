@@ -15,7 +15,7 @@ const Navbar = ({ currentUser , logout, path }) => {
     <div className='right-nav'>
       <SearchContainer />
       <ul className='session-links'>
-        <Link to='/discover' className='session-link'>discover</Link>
+        <a className='session-link'>discover</a>
         <Link to='/signup' className='session-link'>sign up</Link>
         <Link to='/login' className='session-link'>login</Link>
       </ul>
