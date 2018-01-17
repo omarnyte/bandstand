@@ -32,7 +32,7 @@ class LogIn extends React.Component {
   handleSubmitDemo(e) {
     e.preventDefault();
     // redirects new user to landing page
-    const demo = {username: 'username1', password: 'password'};
+    const demo = {username: 'demo_user', password: 'password'};
     this.props.login(demo)
       .then( () => this.props.history.push('/'));
   }

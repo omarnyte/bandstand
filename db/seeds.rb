@@ -10,7 +10,7 @@ require 'faker'
 
 # USERS
 user1 = User.create(
-  username: 'username1',
+  username: 'demo_user',
   password: 'password',
   email: 'email1@email.com'
 )
@@ -37,6 +37,8 @@ user5 = User.create(
   password: 'password',
   email: 'email5@email.com'
 )
+
+
 
 # BANDS
 mini_bio_rand = rand(1) + 1
