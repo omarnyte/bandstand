@@ -70,6 +70,7 @@ group :development do
 end
 
 group :test do
+  gem 'shoulda-matchers'
   gem 'capybara', '~> 2.13'
   gem 'guard-rspec'
   gem 'launchy'

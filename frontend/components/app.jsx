@@ -26,7 +26,6 @@ const App = () => (
       <Route path='/bands/:bandId' component={BandShowContainer}/>
       <Route path='/albums/:albumId' component={AlbumShowContainer}/>
       <Route path='/search' component={SearchResultsContainer}/>
-
     </Switch>
 
     <Footer />

@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  #TODO uncomment for production 
   # protect_from_forgery with: :exception
 
   helper_method :current_user, :logged_in?
