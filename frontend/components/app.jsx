@@ -5,6 +5,7 @@ import NavbarContainer from './navbar/navbar_container';
 import SplashPageContainer from './splash_page/splash_page_container';
 import SplashPage from './splash_page/splash_page';
 import DiscoverShowContainer from './discover/discover_show_container';
+import ProfileContainer from './profile/profile_container';
 import LogInContainer from './session_form/login_container';
 import SignupContainer from './session_form/signup_container';
 import BandShowContainer from './bands/band_show_container';
@@ -22,6 +23,8 @@ const App = () => (
     <Switch>
       <AuthRoute path='/login' component={LogInContainer} />
       <AuthRoute path='/signup' component={SignupContainer} />
+
+      <Route path='/users/:userId' component={ProfileContainer} />
 
       <Route path='/bands/:bandId' component={BandShowContainer}/>
       <Route path='/albums/:albumId' component={AlbumShowContainer}/>
