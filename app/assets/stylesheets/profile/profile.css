@@ -1,0 +1,30 @@
+.edit-profile-button {
+  border: 1px solid #939497;
+  padding: 3px 5px;
+  border-radius: 5px;
+  height: 25px;
+
+  font-size: 13px;
+  font-weight: bold;
+  color: #828282;
+}
+
+.fan-bio {
+  width: 600px;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+
+  background: gray;
+}
+
+.profile-username {
+  font-size: 25px;
+  font-weight: bold;
+  color: #333333;
+}
