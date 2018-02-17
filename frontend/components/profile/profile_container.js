@@ -9,7 +9,7 @@ const mapStateToProps = (state, { match }) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  // fetchBand: (bandId) => dispatch(fetchBand(bandId))
+  
 });
 
 export default withRouter(connect(
