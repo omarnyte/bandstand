@@ -11,6 +11,16 @@ class FollowedBandsIndex extends React.Component {
     this.props.fetchFollowedBands(this.props.match.params.userId);
   }
 
+  componentWillReceiveProps(nextProps) {
+    const currentUserId = this.props.match.params.userId;
+    const nextUserId = nextProps.match.params.userId;
+    if (currentUserId !== nextUserId) {
+      this.props.fetchFollowedBands(nextUserId);
+    }
+  }
+
+
+
   render() {
     const { bands } = this.props;
     if (Object.keys(bands).length === 0) return null;
