@@ -11,3 +11,10 @@ export const fetchBand = (bandId) => (
     url: `/api/bands/${bandId}`
   })
 );
+
+export const fetchFollowedBands = (userId) => (
+  $.ajax({
+    method: 'GET',
+    url: `api/followed_bands/${userId}`
+  })
+);
