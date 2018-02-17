@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
+import FollowedBandsIndexContainer from './followed_bands_index_container';
+
 class ProfileShow extends React.Component {
   constructor(props) {
     super(props);
@@ -24,6 +26,7 @@ class ProfileShow extends React.Component {
           <button className='edit-profile-button'>EDIT PROFILE</button>
         </div>
         <div className='profile-bottom'>
+          <FollowedBandsIndexContainer />
         </div>
       </div>
     );
