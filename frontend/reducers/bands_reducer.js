@@ -1,7 +1,8 @@
 import merge from 'lodash/merge';
 
 import { RECEIVE_ALL_BANDS,
-         RECEIVE_BAND } from '../actions/band_actions';
+         RECEIVE_BAND,
+         RECEIVE_FOLLOWED_BANDS } from '../actions/band_actions';
 import { RECEIVE_ALBUM } from '../actions/album_actions';
 
 
@@ -16,6 +17,8 @@ const BandsReducer = (oldState = {}, action) => {
       const bandBundle = action.payload.band;
       bandBundle.album_ids = action.payload.albums.map(album => album.id);
       return merge({}, oldState, {[bandBundle.id]: bandBundle});
+    case RECEIVE_FOLLOWED_BANDS:
+      return merge({}, action.bands);
     case RECEIVE_ALBUM:
       return merge({}, oldState, {[action.payload.band.id]: action.payload.band});
     default:

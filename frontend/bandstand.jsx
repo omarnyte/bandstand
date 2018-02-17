@@ -21,6 +21,8 @@ import configureStore from './store/store';
   // fetchPermittedGenres,
   // fetchBandsByGenreId,
   // fetchBandsByGenre} from './actions/discover_actions';
+import {
+  fetchFollowedBands } from './actions/band_actions';
 // end test
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -54,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // window.fetchPermittedGenres = fetchPermittedGenres;
   // window.fetchBandsByGenreId = fetchBandsByGenreId;
   // window.fetchBandsByGenre = fetchBandsByGenre;
+  window.fetchFollowedBands = fetchFollowedBands;
   // window.followBand = followBand;
   // window.unfollowBand = unfollowBand;
   // end test
