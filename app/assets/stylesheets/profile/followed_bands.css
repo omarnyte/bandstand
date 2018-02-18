@@ -1,0 +1,32 @@
+.followed-band-image {
+  width: 70px;
+  height: 70px;
+}
+
+.followed-band-li {
+  width: 250px;
+
+  display: flex;
+}
+
+.followed-band-location {
+  font-size: 12px;
+  font-weight: lighter;
+  color: #828282;
+}
+
+.followed-band-name {
+  font-weight: bold;
+}
+
+.followed-band-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.followed-bands-index {
+  width: 75%;
+
+  display: flex;
+  justify-content:space-around;
+}

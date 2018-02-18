@@ -27,10 +27,10 @@ class FollowedBandsIndex extends React.Component {
     console.log(bands);
 
     return (
-      <ul className="followed-band-index">
+      <ul className="followed-bands-index">
         {
           Object.keys(bands).map(bandId => (
-            <FollowedBandsItem band={bands[bandId]} />
+            <FollowedBandsItem band={bands[bandId]} key={bandId} />
           ))
         }
       </ul>

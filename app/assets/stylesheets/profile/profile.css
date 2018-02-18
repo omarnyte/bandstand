@@ -16,6 +16,11 @@
   justify-content: space-around;
 }
 
+.profile-bottom {
+  display: flex;
+  justify-content: center;
+}
+
 .profile-picture {
   width: 200px;
   height: 200px;
