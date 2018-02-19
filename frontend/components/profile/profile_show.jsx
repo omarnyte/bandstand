@@ -13,7 +13,7 @@ class ProfileShow extends React.Component {
 
     return (
       <div className='profile-show-component'>
-
+        <div className='profile-banner'></div>
         <div className='fan-bio'>
           <span className='profile-username'>{currentUser.username}</span>
 

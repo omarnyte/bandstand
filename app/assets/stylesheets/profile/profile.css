@@ -16,6 +16,14 @@
   justify-content: space-around;
 }
 
+.profile-banner {
+  width: 100%;
+  height: 75px;
+
+  background: linear-gradient(135deg, #c577ae 0%, #bf2727 100%);
+
+}
+
 .profile-bottom {
   display: flex;
   justify-content: center;
