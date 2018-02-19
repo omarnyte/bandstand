@@ -24,16 +24,18 @@ class FollowedBandsIndex extends React.Component {
   render() {
     const { bands } = this.props;
     if (Object.keys(bands).length === 0) return null;
-    console.log(bands);
 
     return (
-      <ul className="followed-bands-index">
-        {
-          Object.keys(bands).map(bandId => (
-            <FollowedBandsItem band={bands[bandId]} key={bandId} />
-          ))
-        }
-      </ul>
+      <div>
+        <span className="follow-count">Following {Object.keys(bands).length}</span>
+        <ul className="followed-bands-index">
+          {
+            Object.keys(bands).map(bandId => (
+              <FollowedBandsItem band={bands[bandId]} key={bandId} />
+            ))
+          }
+        </ul>
+      </div>
     );
   }
 }
