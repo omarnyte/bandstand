@@ -27,7 +27,7 @@ class FollowedBandsIndex extends React.Component {
 
     return (
       <div>
-        <span className="follow-count">Following {Object.keys(bands).length}</span>
+        <span className="follow-count"><strong>following</strong> {Object.keys(bands).length}</span>
         <ul className="followed-bands-index">
           {
             Object.keys(bands).map(bandId => (

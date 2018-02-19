@@ -8,7 +8,7 @@ const Navbar = ({ currentUser , logout, path }) => {
   const display = currentUser ? (
     <div className='right-nav'>
       <SearchContainer />
-      <p>Hello, {currentUser.username}</p>
+      <p>Hello, <Link to={`/users/${currentUser.id}`}>{currentUser.username}</Link></p>
       <button onClick={logout}>log out</button>
     </div>
   ) : (

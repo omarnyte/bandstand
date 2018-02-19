@@ -11,9 +11,18 @@
 
 .fan-bio {
   width: 600px;
+  border-bottom: 1px solid #ddd;
 
   display: flex;
   justify-content: space-around;
+}
+
+.follow-count {
+  font-size: 14px;
+}
+
+.follow-count > strong {
+  font-weight: bold;
 }
 
 .profile-banner {
@@ -21,7 +30,6 @@
   height: 75px;
 
   background: linear-gradient(135deg, #c577ae 0%, #bf2727 100%);
-
 }
 
 .profile-bottom {
@@ -34,6 +42,12 @@
   height: 200px;
 
   background: gray;
+}
+
+.profile-show-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile-username {
