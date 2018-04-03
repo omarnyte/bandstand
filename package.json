@@ -6,7 +6,9 @@
     "npm": "2.1.x"
   },
   "scripts": {
-    "postinstall": "webpack"
+    "postinstall": "webpack",
+    "test": "jest",
+    "webpack": "webpack --watch"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -27,5 +29,11 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "webpack": "^3.8.1"
+  },
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-15": "^1.0.5",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^22.4.3"
   }
 }
