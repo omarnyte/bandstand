@@ -75,7 +75,7 @@ group :test do
   gem 'guard-rspec'
   gem 'faker'
   gem 'launchy'
-  gen 'rspec_junit_formatter'
+  gem 'rspec_junit_formatter'
   gem 'shoulda-matchers', '~> 3.1'
 end
 
