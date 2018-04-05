@@ -6,7 +6,6 @@
     "npm": "2.1.x"
   },
   "scripts": {
-    "postinstall": "webpack",
     "test": "jest",
     "webpack": "webpack --watch"
   },
