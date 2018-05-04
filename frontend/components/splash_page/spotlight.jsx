@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Spotlight = () => (
-  <div className='spotlight-component'>
+  <div className='spotlight-component'> 
     <div className='main-spotlight'>
       <span className='spotlight-overlayed-text'>
         Discover new music while supporting independent artists.

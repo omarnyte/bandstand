@@ -25,6 +25,18 @@
   height: 225px;
 }*/
 
+
+.main-spotlight {
+  width: 1065px;
+  height: 600px;
+  
+  background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5) ),  url('https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Site+Images/photo-1461360228754-6e81c478b882.jpeg');
+  
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .spotlight-component {
   background-color: #222;
 
@@ -34,15 +46,11 @@
   color: white;
 }
 
-.main-spotlight {
-  width: 1065px;
-  height: 600px;
-
-  background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5) ),  url('https://s3-us-west-1.amazonaws.com/bandstandapp-dev/Site+Images/photo-1461360228754-6e81c478b882.jpeg');
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+.spotlight-main-button {
+  padding: 4px 10px 4px 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: 30px;
 }
 
 .spotlight-overlayed-text {
@@ -51,9 +59,3 @@
   margin: 30px;
 }
 
-.spotlight-main-button {
-  padding: 4px 10px 4px 10px;
-  border: 1px solid white;
-  border-radius: 5px;
-  margin: 30px;
-}
